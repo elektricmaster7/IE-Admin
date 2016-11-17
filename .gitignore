@@ -9,6 +9,7 @@
 /dist
 /tags
 *.mo
+/_gsdata_*
 
 # IDE and editor specific files #
 #################################
