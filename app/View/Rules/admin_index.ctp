@@ -15,7 +15,7 @@
 				<td><?php echo $rule['Rule']['name'];?></td>
 				<td><?php echo $rule['Group']['name'];?></td>
         <td><?php echo $rule['Rule']['permission'];?></td>
-        <td><?php echo $rule['Rule']['action']);?></td>
+        <td><?php echo $rule['Rule']['action'];?></td>
 				<td><?php echo $rule['Rule']['order']; ?></td>
         <td><!--EDIT DELETE--></td>
 			</tr>

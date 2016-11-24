@@ -1,4 +1,15 @@
 <table class="table">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Login</th>
+			<th>Email</th>
+			<th>Grupo</th>
+      <th>Criado em</th>
+			<th>Estado</th>
+			<th>Acções</th>
+		</tr>
+	</thead>
 	<tbody>
 		<?php foreach ($users as $user){ ?>
 			<tr>
@@ -21,7 +32,7 @@
 						if ($user['User']['disable']) echo 'Desactivado&nbsp;';
 						//EXPIRED
 						$exp = $user['User']['expire_account'];
-						if ($exp != '0000-00-00' and $this->Time->fromString($exp) < time()) echo 'Expirado';
+						if ($exp != '0000-00-00' && $this->Time->fromString($exp) < time()) echo 'Expirado';
 					?>
 				</td>
 				<td><!--EDIT DELETE--></td>
