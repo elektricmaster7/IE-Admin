@@ -6,7 +6,8 @@
 @import "../bootstrap/bootstrap.less";
 
 //FONTS
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+//@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
 
 .material-icons {
   font-family: 'Material Icons';
@@ -52,13 +53,14 @@
 @primaryTextColor:   #212121;
 @secondaryTextColor: #757575;
 @dividerColor:       #BDBDBD;
+@lightDividerColor:  #E7E7E7;
 
 
 /*************************************************************/
 // HEADER
 /*************************************************************/
 html, body{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: @primaryTextColor;
   height:100%;
 }
@@ -69,6 +71,19 @@ a {
 
 a:hover, a:focus {
   color: @primaryTextColor;
+}
+
+a:hover > i {
+  color: @accentColor;
+}
+
+h1 {
+  font-size:24px;
+  font-weight: 700;
+}
+
+h2 {
+
 }
 
 /*************************************************************/
@@ -115,7 +130,7 @@ a:hover, a:focus {
 }
 
 .sidebar ul li {
-  border-bottom: 1px solid #e7e7e7;
+  border-bottom: 1px solid @lightDividerColor;
 }
 
 .sidebar ul li a.active {
@@ -139,6 +154,9 @@ a:hover, a:focus {
 
 /*CONTENT*/
 .page-content {
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
   height:100%;
 }
 
