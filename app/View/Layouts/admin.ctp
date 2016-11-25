@@ -11,6 +11,8 @@
 
     <!--BOOTSTRAP CSS & CUSTOM-->
     <link href="/css/admin/admin.css" rel="stylesheet">
+    <link href="/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <?php echo $this->fetch('styles'); ?>
 
     <!--IE SAFEGUARDS-->
@@ -20,45 +22,45 @@
     <![endif]-->
   </head>
   <body>
-    <div id="wrapper">
+    <!--NAVIGATION-->
+    <nav class="navbar navbar-admin navbar-fixed-top" role="navigation" style="margin-bottom: 0;">
+      <!--LEFT NAVBAR-->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
 
-      <!--NAVIGATION-->
-      <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0;">
-        <!--LEFT NAVBAR-->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+      <!--RIGHT NAVBAR-->
+    </nav>
+
+    <!-- CONTENT -->
+    <div id="page-wrapper">
+      <!--SIDEBAR-->
+      <div class="sidebar-admin sidebar" role="navigation">
+        <div class="sidebar-nav navbar-collapse">
+          <ul class="nav" id="side-menu">
+            <li><a href="#"><i class="material-icons md-18">person</i> Utilizadores</a></li>
+            <li><a href="#"><i class="material-icons md-18">group</i> Grupos</a></li>
+            <li><a href="#"><i class="material-icons md-18">dehaze</i> Regras</a></li>
+          </ul>
         </div>
+      </div>
 
-        <!--RIGHT NAVBAR-->
-
-        <!--SIDEBAR-->
-        <div class="navbar-default sidebar" role="navigation">
-          <div class="sidebar-nav navbar-collapse">
-            <ul class="nav" id="side-menu">
-              <li><a href="#">Utilizadores</a></li>
-              <li><a href="#">Grupos</a></li>
-              <li><a href="#">Regras</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <!-- CONTENT -->
-        <div id="page-wrapper">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-lg-12">
-                <?php echo $this->Flash->render(); ?>
-                <?php echo $this->fetch('content'); ?>
-              </div>
+      <!--PAGE CONTAINER-->
+      <div class="page-content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12">
+              <?php echo $this->Flash->render(); ?>
+              <?php echo $this->fetch('content'); ?>
             </div>
           </div>
         </div>
+      </div>
     </div>
 
 
