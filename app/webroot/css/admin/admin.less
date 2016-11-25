@@ -8,6 +8,41 @@
 //FONTS
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
 
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  position: relative;
+  top:4px;
+  margin-right: 10px;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
 //VARS
 @darkPrimaryColor:   #1976D2;
 @primaryColor:       #2196F3;
@@ -22,36 +57,58 @@
 /*************************************************************/
 // HEADER
 /*************************************************************/
-body{
+html, body{
   font-family: 'Open Sans', sans-serif;
-  overflow-x: hidden;
+  color: @primaryTextColor;
+  height:100%;
+}
+
+a {
+  color: @secondaryTextColor;
+}
+
+a:hover, a:focus {
+  color: @primaryTextColor;
 }
 
 /*************************************************************/
 //BODY
 /*************************************************************/
 /*WRAPPERS*/
-#wrapper {
-  width:100%;
-}
-
 #page-wrapper {
-  padding: 0 15px;
   min-height: 568px;
   background-color: #FFFFFF;
+  margin-top:51px;
+  height:100%;
 }
 
 @media (min-width: 768px) {
   #page-wrapper {
     position: inherit;
-    margin: 0 0 0 250px;
-    padding: 0 30px;
     border-left: 1px solid #e7e7e7;
   }
 }
 /*END WRAPPERS*/
 
+/*NAVBAR ADMIN*/
+.navbar-admin {
+  background-color: @primaryColor;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+
+.navbar-toggle:hover {
+  background-color: @darkPrimaryColor;
+}
+
+.icon-bar {
+  background-color: #FFFFFF;
+}
+
 /*SIDEBAR*/
+.sidebar-admin {
+  background-color: #FFFFFF;
+}
+
 .sidebar .sidebar-nav.navbar-collapse {
   padding-left: 0;
   padding-right: 0;
@@ -67,17 +124,28 @@ body{
 
 @media (min-width: 768px) {
   .sidebar {
-    z-index: 1;
+    z-index: 1030;
     position: absolute;
     width: 250px;
-    margin-top: 51px;
-    //height: 100%;
+    height: 100%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.26);
   }
   /*FOR REFERENCE LATER.navbar-top-links .dropdown-messages,
   .navbar-top-links .dropdown-tasks,
   .navbar-top-links .dropdown-alerts {
     margin-left: auto;
   }*/
+}
+
+/*CONTENT*/
+.page-content {
+  height:100%;
+}
+
+@media (min-width: 768px) {
+  .page-content{
+    margin-left: 250px;
+  }
 }
 
 /*DROPDOWN*/
