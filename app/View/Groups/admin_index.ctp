@@ -1,3 +1,4 @@
+<h1>GRUPOS</h1>
 <table class="table">
 	<thead>
 		<tr>
