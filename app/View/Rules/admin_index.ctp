@@ -1,3 +1,4 @@
+<h1>REGRAS</h1>
 <table class="table">
 	<thead>
 		<tr>
