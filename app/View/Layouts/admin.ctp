@@ -41,8 +41,9 @@
     <div id="page-wrapper">
       <!--SIDEBAR-->
       <div class="sidebar-admin sidebar" role="navigation">
-        <div class="sidebar-nav navbar-collapse">
+        <div class="sidebar-nav collapse navbar-collapse">
           <ul class="nav" id="side-menu">
+            <li><a href="/admin"><i class="material-icons md-18">home</i> Dashboard</a></li>
             <li><a href="#"><i class="material-icons md-18">person</i> Utilizadores</a></li>
             <li><a href="#"><i class="material-icons md-18">group</i> Grupos</a></li>
             <li><a href="#"><i class="material-icons md-18">dehaze</i> Regras</a></li>
