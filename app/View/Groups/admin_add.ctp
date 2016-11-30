@@ -1,8 +1,13 @@
+<h1>ADICIONAR GRUPO</h1>
 <?php echo $this->Form->create('Group');?>
-<label>Nome</label>
-<?php echo $this->Form->input('name', array('label'=>false));?>
+<div class="form-group">
+  <label>Nome</label>
+  <?php echo $this->Form->input('name', array('label'=>false, 'div'=>false, 'class'=>'form-control'));?>
+</div>
 
-<label>Utilizadores no grupo (Pressione 'Control' para selecionar vários)</label>
-<?php echo $this->Form->input('User', array('label'=>false));?>
+<div class="form-group">
+  <label>Utilizadores no grupo (Pressione 'Control' para selecionar vários)</label>
+  <?php echo $this->Form->input('User', array('label'=>false, 'div'=>false, 'class'=>'form-control'));?>
+</div>
 
 <?php echo $this->Form->end(array('div'=>false,'label'=>'Adicionar Grupo'));?>
