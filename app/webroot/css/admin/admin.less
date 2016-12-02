@@ -67,6 +67,8 @@ html, body{
   height:100%;
 }
 
+* { outline: none; }
+
 a {
   color: @secondaryTextColor;
 }
@@ -107,12 +109,21 @@ table > thead > tr > th:hover {
   color: @primaryTextColor;
 }
 
+table > thead > tr > th:focus {
+  background-color: @tableHoverBgColor;
+}
+
 table > tbody > tr > td {
   padding: 14px 24px 14px 24px !important;
 }
 
 table > tbody > tr:hover {
   background-color: @tableHoverBgColor;
+}
+
+//DATATABLES
+.dataTables_filter {
+  display: none;
 }
 
 //PANEL
