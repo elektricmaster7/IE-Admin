@@ -93,6 +93,29 @@ h2 {
   font-weight: 400;
 }
 
+//INPUT
+.form-control:focus {
+  outline: none;
+  border-color: @primaryColor;
+  border-width: 2px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.form-group > input {
+  border-radius: 0px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom:1px solid @lightDividerColor;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  transition: border-color ease-in-out .15s, border-width ease-in-out .15s;
+  -webkit-transition: border-color ease-in-out .15s, border-width ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, border-width ease-in-out .15s;
+}
+
 //TABLE
 table {
 }
