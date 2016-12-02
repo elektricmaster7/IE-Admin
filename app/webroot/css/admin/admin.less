@@ -55,9 +55,11 @@
 @dividerColor:       #BDBDBD;
 @lightDividerColor:  #E7E7E7;
 
+@tableHeaderColor: #8A8A8A;
+@tableHoverBgColor: #EEEEEE;
 
 /*************************************************************/
-// HEADER
+// GENERAL
 /*************************************************************/
 html, body{
   font-family: 'Roboto', sans-serif;
@@ -79,15 +81,67 @@ a:hover > i {
 
 h1 {
   font-size:24px;
-  font-weight: 700;
+  font-weight: 400;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
 h2 {
   font-size:20px;
-  font-weight: 700;
+  font-weight: 400;
 }
+
+//TABLE
+table {
+}
+
+table > thead > tr > th {
+  border:0px !important;
+  color: @tableHeaderColor;
+  font-size:13px;
+  font-weight: 700;
+  padding: 18px 24px 18px 24px !important;
+}
+
+table > thead > tr > th:hover {
+  color: @primaryTextColor;
+}
+
+table > tbody > tr > td {
+  padding: 14px 24px 14px 24px !important;
+}
+
+table > tbody > tr:hover {
+  background-color: @tableHoverBgColor;
+}
+
+//PANEL
+.panel-material {
+  border: 1px solid #E6E6E6;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  overflow-x: auto;
+}
+
+.panel-material > .panel-heading {
+  font-size: 20px;
+  font-weight: 400;
+  border-bottom: 1px solid @lightDividerColor;
+  padding: 18px 24px 17px 24px !important;
+}
+
+.panel-material > .panel-body {
+  padding: 0px;
+}
+
+.panel-material > .panel-body table {
+  margin:0px !important;
+}
+
+/*************************************************************/
+// HEADER
+/*************************************************************/
 
 /*************************************************************/
 //BODY
@@ -157,9 +211,9 @@ h2 {
 
 /*CONTENT*/
 .page-content {
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   height:100%;
 }
 
