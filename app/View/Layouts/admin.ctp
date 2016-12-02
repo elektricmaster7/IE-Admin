@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Inspire Electronics">
+    <?php $this->start('meta'); ?><?php $this->end(); ?>
+    <?php echo $this->fetch('meta'); ?>
 
     <title>Admin Panel</title>
 
@@ -13,6 +15,7 @@
     <link href="/css/admin/admin.css" rel="stylesheet">
     <link href="/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <?php $this->start('styles'); ?><?php $this->end(); ?>
     <?php echo $this->fetch('styles'); ?>
 
     <!--IE SAFEGUARDS-->
@@ -66,12 +69,11 @@
 
 
     <!--JAVASCRIPT-->
-      <!--JQUERY 3.1.1-->
-      <script src="/js/jquery/jquery-3.1.1.min.js"></script>
-      <!--BOOTSTRAP 3.3.7-->
-      <script src="/js/bootstrap/bootstrap.min.js"></script>
-
-      <!--PAGE SPECIFIC JS INCLUDES & CODE-->
-      <?php echo $this->fetch('scripts'); ?>
+    <!--JQUERY 3.1.1-->
+    <script src="/js/jquery/jquery-3.1.1.min.js"></script>
+    <!--BOOTSTRAP 3.3.7-->
+    <script src="/js/bootstrap/bootstrap.min.js"></script>
+    <?php $this->start('scripts'); ?><?php $this->end(); ?>
+    <?php echo $this->fetch('scripts'); ?>
   </body>
 </html>
