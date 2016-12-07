@@ -119,14 +119,14 @@ h2 {
   left:4px;
   top:35px;
   font-size: 18px;
-  transition:0.2s ease all;
-  -moz-transition:0.2s ease all;
-  -webkit-transition:0.2s ease all;
+  transition:0.2s ease-in-out all;
+  -moz-transition:0.2s ease-in-out all;
+  -webkit-transition:0.2s ease-in-out all;
 }
 
-.form-group input:focus ~ .form-group label{
-  top:-20px;
-  font-size:14px;
+input:focus ~ label {
+  top:-20px !important;
+  font-size:14px !important;
   color: @primaryTextColor;
 }
 
