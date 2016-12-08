@@ -100,13 +100,15 @@ h2 {
   box-shadow: none;
 }
 
-.form-group > input {
+.form-group > input , select[multiple] {
   border-radius: 0px;
   border-top: 0px;
   border-left: 0px;
   border-right: 0px;
   border-bottom:1px solid @lightDividerColor;
+  padding: 6px 4px;
   box-shadow: none;
+  overflow-y: auto; 
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   transition: border-color ease-in-out .15s, border-width ease-in-out .15s;
@@ -115,20 +117,33 @@ h2 {
 }
 
 .form-group > label {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.form-group > label.material-label {
   position: relative;
-  left:4px;
   top:35px;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 400;
+  cursor:text;
   transition:0.2s ease-in-out all;
   -moz-transition:0.2s ease-in-out all;
   -webkit-transition:0.2s ease-in-out all;
 }
 
-input:focus ~ label {
+.form-group > label.material-label-focus {
+  top: 10px !important;
+  left: 4px !important;
+  font-size: 12px !important;
+  color: @primaryColor !important;
+}
+
+/*input:focus ~ label {
   top:-20px !important;
   font-size:14px !important;
   color: @primaryTextColor;
-}
+}*/
 
 //TABLE
 table {

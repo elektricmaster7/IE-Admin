@@ -8,7 +8,7 @@
 
 <div class="form-group">
   <label>Password</label>
-  <?php echo $this->Form->input('password', array('label'=>false, 'div'=>false, 'class'=>'form-control'));?>
+  <?php echo $this->Form->input('password', array('label'=>false, 'div'=>false, 'class'=>'form-control', 'value'=>"putedo"));?>
 </div>
 
 <div class="form-group">
