@@ -2,8 +2,8 @@
 <div class="panel panel-material">
 	<div class="panel-heading">
 		<div class="row" data-table-id="users_table">
-			<div class="col-xs-12 col-md-6">table counters</div>
-			<div class="col-xs-12 col-md-6 text-right"><input type="text" data-datatables-search></input></div>
+			<div class="col-xs-12 col-md-8">table counters</div>
+			<div class="col-xs-12 col-md-4"><input type="text" class="form-control" data-datatables-search/><label>Pesquisa</label></div>
 		</div>
 	</div>
 	<div class="panel-body">
@@ -54,8 +54,8 @@
 <div class="panel panel-material">
 	<div class="panel-heading">
 		<div class="row" data-table-id="users_table_2">
-			<div class="col-xs-12 col-md-6">table counters</div>
-			<div class="col-xs-12 col-md-6 text-right"><input type="text" data-datatables-search></input></div>
+			<div class="col-xs-12 col-md-8">table counters</div>
+			<div class="col-xs-12 col-md-4"><input type="text" class="form-control" data-datatables-search></input><label>Pesquisa</label></div>
 		</div>
 	</div>
 	<div class="panel-body">

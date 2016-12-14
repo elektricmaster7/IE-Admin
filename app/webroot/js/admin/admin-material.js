@@ -1,9 +1,9 @@
-$(document).ready(function(){
+//$(document).ready(function(){
   //MATERIAL INPUT LABELS
   var inputs = $('input[type="text"],input[type="email"],input[type="password"]');
-  inputs.prev('label').each(function() {
+  inputs.next('label').each(function() {
     $(this).addClass("material-label");
-    var input = $(this).next('input');
+    var input = $(this).prev('input');
     if(input.val() != ""){
       $(this).addClass('material-label-focus');
     }
@@ -12,14 +12,14 @@ $(document).ready(function(){
   //SETUP FOCUS TRIGGER
   inputs.on('focus', function(){
     console.log("focus on the bish");
-    $(this).prev('label').addClass("material-label-focus");
+    $(this).next('label').addClass("material-label-focus");
   }).on('focusout', function(){
     if($(this).val() == ""){
-      $(this).prev('label').removeClass("material-label-focus");
+      $(this).next('label').removeClass("material-label-focus");
     }
   });
 
   $('label').on('click', function(){
-    $(this).next('input').focus();
+    $(this).prev('input').focus();
   });
-});
+//});
