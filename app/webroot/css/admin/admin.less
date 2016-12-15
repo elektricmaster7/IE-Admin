@@ -54,7 +54,9 @@
 @lightDividerColor:  #E7E7E7;
 
 @checkboxColor: #6D6D6D;
+@successColor:#4CAF50;
 @errorColor:#F44336;
+@mainErrorBGColor:#333333;
 
 @tableHeaderColor: #8A8A8A;
 @tableHoverBgColor: #EEEEEE;
@@ -94,6 +96,37 @@ h2 {
   font-weight: 400;
 }
 
+//COLOR HELPER CLASSES
+.primaryColor { color: @primaryColor; }
+.successColor { color: @successColor; }
+.errorColor { color: @errorColor; }
+.accentColor { color: @accentColor; }
+
+//MATERIAL ALERT
+.alert {
+  background-color:@mainErrorBGColor !important;
+  color:#FFFFFF !important;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  width:100% !important;
+  margin: 0px !important;
+  border: 0px !important;
+  border-radius: 0px !important;
+  position:fixed !important;
+  z-index:99999 !important;
+  left:0;
+  bottom:0;
+}
+
+.alert > .material-icons {
+  font-size: 18px !important;
+}
+
+.alert > .material-button-flat {
+  height: 24px !important;
+  padding-top: 3px !important;
+}
+
 //BUTTONS
 .material-button, input[type="submit"], input[type="button"] {
   padding-left: 16px;
@@ -110,19 +143,30 @@ h2 {
   border:0px !important;
 }
 
-.dense-button {
-  height: 32px !important;
+.material-button-flat {
+  padding-left: 16px;
+  padding-right: 16px;
+  height: 36px;
   border-radius: 2px;
-  background-color: @primaryColor;
-  color: #ffffff;
-  font-size: 13px !important;
+  background-color: transparent !important;
+  color: @primaryColor;
+  font-size: 14px;
   text-transform: uppercase;
-  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 0.2s;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border:0px !important;
 }
 
-.material-button:active, .dense-button:active, input[type="submit"]:active, input[type="button"]:active{
+.material-button-flat:hover, .material-button-flat:active {
+  background-color: rgba(0, 0, 0, 0.26) !important;
+  box-shadow: none !important;
+}
+
+.dense {
+  height: 32px !important;
+  font-size: 13px !important;
+}
+
+.material-button:active, .dense:active, input[type="submit"]:active, input[type="button"]:active{
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
   transition-delay: 0s;
 }
@@ -163,6 +207,10 @@ input , select[multiple] {
   transition: border-color ease-in-out .15s, border-width ease-in-out .15s;
   -webkit-transition: border-color ease-in-out .15s, border-width ease-in-out .15s;
   -o-transition: border-color ease-in-out .15s, border-width ease-in-out .15s;
+}
+//AVOID AUTOFILL BACKGROUND FROM STAYING
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 
 input[type="text"], input[type="password"], input[type="search"], input[type="email"] {

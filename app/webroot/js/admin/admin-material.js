@@ -10,7 +10,7 @@
   });
 
   //SETUP FOCUS TRIGGER
-  inputs.on('focus', function(){
+  inputs.on('focus change keyup', function(){
     console.log("focus on the bish");
     $(this).next('label').addClass("material-label-focus");
   }).on('focusout', function(){
