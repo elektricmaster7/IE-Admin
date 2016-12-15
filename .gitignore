@@ -8,6 +8,7 @@
 /tags
 *.mo
 /_gsdata_*
+/app/View/Layouts/default.ctp
 
 # IDE and editor specific files #
 #################################
