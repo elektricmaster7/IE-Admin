@@ -22,4 +22,6 @@
   $('label').on('click', function(){
     $(this).prev('input').focus();
   });
+
+  $('input').attr('autocomplete', 'off');
 //});
