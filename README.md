@@ -9,3 +9,9 @@ A package with included CakePHP and Administration Backoffice with material desi
 1. Devolped for CakePHP 2.x
 2. Authentication based on Authake's (User, Group, Rules)
 3. Admin Template w/ Material Design Standards
+
+## Instalation
+```
+Composer:
+composer create-project inspirelectronics/ie-admin path dev-master
+```
