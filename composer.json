@@ -13,7 +13,6 @@
             "email": "joao.carvalho.7@hotmail.com"
         }
     ],
-    "minimum-stability": "alpha",
     "config": {
       "vendor-dir": "vendors/"
     },
