@@ -8,7 +8,13 @@
 /tags
 *.mo
 /_gsdata_*
+#Conflict avoiding paths change .defaults
 /app/View/Layouts/default.ctp
+/app/Config/authake_config.php
+/app/Config/core.php
+/app/Config/database.php
+/app/Config/email.php
+/app/Config/routes.php
 
 # IDE and editor specific files #
 #################################

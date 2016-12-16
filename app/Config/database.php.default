@@ -70,9 +70,9 @@ class DATABASE_CONFIG {
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' => 'localhost',
-		'login' => 'admin_bkd_usr',
-		'password' => '4zUpkyJ7nz',
-		'database' => 'admin_backend',
+		'login' => 'username',
+		'password' => 'pass',
+		'database' => 'database',
 		'prefix' => '',
 		'encoding' => 'utf8',
 	);

@@ -21,12 +21,15 @@
  */
 
 /**
+* REQUIRE ROUTES_ADMIN FOR ADMIN SPECIFIC ROUTES (MUST NOT BE EDITED)
+*/
+require APP . 'Config' . DS . 'routes_admin.php';
+/**
  * Here, we are connecting '/' (base path) to controller called 'Pages',
  * its action called 'display', and we pass a param to select the view file
  * to use (in this case, /app/View/Pages/home.ctp)...
  */
 	Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home'));
-  Router::connect('/admin', array('controller' => 'pages', 'action' => 'display', 'admin_home', 'admin' => true));
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */
@@ -37,8 +40,6 @@
  * how to customize the loading of plugin routes.
  */
 	CakePlugin::routes();
-  Router::connect('/login', array('controller' => 'user', 'action' => 'login'));
-  Router::connect('/logout', array('controller' => 'user', 'action' => 'logout'));
 
 /**
  * Load the CakePHP default routes. Only remove this if you do not want to use
