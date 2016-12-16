@@ -2,8 +2,8 @@
 #################################################
 /app/tmp/*
 /lib/Cake/Console/Templates/skel/tmp/
-/plugins
-/vendors
+/plugins/*
+/vendors/*
 /build
 /dist
 /tags
@@ -16,6 +16,7 @@
 /app/Config/database.php
 /app/Config/email.php
 /app/Config/routes.php
+prepros-6.config
 
 # IDE and editor specific files #
 #################################

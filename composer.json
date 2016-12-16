@@ -1,0 +1,22 @@
+{
+    "name": "inspirelectronics/ie-admin",
+    "description": "Inspire Electronics Cakephp 2.x Auth and Admin Panel",
+    "type": "library",
+    "keywords": ["framework"],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "elektricmaster7",
+            "email": "joao.carvalho.7@hotmail.com"
+        }
+    ],
+    "config": {
+      "vendor-dir": "vendors/"
+    },
+    "bin": [
+      "lib/Cake/Console/cake"
+    ]
+}
