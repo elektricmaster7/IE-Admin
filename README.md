@@ -1,3 +1,9 @@
 # IE-Admin
+[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://packagist.org/packages/inspirelectronics/ie-admin)
+[![Packagist Pre Release](https://img.shields.io/packagist/vpre/symfony/symfony.svg)](https://packagist.org/packages/inspirelectronics/ie-admin)
 A Cakephp 2.x Admin System
-Based on Authake with Material Design backoffice
+A package with included CakePHP and Administration Backoffice with material design standards
+
+1. Devolped for CakePHP 2.x
+2. Authentication based on Authake's (User, Group, Rules)
+3. Admin Template w/ Material Design Standards
