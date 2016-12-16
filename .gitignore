@@ -16,7 +16,6 @@
 /app/Config/database.php
 /app/Config/email.php
 /app/Config/routes.php
-prepros-6.config
 
 # IDE and editor specific files #
 #################################
@@ -36,3 +35,6 @@ prepros-6.config
 Icon?
 ehthumbs.db
 Thumbs.db
+
+prepros-6.config
+*.lock
