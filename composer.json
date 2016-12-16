@@ -13,10 +13,6 @@
             "email": "joao.carvalho.7@hotmail.com"
         }
     ],
-    "repositories": [{
-      "type": "composer",
-      "url":  "https://php.fury.io/LsKNZJmSaxUA6FihSxAZ/elektricmaster7/"
-    }],
     "config": {
       "vendor-dir": "vendors/"
     },
