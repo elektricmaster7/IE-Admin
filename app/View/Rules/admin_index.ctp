@@ -1,15 +1,15 @@
-<h1>Regras</h1>
+<h1><?php echo __("Regras"); ?></h1>
 <div class="panel panel-material">
 	<div class="panel-body">
 		<table class="table">
 			<thead>
 				<tr>
-					<th>Descrição</th>
-					<th>Grupo</th>
-					<th>Permissões</th>
-					<th>Path</th>
-		      <th>Ordem</th>
-					<th>Acções</th>
+					<th><?php echo __("Descrição"); ?></th>
+					<th><?php echo __("Grupo"); ?></th>
+					<th><?php echo __("Permissões"); ?></th>
+					<th><?php echo __("Path"); ?></th>
+		      <th><?php echo __("Ordem"); ?></th>
+					<th><?php echo __("Acções"); ?></th>
 				</tr>
 			</thead>
 			<tbody>

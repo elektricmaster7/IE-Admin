@@ -2,4 +2,4 @@
 <?php
 echo $this->Form->input('code');
 ?>
-<?php echo $this->Form->end(array('label'=>'Confirmar');?>
+<?php echo $this->Form->end(array('label'=>__('Confirmar'));?>

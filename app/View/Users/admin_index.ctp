@@ -2,21 +2,21 @@
 <div class="panel panel-material">
 	<div class="panel-heading">
 		<div class="row" data-table-id="users_table">
-			<div class="col-xs-12 col-md-8">table counters</div>
-			<div class="col-xs-12 col-md-4"><input type="text" class="form-control" data-datatables-search/><label>Pesquisa</label></div>
+			<div class="col-xs-12 col-md-8"><!--table counters--></div>
+			<div class="col-xs-12 col-md-4"><input type="text" class="form-control" data-datatables-search/><label><?php __("Pesquisa"); ?></label></div>
 		</div>
 	</div>
 	<div class="panel-body">
 		<table id="users_table" class="table">
 			<thead>
 				<tr>
-					<th>ID</th>
-					<th>Login</th>
-					<th>Email</th>
-					<th>Grupo</th>
-					<th>Criado em</th>
-					<th>Estado</th>
-					<th>Acções</th>
+					<th><?php echo __("ID"); ?></th>
+					<th><?php echo __("Login"); ?></th>
+					<th><?php echo __("Email"); ?></th>
+					<th><?php echo __("Grupo"); ?></th>
+					<th><?php echo __("Criado em"); ?></th>
+					<th><?php echo __("Estado"); ?></th>
+					<th><?php echo __("Acções"); ?></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -54,7 +54,7 @@
 <div class="panel panel-material">
 	<div class="panel-heading">
 		<div class="row" data-table-id="users_table_2">
-			<div class="col-xs-12 col-md-8">table counters</div>
+			<div class="col-xs-12 col-md-8"><a href="/admin/users/add" class="material-button">Adicionar</a></div>
 			<div class="col-xs-12 col-md-4"><input type="text" class="form-control" data-datatables-search></input><label>Pesquisa</label></div>
 		</div>
 	</div>

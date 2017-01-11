@@ -1,43 +1,41 @@
-<h1>EDITAR UTILIZADOR</h1>
+<h1><?php echo __("EDITAR UTILIZADOR");?></h1>
 <?php echo $this->Form->create('User');?>
 <?php echo $this->Form->input('id');?>
 
 <div class="form-group">
-  <label>Utilizador</label>
-  <?php echo $this->Form->input('login', array('label'=>false, 'div'=>false, 'class'=>'form-control'));?>
+  <?php echo $this->Form->input('login', array('label'=>false, 'div'=>false, 'class'=>'form-control', 'error' => false));?>
+  <?php echo $this->Form->label('login', __('Utilizador'));?>
+  <?php echo $this->Form->error('login', null, array('class' => 'form-control error-tip')); ?>
 </div>
 
 <div class="form-group">
-  <label>Password</label>
   <?php echo $this->Form->input('password', array('label'=>false, 'div'=>false, 'class'=>'form-control'));?>
+  <?php echo $this->Form->label('password', __('Password'));?>
 </div>
 
 <div class="form-group">
-  <label>E-mail</label>
-  <?php echo $this->Form->input('email', array('label'=>false, 'div'=>false, 'class'=>'form-control'));?>
+  <?php echo $this->Form->input('email', array('label'=>false, 'div'=>false, 'class'=>'form-control', 'error' => false));?>
+  <?php echo $this->Form->label('email', __('Email'));?>
+  <?php echo $this->Form->error('email', null, array('class' => 'form-control error-tip')); ?>
 </div>
 
 <div class="form-group">
-  <label>Grupos (Pressione 'Control' para selecionar vários)</label>
+  <?php echo $this->Form->label('Group', __("Grupos (Pressione 'Control' para selecionar vários)"));?>
   <?php echo $this->Form->input('Group', array('label'=>false, 'div'=>false, 'class'=>'form-control'));?>
 </div>
 
-<div class="form-group">
-  <label>Código de alterção de password</label>
-  <?php echo $this->Form->input('passwordchangecode', array('label'=>false, 'div'=>false, 'class'=>'form-control'));?>
-</div>
+<!--<div class="form-group">
+  <?php //echo $this->Form->input('passwordchangecode', array('label'=>false, 'div'=>false, 'class'=>'form-control'));?>
+  <?php //echo $this->Form->label('passwordchangecode', __('Código de alterção de password'));?>
+</div>-->
 
-<div class="form-group">
-  <label>Código de alteração de e-mail</label>
-  <?php echo $this->Form->input('emailchangecode', array('label'=>false, 'div'=>false, 'class'=>'form-control'));?>
-</div>
-
-<div class="form-group">
-  <label>Data de expiração</label>
-  <?php echo $this->Form->input('expire_account', array('label'=>false, 'div'=>false, 'separator'=>false, 'class'=>'form-control'));?>
-</div>
+<!--<div class="form-group">
+  <?php //echo $this->Form->input('emailchangecode', array('label'=>false, 'div'=>false, 'class'=>'form-control'));?>
+  <?php //echo $this->Form->label('emailchangecode', __('Código de alteração de e-mail'));?>
+</div>-->
 
 <div class="checkbox">
-  <label><?php echo $this->Form->checkbox('disable', array('label'=>false, 'div'=>false));?> Desactivado</label>
+  <?php echo $this->Form->checkbox('disable', array('label'=>false, 'div'=>false, 'class'=>'material-icons'));?>
+  <?php echo $this->Form->label('disable', __('Desactivado'));?>
 </div>
-<?php echo $this->Form->end(array('div'=>false,'label'=>'Editar Utilizador'));?>
+<?php echo $this->Form->end(array('div'=>false,'label'=>__('Editar Utilizador')));?>

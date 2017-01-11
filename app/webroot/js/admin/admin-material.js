@@ -1,6 +1,6 @@
 //$(document).ready(function(){
   //MATERIAL INPUT LABELS
-  var inputs = $('input[type="text"],input[type="email"],input[type="password"]');
+  var inputs = $('input[type="text"],input[type="email"],input[type="password"],input[type="number"]');
   inputs.next('label').each(function() {
     $(this).addClass("material-label");
     var input = $(this).prev('input');

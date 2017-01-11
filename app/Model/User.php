@@ -26,16 +26,16 @@ function beforeValidate($options = array()){
         $loginOptions = array('login' => array(
             'alphanumeric' => array(
                 'rule' => 'alphaNumeric',
-                'message' => 'Only alphabets and numbers allowed'
+                'message' => __('Apenas são permitidos caracteres alfanumericos')
             ),
             'minlength' => array(
                 'rule' => array('minLength', ( Configure::read('Authake.useEmailAsUsername') ? '0' : '3' )),
                 /* set min length to 0 if we do not want usernames but only emails*/
-                'message' => 'Minimum length of 3 characters'
+                'message' => __('Comprimento minimo de 3 caracteres')
             ),
             'maxlength' => array(
                 'rule' => array('maxLength', '32'),
-                'message' => 'Maximum length of 32 characters'
+                'message' => __('Comprimento máximo de 32 caracteres')
             ),
         ));
         $validateOptions = $loginOptions;
@@ -43,27 +43,27 @@ function beforeValidate($options = array()){
     $otherOptions = array(
         'email' => array(
             'notEmpty' => array(
-                'rule' => 'notEmpty',
-                'message'=>__('Username can not be blank')
+                'rule' => 'notBlank',
+                'message'=>__('Preencha o campo de email')
             ),
             'unique' => array(
                 'rule' => 'isUnique',
-                'message'=>__('This e-mail has already been used'),
+                'message'=>__('O email indicado já está em uso'),
                 'on'=>'create'
             ),
             /*'emailAddress' => array('rule' => array('email', true),'message' => __('Please supply a valid email address'))*/
         ),
         'password1' => array(
             'checkEmpty' => array(
-            'rule' => array('notEmpty'),
-            'message' => __('Passwords must be equal and not empty'),
+            'rule' => array('notBlank'),
+            'message' => __('As passwords devem ser iguais e preenchidas'),
             'on' => 'create'
                 )
         ),
         'password2' => array(
             'checkInsertPass' => array(
-                'rule' => array('notEmpty'),
-                'message' => __('Passwords must be equal and not empty'),
+                'rule' => array('notBlank'),
+                'message' => __('As passwords devem ser iguais e preenchidas'),
                 'on' => 'create'
             )
         )

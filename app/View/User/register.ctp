@@ -5,4 +5,4 @@ echo $this->Form->input('email');
 echo $this->Form->input('password1', array('type'=>'password');
 echo $this->Form->input('password2', array('type'=>'password');
 ?>
-<?php echo $this->Form->end(array('div'=>false,'label'=>'Register');?>
+<?php echo $this->Form->end(array('div'=>false,'label'=>__('Register'));?>

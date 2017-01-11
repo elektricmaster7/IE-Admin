@@ -1,5 +1,5 @@
 <div class="alert alert-info">
-	<button type="button" class="close" data-dismiss="alert">×</button>
+	<button type="button" class="material-button-flat pull-right" data-dismiss="alert"><?php __("Fechar");?></button>
 	<i class="material-icons primaryColor">info_outline</i>
 	<?php echo $message ?>
 </div>

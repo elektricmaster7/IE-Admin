@@ -1,11 +1,11 @@
-<h1>Grupos</h1>
+<h1><?php echo __("Grupos"); ?></h1>
 <div class="panel panel-material">
 	<div class="panel-body">
 		<table class="table">
 			<thead>
 				<tr>
-					<th>Nome</th>
-					<th>Acções</th>
+					<th><?php echo __("Nome"); ?></th>
+					<th><?php echo __("Acções"); ?></th>
 				</tr>
 			</thead>
 			<tbody>

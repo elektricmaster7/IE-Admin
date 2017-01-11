@@ -72,12 +72,43 @@ html, body{
 
 * { outline: none; }
 
+/*CAKE ERROR CONTAINER*/
+pre.cake-error {
+  margin: 0px;
+  padding-top: 30px;
+  border-radius: 0px;
+  position: fixed;
+  width:100%;
+  height:200px;
+  left:0px;
+  bottom:0px;
+  z-index: 9998;
+}
+
+pre.cake-error::before {
+  content:"System Debug:";
+  position: absolute;
+  margin-top: -24px;
+  content: "System Debug:";
+  position: absolute;
+  margin-top: -30px;
+  width: 100%;
+  margin-left: -10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: rgba(0,0,0,0.09);
+  border-bottom: 1px solid #cccccc;
+}
+
 a {
   color: @secondaryTextColor;
 }
 
 a:hover, a:focus {
   color: @primaryTextColor;
+  text-decoration: none !important;
+  cursor: pointer;
 }
 
 a:hover > i {
@@ -129,9 +160,10 @@ h2 {
 
 //BUTTONS
 .material-button, input[type="submit"], input[type="button"] {
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 16px;
   padding-right: 16px;
-  height: 36px;
   border-radius: 2px;
   background-color: @primaryColor;
   color: #ffffff;
@@ -141,12 +173,14 @@ h2 {
   transition-delay: 0.2s;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   border:0px !important;
+  text-decoration: none;
 }
 
 .material-button-flat {
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 16px;
   padding-right: 16px;
-  height: 36px;
   border-radius: 2px;
   background-color: transparent !important;
   color: @primaryColor;
@@ -162,19 +196,21 @@ h2 {
 }
 
 .dense {
-  height: 32px !important;
+  padding-top: 3px;
+  padding-bottom: 3px;
   font-size: 13px !important;
 }
 
 .material-button:active, .dense:active, input[type="submit"]:active, input[type="button"]:active{
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
   transition-delay: 0s;
+  text-decoration: none;
 }
 
 .error-tip{
   clear: both;
-  position: relative;
-  top: -15px;
+  /*position: relative;
+  top: -15px;*/
   font-size: 12px;
   color: #F44336;
 }
@@ -192,7 +228,7 @@ h2 {
   box-shadow: none;
 }
 
-input , select[multiple] {
+input, select, select[multiple], textarea {
   border-radius: 0px;
   border-top: 0px;
   border-left: 0px;
@@ -213,7 +249,7 @@ input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 
-input[type="text"], input[type="password"], input[type="search"], input[type="email"] {
+input[type="text"], input[type="password"], input[type="search"], input[type="email"], input[type="number"] {
   height: 30px !important;
 }
 
@@ -232,6 +268,7 @@ label.material-label {
   transition:0.2s ease-in-out all;
   -moz-transition:0.2s ease-in-out all;
   -webkit-transition:0.2s ease-in-out all;
+  height: 0px;
 }
 
 .form-group::after {
@@ -322,6 +359,46 @@ table > tbody > tr:hover {
 //DATATABLES
 .dataTables_filter {
   display: none;
+}
+
+#datatables-footer {
+  border-top: 1px solid @lightDividerColor;
+  padding: 15px 0px 15px 0px;
+}
+
+#datatables-information {
+  color: @tableHeaderColor;
+}
+
+.paginate_button {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 2px;
+  background-color: transparent !important;
+  color: @primaryColor;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border:0px !important;
+}
+
+.paginate_button:hover, .paginate_button:active {
+  background-color: rgba(0, 0, 0, 0.26) !important;
+  box-shadow: none !important;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.paginate_button.disabled {
+  color: @tableHeaderColor;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
 }
 
 //PANEL

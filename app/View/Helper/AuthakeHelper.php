@@ -20,7 +20,7 @@
 */
 
 class AuthakeHelper extends AppHelper {
-  
+
     var $helpers = array('Session','Authake.Gravatar','Html');
 
     function getUserId() {
@@ -43,7 +43,7 @@ class AuthakeHelper extends AppHelper {
  	if($loginName){
 		$output = '<li class="dropdown pull-right">
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown">'.
-			$this->Gravatar->get_gravatar($this->getUserEmail(),18,'','',true).'&nbsp;'. 
+			$this->Gravatar->get_gravatar($this->getUserEmail(),18,'','',true).'&nbsp;'.
 			$loginName.'<b class="caret"></b></a>
 			<ul class="dropdown-menu">
 				<li><a href="'.$this->Html->url( array('plugin'=>'authake','controller'=>'user','action'=>'index')).'">Profile Settings</a></li>
@@ -54,7 +54,7 @@ class AuthakeHelper extends AppHelper {
 		}
 		else
 		{
-		$output = '<li class="pull-right">'.$this->Html->link(__('Sign Up'), array('plugin'=>'authake','controller'=> 'user', 'action'=>'register')).'</li>';
+		$output = '<li class="pull-right">'.$this->Html->link(__('Registar'), array('plugin'=>'authake','controller'=> 'user', 'action'=>'register')).'</li>';
 		$output .= '<li class="pull-right">'.$this->Html->link(__('Login'), array('plugin'=>'authake','controller'=> 'user', 'action'=>'login')).'</li>';
 		}
         return $output;
@@ -75,13 +75,13 @@ class AuthakeHelper extends AppHelper {
 
     function getGroupNames() {
         $gn = $this->Session->read('Authake.group_names');
-        return (is_array($gn) ? $gn : array(__('Guest')));
+        return (is_array($gn) ? $gn : array(__('Convidado')));
     }
 
     function isMemberOf($gid) {
         return in_array($gid, $this->getGroupIds());
     }
-   
+
 }
-    
+
 ?>
