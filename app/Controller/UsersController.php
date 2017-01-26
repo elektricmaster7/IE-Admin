@@ -3,20 +3,19 @@ App::uses('AppController', 'Controller');
 class UsersController extends AppController {
 	var $uses = array('User', 'Rule');
 	var $components = array('Filter','Session');// var $layout = 'authake';
-	var $paginate = array('limit' => 10, 'order' => array('User.login' => 'asc'));//var $scaffold;
 
-	function admin_index($tableonly = false) {
+	function admin_index() {
 		$this->User->recursive = 1;
 		$filter = $this->Filter->process($this);
-		$this->set('users', $this->paginate(null, $filter));
-		$this->set('tableonly', $tableonly);
+		$this->set('users', $this->User->find('all', array(
+			'order' => array('User.id ASC')
+		)));
 	}
 
 	function admin_view($id = null, $viewactions = null) {
 		$this->User->recursive = 1;// to select user, groups and rules
 
-		if (!$id)
-		{
+		if (!$id){
 			$this->Session->setFlash(__('Utilizador inválido!'));
 			$this->redirect(array('action'=>'index'));
 		}
@@ -33,26 +32,25 @@ class UsersController extends AppController {
 
 	function admin_add() {
 
-		if (!empty($this->request->data))
-		{// only an admin can make an admin
+		if (!empty($this->request->data)){// only an admin can make an admin
 
-			if (in_array(1, $this->request->data['Group']['Group']) and !in_array(1, $this->Authake->getGroupIds()))
-			{
+			if (in_array(1, $this->request->data['Group']['Group']) and !in_array(1, $this->Authake->getGroupIds())){
 				$this->Session->setFlash(__('Não pode adicionar um utilizador ao grupo de administradores'), 'warning');
 				$this->redirect(array('action'=>'index'));
+			}
+
+			if($this->Authake->isMemberOf(2)){
+				$this->request->data['Group']['Group'][0] = 3; //MAKE ALL USERS ADDED BY GESTOR NORMAL USERS
 			}
 
 			$p = $this->request->data['User']['password'];
 			$this->request->data['User']['password'] = $this->__makePassword($p, $p);
 			$this->User->create();
 
-			if ($this->User->save($this->request->data))
-			{
+			if ($this->User->save($this->request->data)){
 				$this->Session->setFlash(__('O utilizador foi adicionado.'), 'success');
 				$this->redirect(array('action'=>'index'));
-			}
-			else
-			{
+			} else {
 				$this->Session->setFlash(__('Erro ao adicionar utilizador! Tente novamente.'), 'error');
 			}
 		}
@@ -64,8 +62,7 @@ class UsersController extends AppController {
 
 	function admin_edit($id = null) {
 
-		if (!$id && empty($this->request->data))
-		{
+		if (!$id && empty($this->request->data)){
 			$this->Session->setFlash(__('Utilizador inválido!'));
 			$this->redirect(array('action'=>'index'));
 		}
@@ -114,10 +111,15 @@ class UsersController extends AppController {
 				unset($this->request->data['User']['password']);
 			}
 
-
-			if (empty($this->request->data['Group']))
+			//DONT SET EMPTY GROUPS
+			/*if (empty($this->request->data['Group']))
 			{
 				$this->request->data['Group']['Group'] = array();
+			}*/
+			if(($this->Authake->isMemberOf(2) || $this->Authake->isMemberOf(3)) && $id != 2){
+				$this->request->data['Group']['Group'][0] = 3; //MAKE ALL USERS ADDED BY GESTOR NORMAL USERS
+			}else if($this->Authake->isMemberOf(2) && $id == 2){
+				$this->request->data['Group']['Group'][0] = 2; //SET ALWAYS GESTOR
 			}
 
 			// delete user-group relation if selection empty

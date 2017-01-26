@@ -12,10 +12,18 @@
 				<?php foreach ($groups as $group){ ?>
 					<tr>
 						<td><?php echo $group['Group']['name'];?></td>
-						<td><!--EDIT DELETE--></td>
+						<td><!--EDIT DELETE-->
+							<a href="/admin/groups/edit/<?php echo $group['Group']['id']; ?>"><i class="material-icons md-18">edit</i></a>
+							<a href="/admin/groups/delete/<?php echo $group['Group']['id']; ?>"><i class="material-icons md-18">delete</i></a>
+						</td>
 					</tr>
 				<?php } ?>
 			</tbody>
 		</table>
 	</div>
 </div>
+<!--BUTTON BAR-->
+<div class="button-bar">
+	<a href="/admin/groups/add" class="material-tooltip" data-toggle="tooltip" data-placement="auto top" title="<?php echo __('Adicionar'); ?>"><i class="material-icons md-24 round-button">add</i></a>
+</div>
+<?php $this->element('admin-datatables'); ?>

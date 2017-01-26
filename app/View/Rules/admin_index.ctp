@@ -20,10 +20,18 @@
 		        <td><?php echo $rule['Rule']['permission'];?></td>
 		        <td><?php echo $rule['Rule']['action'];?></td>
 						<td><?php echo $rule['Rule']['order']; ?></td>
-		        <td><!--EDIT DELETE--></td>
+						<td><!--EDIT DELETE-->
+							<a href="/admin/rules/edit/<?php echo $rule['Rule']['id']; ?>"><i class="material-icons md-18">edit</i></a>
+							<a href="/admin/rules/delete/<?php echo $rule['Rule']['id']; ?>"><i class="material-icons md-18">delete</i></a>
+						</td>
 					</tr>
 		    <?php } ?>
 		  </tbody>
 		</table>
 	</div>
 </div>
+<!--BUTTON BAR-->
+<div class="button-bar">
+	<a href="/admin/rules/add" class="material-tooltip" data-toggle="tooltip" data-placement="auto top" title="<?php echo __('Adicionar'); ?>"><i class="material-icons md-24 round-button">add</i></a>
+</div>
+<?php $this->element('admin-datatables'); ?>

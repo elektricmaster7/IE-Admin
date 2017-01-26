@@ -203,6 +203,7 @@ class UserController extends AppController {
     * Login functionality
     */
     function login($Authake = null){
+        $this->layout = 'login';
         if(!isset($this->Authake))
         {
             $this->Authake = $Authake;

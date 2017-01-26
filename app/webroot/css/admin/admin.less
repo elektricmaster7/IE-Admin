@@ -4,6 +4,8 @@
 
 //IMPORT BOOTSTRAP FILES
 @import "../bootstrap/bootstrap.less";
+//IMPORT TABLES HIDDEN FIELDS
+@import "admin-tables.less";
 
 //FONTS
 //@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
@@ -215,10 +217,66 @@ h2 {
   color: #F44336;
 }
 
+.topbar-button {
+  color: #FFFFFF;
+  padding-top: 9px;
+  margin-top: 4px;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
+.topbar-button:hover {
+  color: #FFFFFF;
+  background-color: @darkPrimaryColor;
+}
+
+//BUTTON BAR
+.button-bar {
+  height: 54px;
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+}
+
+.button-bar a {
+  display: block;
+}
+
+.button-bar i {
+  margin: 0px !important;
+}
+
+.round-button {
+  background: @primaryColor;
+  border-radius: 24px;
+  color: #FFFFFF;
+  width: 46px;
+  height: 46px;
+  text-align: center;
+  padding-top: 11px;
+  box-shadow: 1px 4px 6px #CCCCCC;
+}
+
+.round-button:hover {
+  background: @darkPrimaryColor;
+  color: #FFFFFF;
+}
+
+.tooltip-inner {
+  background: #747474 !important;
+  padding-top: 8px;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+  text-transform: uppercase;
+  height: 32px !important;
+}
+
+.tooltip-arrow {display: none;}
+
 //INPUT
-/*.form-group {
-   clear: both;
-}*/
+.form-group {
+   margin-bottom: 25px !important;
+}
 
 .form-control:focus {
   outline: none;
@@ -426,6 +484,29 @@ table > tbody > tr:hover {
 }
 
 /*************************************************************/
+// LOGIN
+/*************************************************************/
+.login-container {
+  background: #EEEEEE;
+  width: 100%;
+  height: 100%;
+  position:absolute;
+}
+
+.login-content {
+  width: 330px;
+  height: 330px;
+  margin: 0px auto;
+  background: #FFFFFF;
+  padding: 30px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px #BBBBBB;
+  position: relative;
+  top: 50%;
+  margin-top: -200px;
+}
+
+/*************************************************************/
 // HEADER
 /*************************************************************/
 
@@ -460,6 +541,19 @@ table > tbody > tr:hover {
 
 .icon-bar {
   background-color: #FFFFFF;
+}
+
+.navbar-top-content {
+  display: inline-block;
+}
+
+.navbar-username {
+  color: #FFFFFF;
+  display:inline-block;
+  margin-top: 14px;
+  margin-right: 15px;
+  font-size: 16px;
+  text-transform: uppercase;
 }
 
 /*SIDEBAR*/

@@ -11,7 +11,6 @@
 
   //SETUP FOCUS TRIGGER
   inputs.on('focus change keyup', function(){
-    console.log("focus on the bish");
     $(this).next('label').addClass("material-label-focus");
   }).on('focusout', function(){
     if($(this).val() == ""){
@@ -24,4 +23,7 @@
   });
 
   $('input').attr('autocomplete', 'off');
+
+  //TOOLTIPS
+  $('.material-tooltip').tooltip();
 //});

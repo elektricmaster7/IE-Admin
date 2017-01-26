@@ -53,6 +53,13 @@ function beforeValidate($options = array()){
             ),
             /*'emailAddress' => array('rule' => array('email', true),'message' => __('Please supply a valid email address'))*/
         ),
+				'password' => array(
+					'notEmpty' => array(
+						'rule' => array('notBlank'),
+						'message' => __('A password deve ser preenchida'),
+						'on' => 'create'
+					)
+				),
         'password1' => array(
             'checkEmpty' => array(
             'rule' => array('notBlank'),

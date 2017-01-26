@@ -28,7 +28,7 @@
     <!--NAVIGATION-->
     <nav class="navbar navbar-admin navbar-fixed-top" role="navigation" style="margin-bottom: 0;">
       <!--LEFT NAVBAR-->
-      <div class="navbar-header">
+      <div class="navbar-header navbar-top-content pull-right">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
@@ -36,8 +36,14 @@
           <span class="icon-bar"></span>
         </button>
       </div>
+      <!--NAVBAR BUTTONS-->
+      <div class="navbar-top-content pull-right">
+            <a href="/logout" class="pull-right"><i class="material-icons md-24 topbar-button">exit_to_app</i></a>
+            <div class="navbar-username"><?php echo $this->Authake->getLogin(); ?></div>
+      </div>
 
-      <!--RIGHT NAVBAR-->
+      <!--LOGOS-->
+
     </nav>
 
     <!-- CONTENT -->
@@ -47,9 +53,11 @@
         <div class="sidebar-nav collapse navbar-collapse">
           <ul class="nav" id="side-menu">
             <li><a href="/admin"><i class="material-icons md-18">home</i> <?php echo __('Dashboard'); ?></a></li>
-            <li><a href="/admin/users"><i class="material-icons md-18">person</i> <?php echo __('Utilizadores'); ?></a></li>
-            <li><a href="/admin/groups"><i class="material-icons md-18">group</i> <?php echo __('Grupos'); ?></a></li>
-            <li><a href="/admin/rules"><i class="material-icons md-18">dehaze</i> <?php echo __('Regras'); ?></a></li>
+              <?php if($this->Authake->isMemberOf(1) || $this->Authake->isMemberOf(2)){ ?><li><a href="/admin/users"><i class="material-icons md-18">person</i> <?php echo __('Utilizadores'); ?></a></li><?php } ?>
+              <?php if($this->Authake->isMemberOf(1)){ ?>
+                <li><a href="/admin/groups"><i class="material-icons md-18">group</i> <?php echo __('Grupos'); ?></a></li>
+                <li><a href="/admin/rules"><i class="material-icons md-18">dehaze</i> <?php echo __('Regras'); ?></a></li>
+              <?php } ?>
           </ul>
         </div>
       </div>

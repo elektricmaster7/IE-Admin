@@ -23,7 +23,7 @@
 
 <div class="form-group">
   <?php echo $this->Form->label('permission', __('Permissões'));?>
-  <?php echo $this->Form->select('permission', array('1' => 'Permitir', '0' => 'Negar'), array('label'=>false, 'div'=>false, 'class'=>'form-control', 'empty'=>false));?>
+  <?php echo $this->Form->select('permission', array('1' => __('Permitir'), '0' => __('Negar')), array('label'=>false, 'div'=>false, 'class'=>'form-control', 'empty'=>false));?>
 </div>
 
 <div class="form-group">
