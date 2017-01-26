@@ -24,8 +24,7 @@ class UsersController extends AppController {
 		$groups = $this->User->getGroups($id);
 		$this->set('rules', $this->Rule->getRules($groups));
 
-		if ($viewactions === 'actions')
-		{
+		if ($viewactions === 'actions'){
 			$this->set('actions', $this->Authake->getActionsPermissions($groups));
 		}
 	}

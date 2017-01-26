@@ -4,16 +4,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"PO-Revision-Date: 2017-01-17 22:17+0000\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2017-01-26 19:36+0000\n"
+"Last-Translator: \n"
 "Language-Team: EMAIL@ADDRESS\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"POT-Creation-Date: \n"
 "X-Generator: Poedit 1.8.11\n"
-"Last-Translator: \n"
-"Language: en\n"
 
 #: Controller/AppController.php:23
 msgid "As passwords não são iguais!"
@@ -134,31 +134,31 @@ msgstr "Your password has been changed! You can now login!"
 msgid "Erro ao guardar a sua password!"
 msgstr "Error saving your password!"
 
-#: Controller/UserController.php:215;220
+#: Controller/UserController.php:216;221
 msgid "Já tem sessão iniciada!"
 msgstr "You are already logged in!"
 
-#: Controller/UserController.php:243;248;304;309
+#: Controller/UserController.php:244;249;305;310
 msgid "Nome de utilizador ou password inválidos!"
 msgstr "Invalid username or password!"
 
-#: Controller/UserController.php:258;263
+#: Controller/UserController.php:259;264
 msgid "A sua conta encontra-se desactivada!"
 msgstr "Your account is deactivated!"
 
-#: Controller/UserController.php:274;279
+#: Controller/UserController.php:275;280
 msgid "A sua conta expirou!"
 msgstr "Your account has expired!"
 
-#: Controller/UserController.php:289;294
+#: Controller/UserController.php:290;295
 msgid "O seu registo ainda não foi confirmado!"
 msgstr "Your registration is not yet confirmed!"
 
-#: Controller/UserController.php:324
+#: Controller/UserController.php:325
 msgid "Tem sessão inciada como "
 msgstr "You are logged in as "
 
-#: Controller/UserController.php:372
+#: Controller/UserController.php:373
 msgid ""
 "Efectuou um pedido de mudança de password. Por favor verifique o seu e-mail "
 "e use o código que enviamos"
@@ -166,11 +166,11 @@ msgstr ""
 "You requested a password change. Please verify your email and use the given "
 "code"
 
-#: Controller/UserController.php:387
+#: Controller/UserController.php:388
 msgid "Pedido de alteração de password em %s "
 msgstr "Password change request on %s "
 
-#: Controller/UserController.php:397
+#: Controller/UserController.php:398
 msgid ""
 "Se a informção estiver correcta deverá receber um e-mail com as instruções "
 "para alterar a password..."
@@ -178,18 +178,18 @@ msgstr ""
 "If the provided information is correct you should soon receive an email with "
 "instructions to change your password..."
 
-#: Controller/UserController.php:401
+#: Controller/UserController.php:402
 msgid ""
 "Erro ao enviar e-mail de alteração de password. Por favor contacte o "
 "administrador em %s"
 msgstr ""
 "Error sending password change email. Please contact the administrator at %s"
 
-#: Controller/UserController.php:406
+#: Controller/UserController.php:407
 msgid "Error ao alterar a password. Por favor contacte o administrador em %s"
 msgstr "Error changing the password. Please contact the administrator at %s"
 
-#: Controller/UserController.php:411
+#: Controller/UserController.php:412
 msgid ""
 "Se a informação fornecida estiver correcta, deverá receber um email com as "
 "instruções para alterar a sua password..."
@@ -197,55 +197,55 @@ msgstr ""
 "If the information is correct, you should soon receive an email with "
 "instructions to change your password..."
 
-#: Controller/UserController.php:423
+#: Controller/UserController.php:424
 msgid "A sua sessão foi terminada!"
 msgstr "You are logged out!"
 
-#: Controller/UsersController.php:20;69
+#: Controller/UsersController.php:19;65
 msgid "Utilizador inválido!"
 msgstr "Invalid user!"
 
-#: Controller/UsersController.php:41
+#: Controller/UsersController.php:37
 msgid "Não pode adicionar um utilizador ao grupo de administradores"
 msgstr "You cannot add a user on to the administrators group"
 
-#: Controller/UsersController.php:51
+#: Controller/UsersController.php:50
 msgid "O utilizador foi adicionado."
 msgstr "User created."
 
-#: Controller/UsersController.php:56
+#: Controller/UsersController.php:53
 msgid "Erro ao adicionar utilizador! Tente novamente."
 msgstr "Error adding user! Please try again."
 
-#: Controller/UsersController.php:78
+#: Controller/UsersController.php:74
 msgid "Não pode editar um utilizador do grupo de administradores"
 msgstr "You cannot edit an admin user"
 
-#: Controller/UsersController.php:88
+#: Controller/UsersController.php:84
 msgid "Apenas o admin pode editar o seu perfil!"
 msgstr "Only an admin can change his profile!"
 
-#: Controller/UsersController.php:102
+#: Controller/UsersController.php:98
 msgid "Não pode editar um utilizador no grupo de administradores"
 msgstr "You cannot edit an admin user"
 
-#: Controller/UsersController.php:129
+#: Controller/UsersController.php:130
 msgid "O utilizador foi editado."
 msgstr "The user was edited."
 
-#: Controller/UsersController.php:134
+#: Controller/UsersController.php:135
 msgid "Erro ao editar utilizador! Tente novamente."
 msgstr "The user cannot be edited! Please try again!"
 
-#: Controller/UsersController.php:151
+#: Controller/UsersController.php:152
 msgid "ID de utilizador inválido!"
 msgstr "Invalid user ID!"
 
-#: Controller/UsersController.php:160
+#: Controller/UsersController.php:161
 msgid "Não pode eliminar um utilizador no grupo de administradores"
 msgstr "You cannot edit an admin user"
 
-#: Controller/UsersController.php:167
+#: Controller/UsersController.php:168
 msgid "Utilizador eliminado"
 msgstr "User deleted."
 
@@ -281,7 +281,11 @@ msgstr "Email cannot be blank"
 msgid "O email indicado já está em uso"
 msgstr "The selected email is already in use"
 
-#: Model/User.php:59;66
+#: Model/User.php:59
+msgid "A password deve ser preenchida"
+msgstr "The password must be filled in"
+
+#: Model/User.php:66;73
 msgid "As passwords devem ser iguais e preenchidas"
 msgstr "The passwords must not be blank and should match"
 
@@ -377,7 +381,7 @@ msgstr "Add Group"
 msgid "Editar Grupo"
 msgstr "Edit Group"
 
-#: View/Groups/admin_index.ctp:1 View/Layouts/admin.ctp:51
+#: View/Groups/admin_index.ctp:1 View/Layouts/admin.ctp:58
 msgid "Grupos"
 msgstr "Groups"
 
@@ -385,6 +389,11 @@ msgstr "Groups"
 #: View/Users/admin_index.ctp:19
 msgid "Acções"
 msgstr "Actions"
+
+#: View/Groups/admin_index.ctp:27 View/Rules/admin_index.ctp:35
+#: View/Users/admin_index.ctp:61
+msgid "Adicionar"
+msgstr "Add"
 
 #: View/Helper/AuthakeHelper.php:51
 msgid "Logout"
@@ -402,15 +411,15 @@ msgstr "Login"
 msgid "Convidado"
 msgstr "Guest"
 
-#: View/Layouts/admin.ctp:49
+#: View/Layouts/admin.ctp:55
 msgid "Dashboard"
 msgstr "Dashboard"
 
-#: View/Layouts/admin.ctp:50
+#: View/Layouts/admin.ctp:56 View/Users/admin_index.ctp:1
 msgid "Utilizadores"
 msgstr "Users"
 
-#: View/Layouts/admin.ctp:52 View/Rules/admin_index.ctp:1
+#: View/Layouts/admin.ctp:59 View/Rules/admin_index.ctp:1
 msgid "Regras"
 msgstr "Rules"
 
@@ -424,7 +433,7 @@ msgid "Descrição"
 msgstr "Description"
 
 #: View/Rules/admin_add.ctp:9 View/Rules/admin_edit.ctp:10
-#: View/Rules/admin_index.ctp:8 View/Users/admin_add.ctp:22
+#: View/Rules/admin_index.ctp:8 View/Users/admin_add.ctp:23
 #: View/Users/admin_index.ctp:16
 msgid "Grupo"
 msgstr "Group"
@@ -463,6 +472,14 @@ msgstr "Add Rule"
 msgid "EDITAR REGRA"
 msgstr "EDIT RULE"
 
+#: View/Rules/admin_edit.ctp:26
+msgid "Permitir"
+msgstr "Allow"
+
+#: View/Rules/admin_edit.ctp:26
+msgid "Negar"
+msgstr "Deny"
+
 #: View/Rules/admin_edit.ctp:39
 msgid "Editar Regra"
 msgstr "Edit Rule"
@@ -474,6 +491,15 @@ msgstr "Path"
 #: View/User/denied.ctp:1
 msgid "Não tem acesso a esta página."
 msgstr "Access denied! "
+
+#: View/User/login.ctp:6 View/Users/admin_add.ctp:6 View/Users/admin_edit.ctp:7
+msgid "Utilizador"
+msgstr "User"
+
+#: View/User/login.ctp:10 View/Users/admin_add.ctp:12
+#: View/Users/admin_edit.ctp:13
+msgid "Password"
+msgstr "Password"
 
 #: View/User/lost_password.ctp:3
 msgid "Pedido de reposição"
@@ -499,24 +525,16 @@ msgstr "Register"
 msgid "ADICIONAR UTILIZADOR"
 msgstr "ADD USER"
 
-#: View/Users/admin_add.ctp:6 View/Users/admin_edit.ctp:7
-msgid "Utilizador"
-msgstr "User"
-
-#: View/Users/admin_add.ctp:12 View/Users/admin_edit.ctp:13
-msgid "Password"
-msgstr "Password"
-
-#: View/Users/admin_add.ctp:17 View/Users/admin_edit.ctp:18
+#: View/Users/admin_add.ctp:18 View/Users/admin_edit.ctp:18
 #: View/Users/admin_index.ctp:15
 msgid "Email"
 msgstr "Email"
 
-#: View/Users/admin_add.ctp:28 View/Users/admin_edit.ctp:39
+#: View/Users/admin_add.ctp:30 View/Users/admin_edit.ctp:39
 msgid "Desactivado"
 msgstr "Deactivated"
 
-#: View/Users/admin_add.ctp:30
+#: View/Users/admin_add.ctp:33
 msgid "Adicionar Utilizador"
 msgstr "Add User"
 
@@ -528,7 +546,7 @@ msgstr "EDIT USER"
 msgid "Grupos (Pressione 'Control' para selecionar vários)"
 msgstr "Groups (Press 'Control' for multiple selection)"
 
-#: View/Users/admin_edit.ctp:41
+#: View/Users/admin_edit.ctp:42
 msgid "Editar Utilizador"
 msgstr "Edit User"
 
@@ -540,10 +558,8 @@ msgstr "Search"
 msgid "ID"
 msgstr "ID"
 
-#: View/Users/admin_index.ctp:17
-msgid "Criado em"
-msgstr "Created"
+#~ msgid "Criado em"
+#~ msgstr "Created"
 
-#: View/Users/admin_index.ctp:18
-msgid "Estado"
-msgstr "State"
+#~ msgid "Estado"
+#~ msgstr "State"
