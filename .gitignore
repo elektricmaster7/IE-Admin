@@ -16,6 +16,7 @@
 /app/Config/database.php
 /app/Config/email.php
 /app/Config/routes.php
+/app/webroot/favicon.ico
 
 # IDE and editor specific files #
 #################################
