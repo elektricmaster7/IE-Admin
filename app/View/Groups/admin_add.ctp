@@ -1,13 +1,19 @@
 <h1><?php echo __("ADICIONAR GRUPO"); ?></h1>
-<?php echo $this->Form->create('Group');?>
-<div class="form-group">
-  <?php echo $this->Form->input('name', array('label'=>false, 'div'=>false, 'class'=>'form-control'));?>
-  <?php echo $this->Form->label('name', __('Nome'));?>
-</div>
+<div class="material-container">
+  <?php echo $this->Form->create('Group');?>
+  <div class="form-group">
+    <?php echo $this->Form->input('name', array('label'=>false, 'div'=>false, 'class'=>'form-control'));?>
+    <?php echo $this->Form->label('name', __('Nome'));?>
+  </div>
 
-<div class="form-group">
-  <?php echo $this->Form->label('User', __("Utilizadores no grupo (Pressione 'Control' para selecionar vários)"));?>
-  <?php echo $this->Form->input('User', array('label'=>false, 'div'=>false, 'class'=>'form-control'));?>
-</div>
+  <div class="form-group">
+    <?php echo $this->Form->label('User', __("Utilizadores no grupo (Pressione 'Control' para selecionar vários)"));?>
+    <?php echo $this->Form->input('User', array('label'=>false, 'div'=>false, 'class'=>'form-control'));?>
+  </div>
 
-<?php echo $this->Form->end(array('div'=>false,'label'=>__('Adicionar Grupo')));?>
+  <div class="row material-container-footer">
+    <div class="col-xs-12 col-sm-6 col-md-4"><?php echo $this->Form->submit(__('Adicionar Grupo'),array('div'=>false, 'class'=>'material-button')); ?></div>
+    <div class="col-xs-12 col-sm-6 col-md-4"><a href="/admin/groups" class="material-button inverted-button">VOLTAR</a></div>
+  </div>
+  <?php echo $this->Form->end();?>
+</div>
