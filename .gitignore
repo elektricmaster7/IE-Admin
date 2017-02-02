@@ -20,8 +20,6 @@
 /app/Config/email.php
 /app/Config/routes.php
 /app/webroot/favicon.ico
-update.json
-update.js
 
 # IDE and editor specific files #
 #################################
