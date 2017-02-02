@@ -39,7 +39,7 @@
 
   <div class="row material-container-footer">
     <div class="col-xs-12 col-sm-6 col-md-4"><?php echo $this->Form->submit(__('Editar Regra'),array('div'=>false, 'class'=>'material-button')); ?></div>
-    <div class="col-xs-12 col-sm-6 col-md-4"><a href="/admin/users" class="material-button inverted-button">VOLTAR</a></div>
+    <div class="col-xs-12 col-sm-6 col-md-4"><a href="/admin/rules" class="material-button inverted-button">VOLTAR</a></div>
   </div>
   <?php echo $this->Form->end();?>
 </div>
