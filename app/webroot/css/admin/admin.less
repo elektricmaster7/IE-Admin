@@ -5,7 +5,7 @@
 //IMPORT BOOTSTRAP FILES
 @import "../bootstrap/bootstrap.less";
 //IMPORT TABLES HIDDEN FIELDS
-@import "admin-tables.less";
+//@import "admin-tables.less";
 
 //FONTS
 //@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
@@ -137,6 +137,26 @@ h2 {
 }
 
 dd { margin-bottom: 15px; }
+
+td.child ul {
+  list-style-type: none !important;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+td.child li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.dtr-title {
+  display: inline-block;
+  width: 25%;
+}
+
+.dtr-data {
+  display: inline-block;
+  width: 25%;
+}
 
 //COLOR HELPER CLASSES
 .primaryColor { color: @primaryColor; }
@@ -413,12 +433,36 @@ input[type="checkbox"]:checked + label:after {
 table {
 }
 
+th, td {
+  vertical-align: middle;
+}
+
+td:last-child {
+  white-space:nowrap;
+}
+
 table > thead > tr > th {
   border:0px !important;
   color: @tableHeaderColor;
   font-size:13px;
   font-weight: 700;
   padding: 18px 24px 18px 24px !important;
+}
+
+table.collapsed > tbody > tr > td[tabindex="0"]:first-child {
+  padding-left: 40px !important;
+}
+
+table.collapsed > tbody > tr > td[tabindex="0"]:first-child::before {
+  font-family: 'Material Icons';
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: url(./arrow_down.png);
+  position: absolute;
+  margin-left: -30px;
+  margin-top: 2px;
+  opacity: 0.4;
 }
 
 table > thead > tr > th:hover {
@@ -488,7 +532,6 @@ table > tbody > tr:hover {
   border-radius: 2px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
-  overflow-x: auto;
 }
 
 .panel-material > .panel-heading {

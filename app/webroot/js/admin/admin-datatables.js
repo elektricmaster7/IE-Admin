@@ -23,6 +23,8 @@ $(document).ready(function(){
     "paging":   true,
     "ordering": false,
     "info":     true,
+    "responsive": true,
+    "autoWidth": false,
     //"filter":   false,
     "initComplete" : onInitComplete,
     "language": {
