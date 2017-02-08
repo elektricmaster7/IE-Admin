@@ -69,6 +69,7 @@ task('deploy:update', function(){
     'app/Model/User.php',
     'app/View/Elements/Flash',
     'app/View/Elements/admin-datatables.ctp',
+    'app/View/Elements/admin-menu.ctp',
     'app/View/Elements/error.ctp',
     'app/View/Elements/gotoadminpage.ctp',
     'app/View/Elements/gotohomepage.ctp',

@@ -47,8 +47,8 @@
 							?>
 						</td>-->
 						<td><!--EDIT DELETE-->
-							<a href="/admin/users/edit/<?php echo $user['User']['id']; ?>"><i class="material-icons md-18">edit</i></a>
-							<?php if($user['User']['id'] != 1 && $user['User']['id'] != 2){ ?><a href="/admin/users/delete/<?php echo $user['User']['id']; ?>"><i class="material-icons md-18">delete</i></a><?php } ?>
+							<a href="/admin/users/edit/<?php echo $user['User']['id']; ?>"><i class="material-icons md-24">edit</i></a>
+							<?php if($user['User']['id'] != 1 && $user['User']['id'] != 2){ ?><a href="/admin/users/delete/<?php echo $user['User']['id']; ?>"><i class="material-icons md-24">delete</i></a><?php } ?>
 						</td>
 					</tr>
 				<?php } ?>
