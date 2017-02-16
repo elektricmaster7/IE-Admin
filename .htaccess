@@ -1,5 +1,7 @@
 <IfModule mod_rewrite.c>
-	RewriteEngine on
+	RewriteEngine On
+	RewriteCond %{SERVER_PORT} 80
+	RewriteRule ^(.*)$ https://admin.inspirelectronics.com/$1 [R,L]
 	# Uncomment if you have a .well-known directory in the root folder, e.g. for the Let's Encrypt challenge
 	# https://tools.ietf.org/html/rfc5785
 	#RewriteRule ^(\.well-known/.*)$ $1 [L]

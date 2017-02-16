@@ -7,7 +7,7 @@ set('default_stage', 'production');
 server('admin_server', '5.189.170.154', '22') //SERVER | IP | PORT
   ->user('admin') //USERNAME
   ->password('Telefone7#')
-  ->set('deploy_path', '/home/admin/web/admin.inspirelectronics.com/public_html/test')
+  ->set('deploy_path', '/home/admin/web/camperakarting.inspirelectronics.com/public_html')
   ->set('linux_user', 'admin')
   ->set('linux_group', 'admin')
   ->stage('production');
