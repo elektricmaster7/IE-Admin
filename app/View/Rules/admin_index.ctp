@@ -21,8 +21,12 @@
 		        <td><?php echo $rule['Rule']['action'];?></td>
 						<td><?php echo $rule['Rule']['order']; ?></td>
 						<td><!--EDIT DELETE-->
-							<a href="/admin/rules/edit/<?php echo $rule['Rule']['id']; ?>"><i class="material-icons md-18">edit</i></a>
-							<a href="/admin/rules/delete/<?php echo $rule['Rule']['id']; ?>"><i class="material-icons md-18">delete</i></a>
+							<?php echo $this->Material->editButton('rules', $rule['Rule']['id']); ?>
+							<?php echo $this->Material->deleteButton('rules', $rule['Rule']['id'], array(
+								'confirm' => true,
+								'title' => __('Eliminar regra'),
+								'message' => __('Tem a certeza que pretende eliminar a regra?')
+							)); ?>
 						</td>
 					</tr>
 		    <?php } ?>

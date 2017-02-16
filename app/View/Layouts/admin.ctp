@@ -41,9 +41,9 @@
         <a href="/logout" class="pull-right"><i class="material-icons md-24 topbar-button">exit_to_app</i></a>
         <a class="pull-right" data-toggle="dropdown"><i class="material-icons md-24 topbar-button">message</i></a>
         <ul class="dropdown-menu material-dropdown">
-          <li><a href="#"><i class="material-icons md-24 pull-left" style="margin-right:15px;">message</i>João Redondo has created a new model right now<br><div class="info">2017-02-01 10:54</div></a></li>
-          <li><a href="#">Ashley Williams has changed a burger<br><div class="info">2017-02-01 15:54</div></a></li>
-          <li><a href="#">Peter Griffin has deleted a system<br><div class="info">2017-02-01 17:54</div></a></li>
+          <li><a href="#"><i class="material-icons md-24 pull-left note-icon">insert_comment</i>João Redondo has created a new model right now<br><div class="info">2017-02-01 10:54</div></a></li>
+          <li><a href="#"><i class="material-icons md-24 pull-left note-icon">insert_comment</i>Ashley Williams has changed a burger<br><div class="info">2017-02-01 15:54</div></a></li>
+          <li><a href="#"><i class="material-icons md-24 pull-left note-icon">insert_comment</i>Peter Griffin has deleted a system<br><div class="info">2017-02-01 17:54</div></a></li>
         </ul>
         <div class="navbar-username"><?php echo $this->Authake->getLogin(); ?></div>
       </div>

@@ -278,7 +278,17 @@ td.child li {
   border: 0px;
   border-radius: 2px;
   box-shadow: 0px 2px 4px rgba(0,0,0,0.175);
-  max-width: 365px;
+  max-width: 375px;
+}
+
+@media (max-width: 768px) {
+  .material-dropdown {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
 }
 
 .material-dropdown > li {
@@ -307,6 +317,12 @@ td.child li {
   color: @primaryColor;
   font-size: 12px;
 
+}
+
+//NOTIFICATIONS
+.note-icon{
+  margin-right:20px;
+  color: @secondaryTextColor;
 }
 
 //BUTTON BAR
@@ -524,13 +540,20 @@ table > tbody > tr:hover {
 }
 
 //MODALS
+.modal {
+  padding: 0px !important;
+}
+
 .modal-dialog {
   margin: 100px auto;
 }
+
 .modal-content {
   border: 0px;
   border-radius: 2px !important;
   color: @secondaryTextColor;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .modal-header {

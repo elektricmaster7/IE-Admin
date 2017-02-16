@@ -13,8 +13,12 @@
 					<tr>
 						<td><?php echo $group['Group']['name'];?></td>
 						<td><!--EDIT DELETE-->
-							<a href="/admin/groups/edit/<?php echo $group['Group']['id']; ?>"><i class="material-icons md-18">edit</i></a>
-							<a href="/admin/groups/delete/<?php echo $group['Group']['id']; ?>"><i class="material-icons md-18">delete</i></a>
+							<?php echo $this->Material->editButton('groups', $group['Group']['id']); ?>
+							<?php echo $this->Material->deleteButton('groups', $group['Group']['id'], array(
+								'confirm' => true,
+								'title' => __('Eliminar grupo'),
+								'message' => __('Tem a certeza que pretende eliminar o grupo?')
+							)); ?>
 						</td>
 					</tr>
 				<?php } ?>

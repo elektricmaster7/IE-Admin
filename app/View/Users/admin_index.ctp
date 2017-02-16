@@ -47,8 +47,14 @@
 							?>
 						</td>-->
 						<td><!--EDIT DELETE-->
-							<a href="/admin/users/edit/<?php echo $user['User']['id']; ?>"><i class="material-icons md-24">edit</i></a>
-							<?php if($user['User']['id'] != 1 && $user['User']['id'] != 2){ ?><a href="#" data-href="/admin/users/delete/<?php echo $user['User']['id']; ?>" data-toggle="modal" data-target="#confirmModal" data-title="Eliminar utilizador" data-message="Tem a certeza que pretende eliminar o utilizador selecionado?"><i class="material-icons md-24">delete</i></a><?php } ?>
+							<?php echo $this->Material->editButton('users', $user['User']['id']); ?>
+							<?php if($user['User']['id'] != 1 && $user['User']['id'] != 2){ ?>
+								<?php echo $this->Material->deleteButton('users', $user['User']['id'], array(
+									'confirm' => true,
+									'title' => __('Eliminar utilizador'),
+									'message' => __('Tem a certeza que pretende eliminar o utilizador?')
+								)); ?>
+							<?php } ?>
 						</td>
 					</tr>
 				<?php } ?>
