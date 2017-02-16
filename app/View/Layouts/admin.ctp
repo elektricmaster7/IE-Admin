@@ -84,6 +84,10 @@
     <script src="/js/bootstrap/bootstrap.min.js"></script>
     <script src="/js/admin/admin-material.js"></script>
     <?php $this->start('scripts'); ?><?php $this->end(); ?>
+    <!--MODALS-->
+    <!--SYSTEM MODALS-->
+    <?php echo $this->element('admin-modals'); ?>
+    <!--SCRIPTS-->
     <?php echo $this->fetch('scripts'); ?>
   </body>
 </html>

@@ -48,7 +48,7 @@
 						</td>-->
 						<td><!--EDIT DELETE-->
 							<a href="/admin/users/edit/<?php echo $user['User']['id']; ?>"><i class="material-icons md-24">edit</i></a>
-							<?php if($user['User']['id'] != 1 && $user['User']['id'] != 2){ ?><a href="/admin/users/delete/<?php echo $user['User']['id']; ?>"><i class="material-icons md-24">delete</i></a><?php } ?>
+							<?php if($user['User']['id'] != 1 && $user['User']['id'] != 2){ ?><a href="#" data-href="/admin/users/delete/<?php echo $user['User']['id']; ?>" data-toggle="modal" data-target="#confirmModal" data-title="Eliminar utilizador" data-message="Tem a certeza que pretende eliminar o utilizador selecionado?"><i class="material-icons md-24">delete</i></a><?php } ?>
 						</td>
 					</tr>
 				<?php } ?>

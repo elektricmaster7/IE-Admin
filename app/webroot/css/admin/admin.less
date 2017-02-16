@@ -120,6 +120,10 @@ a:hover, a:focus {
   cursor: pointer;
 }
 
+a:focus {
+  outline: none !important;
+}
+
 a:hover > i {
   color: @primaryColor;
 }
@@ -230,7 +234,7 @@ td.child li {
 }
 
 .material-button-flat:hover, .material-button-flat:active {
-  background-color: rgba(0, 0, 0, 0.26) !important;
+  background-color: rgba(0, 0, 0, 0.18) !important;
   box-shadow: none !important;
 }
 
@@ -434,7 +438,7 @@ table {
 }
 
 th, td {
-  vertical-align: middle;
+  vertical-align: middle !important;
 }
 
 td:last-child {
@@ -479,6 +483,38 @@ table > tbody > tr > td {
 
 table > tbody > tr:hover {
   background-color: @tableHoverBgColor;
+}
+
+//MODALS
+.modal-dialog {
+  margin: 100px auto;
+}
+.modal-content {
+  border: 0px;
+  border-radius: 2px !important;
+  color: @secondaryTextColor;
+}
+
+.modal-header {
+  border-bottom: 0px;
+  color: @primaryTextColor;
+  font-size: 20px;
+  padding: 24px 24px 20px 24px;
+}
+
+.modal-body {
+  padding: 0px 24px 24px 24px;
+  font-size: 16px;
+}
+
+.modal-body p {
+  margin:0px;
+}
+
+.modal-footer {
+  border-top: 1px solid @lightDividerColor;
+  height: 56px;
+  padding: 8px;
 }
 
 //DATATABLES
