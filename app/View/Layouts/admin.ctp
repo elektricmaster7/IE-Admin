@@ -39,11 +39,15 @@
       <!--NAVBAR BUTTONS-->
       <div class="navbar-top-content pull-right">
         <a href="/logout" class="pull-right"><i class="material-icons md-24 topbar-button">exit_to_app</i></a>
-        <a class="pull-right" data-toggle="dropdown"><i class="material-icons md-24 topbar-button">message</i></a>
+        <a class="pull-right" data-toggle="dropdown"><i class="material-icons md-24 topbar-button">message</i><?php if($notifications_count > 0){ ?><div class="note-counter"><?php echo $notifications_count; ?></div><?php } ?></a>
         <ul class="dropdown-menu material-dropdown">
-          <li><a href="#"><i class="material-icons md-24 pull-left note-icon">insert_comment</i>João Redondo has created a new model right now<br><div class="info">2017-02-01 10:54</div></a></li>
-          <li><a href="#"><i class="material-icons md-24 pull-left note-icon">insert_comment</i>Ashley Williams has changed a burger<br><div class="info">2017-02-01 15:54</div></a></li>
-          <li><a href="#"><i class="material-icons md-24 pull-left note-icon">insert_comment</i>Peter Griffin has deleted a system<br><div class="info">2017-02-01 17:54</div></a></li>
+          <?php foreach($notifications as $notification){ ?>
+            <li><a href="/admin/notifications/view/<?php echo $notification['Notification']['id']; ?>"><i class="material-icons md-24 pull-left note-icon">insert_comment</i><?php echo $notification['Notification']['message']; ?><br><div class="info"><?php echo date('Y-m-d H:i', strtotime($notification['Notification']['created'])); ?></div></a></li>
+          <?php } ?>
+          <li class="divider"></li>
+          <li>
+            <a href="#" class="material-button-flat inverted-button"><?php echo __("Ver todas"); ?></a>
+          </li>
         </ul>
         <div class="navbar-username"><?php echo $this->Authake->getLogin(); ?></div>
       </div>
@@ -81,7 +85,7 @@
         </div>
       </div>
     </div>
-
+    <?php echo $this->element('sql_dump');?>
 
     <!--JAVASCRIPT-->
     <!--JQUERY 3.1.1-->

@@ -48,6 +48,7 @@ class UsersController extends AppController {
 
 			if ($this->User->save($this->request->data)){
 				$this->Session->setFlash(__('O utilizador foi adicionado.'), 'success');
+				$this->setNotification(1, $this->request->data['User']['login'].' foi adicionado aos utilizadores', '/admin/users/edit/'.$this->User->id);
 				$this->redirect(array('action'=>'index'));
 			} else {
 				$this->Session->setFlash(__('Erro ao adicionar utilizador! Tente novamente.'), 'error');
