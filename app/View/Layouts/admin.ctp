@@ -39,16 +39,7 @@
       <!--NAVBAR BUTTONS-->
       <div class="navbar-top-content pull-right">
         <a href="/logout" class="pull-right"><i class="material-icons md-24 topbar-button">exit_to_app</i></a>
-        <a class="pull-right" data-toggle="dropdown"><i class="material-icons md-24 topbar-button">message</i><?php if($notifications_count > 0){ ?><div class="note-counter"><?php echo $notifications_count; ?></div><?php } ?></a>
-        <ul class="dropdown-menu material-dropdown">
-          <?php foreach($notifications as $notification){ ?>
-            <li><a href="/admin/notifications/view/<?php echo $notification['Notification']['id']; ?>"><i class="material-icons md-24 pull-left note-icon">insert_comment</i><?php echo $notification['Notification']['message']; ?><br><div class="info"><?php echo date('Y-m-d H:i', strtotime($notification['Notification']['created'])); ?></div></a></li>
-          <?php } ?>
-          <li class="divider"></li>
-          <li>
-            <a href="#" class="material-button-flat inverted-button"><?php echo __("Ver todas"); ?></a>
-          </li>
-        </ul>
+        <?php echo $this->element('admin-notifications', array('notifications' => $notifications)); ?>
         <div class="navbar-username"><?php echo $this->Authake->getLogin(); ?></div>
       </div>
 

@@ -69,6 +69,8 @@ task('deploy:update', function(){
     'app/Model/User.php',
     'app/View/Elements/Flash',
     'app/View/Elements/admin-datatables.ctp',
+    'app/View/Elements/admin-notifications.ctp',
+    'app/View/Elements/admin-modals.ctp',
     'app/View/Elements/admin-menu.ctp',
     'app/View/Elements/error.ctp',
     'app/View/Elements/gotoadminpage.ctp',
@@ -92,6 +94,7 @@ task('deploy:update', function(){
     'app/webroot/js/bootstrap',
     'app/webroot/js/datatables',
     'app/webroot/js/jquery',
+    'app/webroot/js/plugins',
     'index.php',
     'LICENCE.md'
   ];
@@ -138,6 +141,7 @@ task('deploy:safeupdate', function(){
     'app/webroot/js/bootstrap',
     'app/webroot/js/datatables',
     'app/webroot/js/jquery',
+    'app/webroot/js/plugins',
     'index.php',
     'LICENCE.md'
   ];
