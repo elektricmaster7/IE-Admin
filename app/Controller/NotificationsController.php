@@ -3,7 +3,16 @@ App::uses('AppController', 'Controller');
 class NotificationsController extends AppController {
 
   function admin_index() {
-
+    $notifications = $this->Notification->find('all', array(
+			'conditions' => array(
+				'OR' => array(
+					'Notification.user_id' => $this->Authake->getUserId(),
+					'Notification.user_id IS NULL'
+				)
+			),
+			'order' => array('Notification.id DESC')
+		));
+		$this->set('notifications', $notifications);
   }
 
   function admin_view($id = null){

@@ -5,7 +5,7 @@
   <?php } ?>
   <li class="divider"></li>
   <li>
-    <a href="#" class="material-button-flat inverted-button"><?php echo __("Ver todas"); ?></a>
+    <a href="/admin/notifications" class="material-button-flat inverted-button"><?php echo __("Ver todas"); ?></a>
   </li>
 </ul>
 <?php $this->append('scripts'); ?>
