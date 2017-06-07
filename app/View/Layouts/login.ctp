@@ -25,7 +25,7 @@
     <![endif]-->
   </head>
   <body>
-    <div class="login-container">
+    <div class="login-container" style="background-image:url(/img/backgrounds/aurora_bg.jpg); background-repeat: no-repeat; background-size:cover;">
       <?php echo $this->Flash->render(); ?>
       <?php echo $this->fetch('content'); ?>
     </div>
