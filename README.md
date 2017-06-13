@@ -22,3 +22,13 @@ git clone https://github.com/elektricmaster7/IE-Admin.git
 1. Administration Panel
 2. User/Group/Rules
 3. Material Design
+
+## Roadmap
+
+1. New Admin Material Design template
+2. Store Module Plugin
+3. Full Translation Support
+4. Administration Flexible yet functional generation
+
+### Developed
+DEVELOPED BY INSPIRE ELECTRONICS &copy; 2017 IN SUNNY ALENTEJO - PORTUGAL
