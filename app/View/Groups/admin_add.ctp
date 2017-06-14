@@ -1,4 +1,4 @@
-<h1><?php echo __("ADICIONAR GRUPO"); ?></h1>
+<h2><?php echo __("ADICIONAR GRUPO"); ?></h2>
 <div class="material-container">
   <?php echo $this->Form->create('Group');?>
   <div class="form-group">

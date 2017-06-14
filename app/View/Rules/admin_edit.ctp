@@ -1,4 +1,4 @@
-<h1><?php echo __("EDITAR REGRA");?></h1>
+<h2><?php echo __("EDITAR REGRA");?></h2>
 <div class="material-container">
   <?php echo $this->Form->create('Rule');?>
   <?php echo $this->Form->input('id');?>

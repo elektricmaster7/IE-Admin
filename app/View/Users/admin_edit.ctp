@@ -1,4 +1,4 @@
-<h1><?php echo __("EDITAR UTILIZADOR");?></h1>
+<h2><?php echo __("EDITAR UTILIZADOR");?></h2>
 <div class="material-container">
   <?php echo $this->Form->create('User');?>
   <?php echo $this->Form->input('id');?>

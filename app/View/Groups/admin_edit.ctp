@@ -1,4 +1,4 @@
-<h1><?php echo __("EDITAR GRUPO");?></h1>
+<h2><?php echo __("EDITAR GRUPO");?></h2>
 <div class="material-container">
   <?php echo $this->Form->create('Group');?>
   <?php echo $this->Form->input('id');?>
