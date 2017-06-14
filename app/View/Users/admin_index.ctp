@@ -1,4 +1,4 @@
-<h1><?php echo __("Utilizadores"); ?></h1>
+<h2><?php echo __("Utilizadores"); ?></h2>
 <div class="panel panel-material">
 	<div class="panel-heading">
 		<div class="row" data-table-id="users_table">

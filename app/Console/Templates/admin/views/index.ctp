@@ -1,4 +1,4 @@
-<h1><?php echo "<?php echo __('{$pluralHumanName}'); ?>"; ?></h1>
+<h2><?php echo "<?php echo __('{$pluralHumanName}'); ?>"; ?></h2>
 <div class="panel panel-material">
 	<div class="panel-body">
 		<table class="table">

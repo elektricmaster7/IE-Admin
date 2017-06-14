@@ -70,6 +70,8 @@
 @materialGreen: #8BC34A;
 @materialYellow: #FFC107;
 
+@headerTitleColor: #666666;
+
 /*************************************************************/
 // GENERAL
 /*************************************************************/
@@ -130,15 +132,21 @@ a:hover > i {
 }
 
 h1 {
-  font-size:24px;
+  font-size:18px;
   font-weight: 400;
   margin-top: 20px;
   margin-bottom: 20px;
+  color: @headerTitleColor;
+  text-transform: uppercase;
 }
 
 h2 {
-  font-size:20px;
+  font-size:16px;
   font-weight: 400;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: @headerTitleColor;
+  text-transform: uppercase;
 }
 
 dd { margin-bottom: 15px; }
@@ -680,12 +688,51 @@ table > tbody > tr:hover {
 
 //CARDS
 .material-card {
-  box-shadow: 0px 2px 4px #CCCCCC;
+  /*box-shadow: 0px 2px 4px #CCCCCC;
   border-radius: 2px;
   margin-bottom: 15px;
   padding: 20px 20px 20px 20px;
   font-size: 14px;
-  min-height: 110px;
+  min-height: 110px;*/
+
+  box-shadow: 0px 2px 4px #CCCCCC;
+  height: 80px;
+  display: flex;
+  cursor: default;
+  //background-color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+
+  .icon {
+    display: inline-block;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.12);
+    width: 80px;
+
+    i {
+      color: #fff;
+      font-size: 50px;
+      line-height: 80px;
+      top:0px;
+      margin-right: 0px;
+    }
+  }
+  .content {
+    display: inline-block;
+    padding: 7px 10px;
+
+    .card-title {
+      font-size: 13px;
+      margin-top: 11px;
+    }
+
+    .card-content {
+      font-weight: normal;
+      font-size: 26px;
+      margin-top: -4px;
+    }
+  }
 }
 
 .primary-card {
@@ -706,25 +753,6 @@ table > tbody > tr:hover {
 .yellow-card {
   background-color: @materialYellow;
   color: #FFFFFF;
-}
-
-.card-title {
-  font-size: 22px;
-}
-
-.card-content {
-  margin-top: 10px;
-  font-size: 18px;
-}
-
-.card-decoration {
-  position: absolute;
-  right: 10px;
-  bottom: 20px;
-}
-
-.card-icon {
-  font-size: 42px !important;
 }
 
 /*************************************************************/

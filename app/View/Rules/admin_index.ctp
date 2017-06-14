@@ -1,4 +1,4 @@
-<h1><?php echo __("Regras"); ?></h1>
+<h2><?php echo __("Regras"); ?></h2>
 <div class="panel panel-material">
 	<div class="panel-body">
 		<table class="table">
