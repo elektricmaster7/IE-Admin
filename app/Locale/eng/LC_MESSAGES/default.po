@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2017-01-26 19:36+0000\n"
+"PO-Revision-Date: 2017-06-14 19:04+0100\n"
 "Last-Translator: \n"
 "Language-Team: EMAIL@ADDRESS\n"
 "Language: en\n"
@@ -13,9 +13,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 2.0.2\n"
 
-#: Controller/AppController.php:23
+#: Controller/AppController.php:58
 msgid "As passwords não são iguais!"
 msgstr "The passwords don't match!"
 
@@ -46,6 +46,10 @@ msgstr "This group cannot be deleted."
 #: Controller/GroupsController.php:88
 msgid "Grupo eliminado."
 msgstr "Group deleted."
+
+#: Controller/NotificationsController.php:26
+msgid "Notificação inválida!"
+msgstr "Invalid notification!"
 
 #: Controller/RulesController.php:16
 msgid "Regra inválida."
@@ -201,7 +205,7 @@ msgstr ""
 msgid "A sua sessão foi terminada!"
 msgstr "You are logged out!"
 
-#: Controller/UsersController.php:19;65
+#: Controller/UsersController.php:19;66
 msgid "Utilizador inválido!"
 msgstr "Invalid user!"
 
@@ -213,39 +217,39 @@ msgstr "You cannot add a user on to the administrators group"
 msgid "O utilizador foi adicionado."
 msgstr "User created."
 
-#: Controller/UsersController.php:53
+#: Controller/UsersController.php:54
 msgid "Erro ao adicionar utilizador! Tente novamente."
 msgstr "Error adding user! Please try again."
 
-#: Controller/UsersController.php:74
+#: Controller/UsersController.php:75
 msgid "Não pode editar um utilizador do grupo de administradores"
 msgstr "You cannot edit an admin user"
 
-#: Controller/UsersController.php:84
+#: Controller/UsersController.php:85
 msgid "Apenas o admin pode editar o seu perfil!"
 msgstr "Only an admin can change his profile!"
 
-#: Controller/UsersController.php:98
+#: Controller/UsersController.php:99
 msgid "Não pode editar um utilizador no grupo de administradores"
 msgstr "You cannot edit an admin user"
 
-#: Controller/UsersController.php:130
+#: Controller/UsersController.php:131
 msgid "O utilizador foi editado."
 msgstr "The user was edited."
 
-#: Controller/UsersController.php:135
+#: Controller/UsersController.php:136
 msgid "Erro ao editar utilizador! Tente novamente."
 msgstr "The user cannot be edited! Please try again!"
 
-#: Controller/UsersController.php:152
+#: Controller/UsersController.php:153
 msgid "ID de utilizador inválido!"
 msgstr "Invalid user ID!"
 
-#: Controller/UsersController.php:161
+#: Controller/UsersController.php:162
 msgid "Não pode eliminar um utilizador no grupo de administradores"
 msgstr "You cannot edit an admin user"
 
-#: Controller/UsersController.php:168
+#: Controller/UsersController.php:169
 msgid "Utilizador eliminado"
 msgstr "User deleted."
 
@@ -261,40 +265,57 @@ msgstr "You have to login to access %s"
 msgid "Guest"
 msgstr "Guest"
 
-#: Model/User.php:29
+#: Model/User.php:37
 msgid "Apenas são permitidos caracteres alfanumericos"
 msgstr "Only alphanumeric characters are allowed"
 
-#: Model/User.php:34
+#: Model/User.php:42
 msgid "Comprimento minimo de 3 caracteres"
 msgstr "Minimum 3 characters"
 
-#: Model/User.php:38
+#: Model/User.php:46
 msgid "Comprimento máximo de 32 caracteres"
 msgstr "Maximum 32 characters"
 
-#: Model/User.php:47
+#: Model/User.php:55
 msgid "Preencha o campo de email"
 msgstr "Email cannot be blank"
 
-#: Model/User.php:51
+#: Model/User.php:59
 msgid "O email indicado já está em uso"
 msgstr "The selected email is already in use"
 
-#: Model/User.php:59
+#: Model/User.php:67
 msgid "A password deve ser preenchida"
 msgstr "The password must be filled in"
 
-#: Model/User.php:66;73
+#: Model/User.php:74;81
 msgid "As passwords devem ser iguais e preenchidas"
 msgstr "The passwords must not be blank and should match"
+
+#: View/Elements/admin-modals.ctp:6;13 View/Helper/MaterialHelper.php:20
+#: View/User/pass.ctp:7 View/User/verify.ctp:5
+msgid "Confirmar"
+msgstr "Confirm"
+
+#: View/Elements/admin-modals.ctp:9
+msgid "Tem a certeza que pretende continuar esta acção?"
+msgstr "Are you sure you want to complete this action?"
+
+#: View/Elements/admin-modals.ctp:12
+msgid "Cancelar"
+msgstr "Cancel"
+
+#: View/Elements/admin-notifications.ctp:8
+msgid "Ver todas"
+msgstr "View all"
 
 #: View/Elements/error.ctp:2 View/Elements/info.ctp:2
 #: View/Elements/success.ctp:2 View/Elements/warning.ctp:2
 msgid "Fechar"
 msgstr "Close"
 
-#: View/Elements/gotoadminpage.ctp:3
+#: View/Elements/gotoadminpage.ctp:3 View/Layouts/admin.ctp:56
 msgid "Administração"
 msgstr "Administration"
 
@@ -364,34 +385,51 @@ msgstr "In order to confirm you email, you should click the link bellow:"
 msgid "ADICIONAR GRUPO"
 msgstr "ADD GROUP"
 
-#: View/Groups/admin_add.ctp:5 View/Groups/admin_edit.ctp:6
+#: View/Groups/admin_add.ctp:6 View/Groups/admin_edit.ctp:7
 #: View/Groups/admin_index.ctp:7
 msgid "Nome"
 msgstr "Name"
 
-#: View/Groups/admin_add.ctp:9 View/Groups/admin_edit.ctp:10
+#: View/Groups/admin_add.ctp:10 View/Groups/admin_edit.ctp:11
 msgid "Utilizadores no grupo (Pressione 'Control' para selecionar vários)"
 msgstr "Users (Press 'Control' for multiple selection)"
 
-#: View/Groups/admin_add.ctp:13
+#: View/Groups/admin_add.ctp:15
 msgid "Adicionar Grupo"
 msgstr "Add Group"
 
-#: View/Groups/admin_edit.ctp:14
+#: View/Groups/admin_edit.ctp:1
+msgid "EDITAR GRUPO"
+msgstr "EDIT GROUP"
+
+#: View/Groups/admin_edit.ctp:16
 msgid "Editar Grupo"
 msgstr "Edit Group"
 
-#: View/Groups/admin_index.ctp:1 View/Layouts/admin.ctp:58
+#: View/Groups/admin_edit.ctp:17 View/Rules/admin_edit.ctp:42
+#: View/Users/admin_edit.ctp:45
+msgid "VOLTAR"
+msgstr "BACK"
+
+#: View/Groups/admin_index.ctp:1 View/Layouts/admin.ctp:60
 msgid "Grupos"
 msgstr "Groups"
 
-#: View/Groups/admin_index.ctp:8 View/Rules/admin_index.ctp:12
-#: View/Users/admin_index.ctp:19
+#: View/Groups/admin_index.ctp:8 View/Notifications/admin_index.ctp:9
+#: View/Rules/admin_index.ctp:12 View/Users/admin_index.ctp:19
 msgid "Acções"
 msgstr "Actions"
 
-#: View/Groups/admin_index.ctp:27 View/Rules/admin_index.ctp:35
-#: View/Users/admin_index.ctp:61
+#: View/Groups/admin_index.ctp:19
+msgid "Eliminar grupo"
+msgstr "Delete Group"
+
+#: View/Groups/admin_index.ctp:20
+msgid "Tem a certeza que pretende eliminar o grupo?"
+msgstr "Are you sure you want to delete this group?"
+
+#: View/Groups/admin_index.ctp:31 View/Rules/admin_index.ctp:39
+#: View/Users/admin_index.ctp:67
 msgid "Adicionar"
 msgstr "Add"
 
@@ -411,60 +449,76 @@ msgstr "Login"
 msgid "Convidado"
 msgstr "Guest"
 
-#: View/Layouts/admin.ctp:55
+#: View/Helper/MaterialHelper.php:21
+msgid "Tem a certeza que pretende continuar a operação indicada?"
+msgstr "Are you sure you want to complete this action?"
+
+#: View/Layouts/admin.ctp:57
 msgid "Dashboard"
 msgstr "Dashboard"
 
-#: View/Layouts/admin.ctp:56 View/Users/admin_index.ctp:1
+#: View/Layouts/admin.ctp:58 View/Users/admin_index.ctp:1
 msgid "Utilizadores"
 msgstr "Users"
 
-#: View/Layouts/admin.ctp:59 View/Rules/admin_index.ctp:1
+#: View/Layouts/admin.ctp:61 View/Rules/admin_index.ctp:1
 msgid "Regras"
 msgstr "Rules"
+
+#: View/Notifications/admin_index.ctp:1
+msgid "Notificações"
+msgstr "Notifications"
+
+#: View/Notifications/admin_index.ctp:7
+msgid "Notificação"
+msgstr "Notification"
+
+#: View/Notifications/admin_index.ctp:8
+msgid "Data"
+msgstr "Date"
 
 #: View/Rules/admin_add.ctp:1
 msgid "ADICIONAR REGRA"
 msgstr "ADD RULE"
 
-#: View/Rules/admin_add.ctp:4 View/Rules/admin_edit.ctp:5
+#: View/Rules/admin_add.ctp:5 View/Rules/admin_edit.ctp:6
 #: View/Rules/admin_index.ctp:7
 msgid "Descrição"
 msgstr "Description"
 
-#: View/Rules/admin_add.ctp:9 View/Rules/admin_edit.ctp:10
+#: View/Rules/admin_add.ctp:10 View/Rules/admin_edit.ctp:11
 #: View/Rules/admin_index.ctp:8 View/Users/admin_add.ctp:23
 #: View/Users/admin_index.ctp:16
 msgid "Grupo"
 msgstr "Group"
 
-#: View/Rules/admin_add.ctp:10
+#: View/Rules/admin_add.ctp:11
 msgid "Selecione uma opção"
 msgstr "Select an option"
 
-#: View/Rules/admin_add.ctp:15 View/Rules/admin_edit.ctp:16
+#: View/Rules/admin_add.ctp:16 View/Rules/admin_edit.ctp:17
 #: View/Rules/admin_index.ctp:11
 msgid "Ordem"
 msgstr "Order"
 
-#: View/Rules/admin_add.ctp:19 View/Rules/admin_edit.ctp:20
+#: View/Rules/admin_add.ctp:20 View/Rules/admin_edit.ctp:21
 msgid "Path (perl regex)"
 msgstr "Path (perl regex)"
 
-#: View/Rules/admin_add.ctp:24 View/Rules/admin_edit.ctp:25
+#: View/Rules/admin_add.ctp:25 View/Rules/admin_edit.ctp:26
 #: View/Rules/admin_index.ctp:9
 msgid "Permissões"
 msgstr "Permissions"
 
-#: View/Rules/admin_add.ctp:29 View/Rules/admin_edit.ctp:30
+#: View/Rules/admin_add.ctp:30 View/Rules/admin_edit.ctp:31
 msgid "Redireccionar"
 msgstr "Redirect"
 
-#: View/Rules/admin_add.ctp:34 View/Rules/admin_edit.ctp:35
+#: View/Rules/admin_add.ctp:35 View/Rules/admin_edit.ctp:36
 msgid "Mensagem"
 msgstr "Message"
 
-#: View/Rules/admin_add.ctp:38
+#: View/Rules/admin_add.ctp:40
 msgid "Adicionar Regra"
 msgstr "Add Rule"
 
@@ -472,15 +526,15 @@ msgstr "Add Rule"
 msgid "EDITAR REGRA"
 msgstr "EDIT RULE"
 
-#: View/Rules/admin_edit.ctp:26
+#: View/Rules/admin_edit.ctp:27
 msgid "Permitir"
 msgstr "Allow"
 
-#: View/Rules/admin_edit.ctp:26
+#: View/Rules/admin_edit.ctp:27
 msgid "Negar"
 msgstr "Deny"
 
-#: View/Rules/admin_edit.ctp:39
+#: View/Rules/admin_edit.ctp:41
 msgid "Editar Regra"
 msgstr "Edit Rule"
 
@@ -488,16 +542,24 @@ msgstr "Edit Rule"
 msgid "Path"
 msgstr "Path"
 
+#: View/Rules/admin_index.ctp:27
+msgid "Eliminar regra"
+msgstr "Delete Rule"
+
+#: View/Rules/admin_index.ctp:28
+msgid "Tem a certeza que pretende eliminar a regra?"
+msgstr "Are you sure you want to delete this rule?"
+
 #: View/User/denied.ctp:1
 msgid "Não tem acesso a esta página."
 msgstr "Access denied! "
 
-#: View/User/login.ctp:6 View/Users/admin_add.ctp:6 View/Users/admin_edit.ctp:7
+#: View/User/login.ctp:6 View/Users/admin_add.ctp:6 View/Users/admin_edit.ctp:8
 msgid "Utilizador"
 msgstr "User"
 
 #: View/User/login.ctp:10 View/Users/admin_add.ctp:12
-#: View/Users/admin_edit.ctp:13
+#: View/Users/admin_edit.ctp:14
 msgid "Password"
 msgstr "Password"
 
@@ -508,10 +570,6 @@ msgstr "Reset request"
 #: View/User/message.ctp:5
 msgid "Ir para página principal"
 msgstr "Go to homepage"
-
-#: View/User/pass.ctp:7 View/User/verify.ctp:5
-msgid "Confirmar"
-msgstr "Confirm"
 
 #: View/User/profile.ctp:6
 msgid "Alterar a password"
@@ -525,16 +583,16 @@ msgstr "Register"
 msgid "ADICIONAR UTILIZADOR"
 msgstr "ADD USER"
 
-#: View/Users/admin_add.ctp:18 View/Users/admin_edit.ctp:18
+#: View/Users/admin_add.ctp:18 View/Users/admin_edit.ctp:19
 #: View/Users/admin_index.ctp:15
 msgid "Email"
 msgstr "Email"
 
-#: View/Users/admin_add.ctp:30 View/Users/admin_edit.ctp:39
+#: View/Users/admin_add.ctp:30 View/Users/admin_edit.ctp:40
 msgid "Desactivado"
 msgstr "Deactivated"
 
-#: View/Users/admin_add.ctp:33
+#: View/Users/admin_add.ctp:34
 msgid "Adicionar Utilizador"
 msgstr "Add User"
 
@@ -542,11 +600,11 @@ msgstr "Add User"
 msgid "EDITAR UTILIZADOR"
 msgstr "EDIT USER"
 
-#: View/Users/admin_edit.ctp:23
+#: View/Users/admin_edit.ctp:24
 msgid "Grupos (Pressione 'Control' para selecionar vários)"
 msgstr "Groups (Press 'Control' for multiple selection)"
 
-#: View/Users/admin_edit.ctp:42
+#: View/Users/admin_edit.ctp:44
 msgid "Editar Utilizador"
 msgstr "Edit User"
 
@@ -557,6 +615,34 @@ msgstr "Search"
 #: View/Users/admin_index.ctp:13
 msgid "ID"
 msgstr "ID"
+
+#: View/Users/admin_index.ctp:54
+msgid "Eliminar utilizador"
+msgstr "Delete User"
+
+#: View/Users/admin_index.ctp:55
+msgid "Tem a certeza que pretende eliminar o utilizador?"
+msgstr "Are you sure you want to delete this user?"
+
+#: View/Errors/error400.ctp:19 View/Errors/error500.ctp:19
+msgid "Error"
+msgstr "Error"
+
+#: View/Errors/error400.ctp:21
+msgid "The requested address %s was not found on this server."
+msgstr "The requested address %s was not found on this server."
+
+#: View/Errors/error500.ctp:20
+msgid "An Internal Error Has Occurred."
+msgstr "An Internal Error Has Occurred."
+
+#: View/Layouts/error.ctp:17
+msgid "CakePHP: the rapid development php framework"
+msgstr "CakePHP: the rapid development php framework"
+
+#: webroot/test.php:100
+msgid "Debug setting does not allow access to this URL."
+msgstr "Debug setting does not allow access to this URL."
 
 #~ msgid "Criado em"
 #~ msgstr "Created"
