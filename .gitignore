@@ -11,7 +11,7 @@
 *.mo
 /_gsdata_*
 #Conflict avoiding paths change .defaults
-/app/View/Pages/admin_home.ctp
+#/app/View/Pages/admin_home.ctp
 /app/View/Pages/home.ctp
 /app/View/Layouts/default.ctp
 /app/Config/authake_config.php
