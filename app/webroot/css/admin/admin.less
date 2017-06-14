@@ -72,6 +72,24 @@
 
 @headerTitleColor: #666666;
 
+//MATERIAL COLORS
+@materialColorRed: #F44336;
+@materialColorPink: #E91E63;
+@materialColorPurple: #9C27B0;
+@materialColorDeepPurple: #673AB7;
+@materialColorIndigo: #3F51B5;
+@materialColorBlue: #2196F3;
+@materialColorLightBlue: #03A9F4;
+@materialColorCyan: #00BCD4;
+@materialColorTeal: #009688;
+@materialColorGreen: #4CAF50;
+@materialColorLightGreen: #8BC34A;
+@materialColorLime: #CDDC39;
+@materialColorYellow: #FFEB3B;
+@materialColorAmber: #FFC107;
+@materialColorOrange: #FF9800;
+@materialColorDeepOrange: #FF5722;
+
 /*************************************************************/
 // GENERAL
 /*************************************************************/
@@ -85,7 +103,7 @@ html, body{
 * { outline: none; }
 
 /*CAKE ERROR CONTAINER*/
-pre.cake-error {
+pre.cake-error{
   margin: 0px;
   padding-top: 30px;
   border-radius: 0px;
@@ -112,6 +130,48 @@ pre.cake-error::before {
   background-color: rgba(0,0,0,0.09);
   border-bottom: 1px solid #cccccc;
 }
+
+.cake-sql-log {
+  margin: 0px;
+  padding-top: 30px;
+  border-radius: 0px;
+  position: fixed;
+  width:100%;
+  height:200px;
+  left:0px;
+  bottom:0px;
+  z-index: 9998;
+  background-color: #FFFFFF;
+
+  caption {
+    padding: 0px;
+    background-color: #FFFFFF;
+    text-align: right;
+    /* z-index: 100000; */
+    position: absolute;
+    width: 100%;
+    margin-top: -85px;
+    background-color: transparent;
+    margin-left: -10px;
+  }
+
+  &:before {
+    content: "System Query Debug:";
+    position: absolute;
+    margin-top: -92px;
+    width: 100%;
+    /* margin-left: -10px; */
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #DDD;
+    border-bottom: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+  }
+}
+
+
+//MAIN MARKUP
 
 a {
   color: @secondaryTextColor;
@@ -191,15 +251,15 @@ td.child li {
   z-index:99999 !important;
   left:0;
   bottom:0;
-}
 
-.alert > .material-icons {
-  font-size: 18px !important;
-}
+  & > .material-icons {
+    font-size: 18px !important;
+  }
 
-.alert > .material-button-flat {
-  height: 24px !important;
-  padding-top: 3px !important;
+  & > .material-button-flat {
+    height: 24px !important;
+    padding-top: 3px !important;
+  }
 }
 
 //BUTTONS
@@ -688,18 +748,10 @@ table > tbody > tr:hover {
 
 //CARDS
 .material-card {
-  /*box-shadow: 0px 2px 4px #CCCCCC;
-  border-radius: 2px;
-  margin-bottom: 15px;
-  padding: 20px 20px 20px 20px;
-  font-size: 14px;
-  min-height: 110px;*/
-
   box-shadow: 0px 2px 4px #CCCCCC;
   height: 80px;
   display: flex;
   cursor: default;
-  //background-color: #fff;
   position: relative;
   overflow: hidden;
   margin-bottom: 30px;
@@ -763,19 +815,29 @@ table > tbody > tr:hover {
   width: 100%;
   height: 100%;
   position:absolute;
-}
 
-.login-content {
-  width: 330px;
-  height: 330px;
-  margin: 0px auto;
-  background: #FFFFFF;
-  padding: 30px;
-  border-radius: 3px;
-  box-shadow: 1px 1px 2px #BBBBBB;
-  position: relative;
-  top: 50%;
-  margin-top: -200px;
+  .login-content {
+    width: 330px;
+    height: 320px;
+    margin: 0px auto;
+    background: #FFFFFF;
+    padding: 30px 30px 30px 30px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px #BBBBBB;
+    position: relative;
+    top: 50%;
+    margin-top: -200px;
+  }
+
+  h1 {
+    margin-top:5px;
+    margin-bottom: 35px;
+  }
+
+  p {
+    margin-top:10px;
+    margin-bottom: 0px;
+  }
 }
 
 /*************************************************************/
@@ -789,7 +851,8 @@ table > tbody > tr:hover {
 #page-wrapper {
   min-height: 568px;
   background-color: #FFFFFF;
-  margin-top:51px;
+  //margin-top:51px;
+  padding-top: 50px;
   height:100%;
 }
 
@@ -829,21 +892,31 @@ table > tbody > tr:hover {
 }
 
 /*SIDEBAR*/
+
 .sidebar-admin {
   background-color: #FFFFFF;
-}
 
-.sidebar .sidebar-nav.navbar-collapse {
-  padding-left: 0;
-  padding-right: 0;
-}
+  .header {
+    background: #eee;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 16px;
+    color: @headerTitleColor;
+    text-transform: uppercase;
+  }
 
-.sidebar ul li {
-  border-bottom: 1px solid @lightDividerColor;
-}
+  .sidebar-nav.navbar-collapse {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
-.sidebar ul li a.active {
-  background-color: #eeeeee;
+  ul li {
+    border-bottom: 1px solid @lightDividerColor;
+  }
+
+  ul li a.active {
+    background-color: #eeeeee;
+  }
 }
 
 @media (min-width: 768px) {
