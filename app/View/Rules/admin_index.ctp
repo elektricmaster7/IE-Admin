@@ -1,7 +1,7 @@
 <h2><?php echo __("Regras"); ?></h2>
 <div class="panel panel-material">
 	<div class="panel-body">
-		<table class="table">
+		<table class="table material-table">
 			<thead>
 				<tr>
 					<th><?php echo __("Descrição"); ?></th>

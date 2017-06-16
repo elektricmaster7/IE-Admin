@@ -68,12 +68,8 @@
       <!--PAGE CONTAINER-->
       <div class="page-content">
         <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-12">
-              <?php echo $this->Flash->render(); ?>
-              <?php echo $this->fetch('content'); ?>
-            </div>
-          </div>
+          <?php echo $this->Flash->render(); ?>
+          <?php echo $this->fetch('content'); ?>
         </div>
       </div>
     </div>

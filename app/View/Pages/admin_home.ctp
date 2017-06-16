@@ -1,7 +1,7 @@
 <h2>DASHBOARD</h2>
 <div class="row">
   <div class="col-xs-12 col-sm-6 col-md-3">
-    <div class="material-card primary-card">
+    <div class="material-info-box primary-card">
       <div class="icon">
         <i class="material-icons">shopping_cart</i>
       </div>
@@ -12,7 +12,7 @@
     </div>
   </div>
   <div class="col-xs-12 col-sm-6 col-md-3">
-    <div class="material-card green-card">
+    <div class="material-info-box green-card">
       <div class="icon">
         <i class="material-icons">euro_symbol</i>
       </div>
@@ -23,7 +23,7 @@
     </div>
   </div>
   <div class="col-xs-12 col-sm-6 col-md-3">
-    <div class="material-card red-card">
+    <div class="material-info-box red-card">
       <div class="icon">
         <i class="material-icons">people</i>
       </div>
@@ -34,7 +34,7 @@
     </div>
   </div>
   <div class="col-xs-12 col-sm-6 col-md-3">
-    <div class="material-card yellow-card">
+    <div class="material-info-box yellow-card">
       <div class="icon">
         <i class="material-icons">playlist_add_check</i>
       </div>

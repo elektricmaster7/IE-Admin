@@ -30,7 +30,7 @@
         <?php echo $this->Form->label('disable', __('Desactivado'));?>
       </div>
     <?php } ?>
-    <div class="row material-container-footer">
+    <div class="row footer">
       <div class="col-xs-12 col-sm-6 col-md-4"><?php echo $this->Form->submit(__('Adicionar Utilizador'),array('div'=>false, 'class'=>'material-button')); ?></div>
       <div class="col-xs-12 col-sm-6 col-md-4"><a href="/admin/users" class="material-button inverted-button">VOLTAR</a></div>
     </div>

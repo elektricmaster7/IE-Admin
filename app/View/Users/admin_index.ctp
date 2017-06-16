@@ -7,7 +7,7 @@
 		</div>
 	</div>
 	<div class="panel-body">
-		<table id="users_table" class="table table-responsive">
+		<table id="users_table" class="table material-table table-responsive">
 			<thead>
 				<tr>
 					<th><?php echo __("ID"); ?></th>
