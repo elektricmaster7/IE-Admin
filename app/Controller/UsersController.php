@@ -1,8 +1,26 @@
 <?php
 App::uses('AppController', 'Controller');
+App::uses('Folder', 'Utility');
+App::uses('File', 'Utility');
+
 class UsersController extends AppController {
 	var $uses = array('User', 'Rule');
 	var $components = array('Filter','Session');// var $layout = 'authake';
+
+	function admin_test() {
+		//TEST OF DIRECTORIES
+		$dir = new Folder(APP.'Model'.DS);
+		$file = new File($dir->pwd().'TestModel.php', true, 0644);
+		$file->write("<?php\nApp::uses('AppModel', 'Model');\nclass TestI18n extends AppModel {\n\tpublic \$displayField = 'field';\n}\n?>");
+
+		$table_schema = $this->User->query("SELECT TABLE_NAME AS name FROM INFORMATION_SCHEMA.TABLES AS Backend WHERE TABLE_SCHEMA<>'information_schema'");
+		$table_list = array();
+		foreach($table_schema as $tables){
+			$table_list[$tables['Backend']['name']] = $tables['Backend']['name'];
+		}
+		$this->set('tables', $table_list);
+
+	}
 
 	function admin_index() {
 		$this->User->recursive = 1;
