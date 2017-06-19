@@ -39,6 +39,9 @@
       <!--NAVBAR BUTTONS-->
       <div class="navbar-top-content pull-right">
         <a href="/logout" class="pull-right"><i class="material-icons md-24 topbar-button">exit_to_app</i></a>
+        <?php if($this->Authake->isMemberOf(1)){ ?>
+          <a href="/admin/settings/tools" class="pull-right"><i class="material-icons md-24 topbar-button">settings</i></a>
+        <?php } ?>
         <?php echo $this->element('admin-notifications', array('notifications' => $notifications)); ?>
         <div class="navbar-username"><?php echo $this->Authake->getLogin(); ?></div>
       </div>
@@ -52,13 +55,19 @@
       <!--SIDEBAR-->
       <div class="sidebar-admin sidebar" role="navigation">
         <div class="sidebar-nav collapse navbar-collapse">
-          <ul class="nav" id="side-menu">
+          <ul class="nav navbar-nav" id="side-menu">
             <li class="header"><?php echo __('Administração'); ?></li>
             <li><a href="/admin"><i class="material-icons md-18">home</i> <?php echo __('Dashboard'); ?></a></li>
             <?php if($this->Authake->isMemberOf(1) || $this->Authake->isMemberOf(2)){ ?><li><a href="/admin/users"><i class="material-icons md-18">person</i> <?php echo __('Utilizadores'); ?></a></li><?php } ?>
             <?php if($this->Authake->isMemberOf(1)){ ?>
-              <li><a href="/admin/groups"><i class="material-icons md-18">group</i> <?php echo __('Grupos'); ?></a></li>
-              <li><a href="/admin/rules"><i class="material-icons md-18">dehaze</i> <?php echo __('Regras'); ?></a></li>
+            <li><a href="/admin/groups"><i class="material-icons md-18">group</i> <?php echo __('Grupos'); ?></a></li>
+            <li><a href="/admin/rules"><i class="material-icons md-18">dehaze</i> <?php echo __('Regras'); ?></a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="material-icons md-18">settings</i> <?php echo __('Definições'); ?></a>
+              <ul class="dropdown-menu">
+                <li><a href="#"><i class="material-icons md-18">tools</i> <?php echo __('Ferramentas'); ?></a></li>
+              </ul>
+            </li>
             <?php } ?>
             <?php echo $this->element('admin-menu'); ?>
           </ul>
