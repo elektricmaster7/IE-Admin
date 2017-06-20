@@ -685,6 +685,10 @@ table.material-table {
   #datatables-pagination {
     text-align: center;
   }
+
+  .table-responsive {
+    border: none !important;
+  }
 }
 
 #datatables-footer {
@@ -951,7 +955,9 @@ table.material-table {
   }
 
   .dropdown-admin {
-    ul { padding-left: 15px; }
+    a:focus { background-color: transparent; }
+
+    ul { padding-left: 15px; display: none;}
 
     ul:hover { background-color: #eeeeee; }
 

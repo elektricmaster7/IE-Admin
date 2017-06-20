@@ -26,4 +26,8 @@
 
   //TOOLTIPS
   $('.material-tooltip').tooltip();
+
+  $('.dropdown-admin').on('click', function(){
+    $(this).find('ul').toggle();
+  });
 //});
