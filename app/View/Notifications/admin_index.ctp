@@ -1,7 +1,7 @@
-<h1><?php echo __("Notificações"); ?></h1>
+<h2><?php echo __("Notificações"); ?></h2>
 <div class="panel panel-material">
 	<div class="panel-body">
-		<table class="table">
+		<table class="table material-table">
 			<thead>
 				<tr>
 					<th><?php echo __("Notificação"); ?></th>
