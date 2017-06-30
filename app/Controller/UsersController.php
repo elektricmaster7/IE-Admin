@@ -5,13 +5,15 @@ App::uses('File', 'Utility');
 
 class UsersController extends AppController {
 	var $uses = array('User', 'Rule');
-	var $components = array('Filter','Session');// var $layout = 'authake';
+	var $components = array('Filter','Session','Generator');// var $layout = 'authake';
 
 	function admin_test() {
 		//TEST OF DIRECTORIES
-		$dir = new Folder(APP.'Model'.DS);
-		$file = new File($dir->pwd().'TestModel.php', true, 0644);
-		$file->write("<?php\nApp::uses('AppModel', 'Model');\nclass TestI18n extends AppModel {\n\tpublic \$displayField = 'field';\n}\n?>");
+		//$dir = new Folder(APP.'Model'.DS);
+		//$file = new File($dir->pwd().'TestModel.php', true, 0644);
+		/*$file->write("<?php\nApp::uses('AppModel', 'Model');\nclass TestI18n extends AppModel {\n\tpublic \$displayField = 'field';\n}\n?>");*/
+
+		$this->Generator->generateModel("Barco");
 
 		$table_schema = $this->User->query("SELECT TABLE_NAME AS name FROM INFORMATION_SCHEMA.TABLES AS Backend WHERE TABLE_SCHEMA<>'information_schema'");
 		$table_list = array();
