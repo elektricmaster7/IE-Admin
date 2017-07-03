@@ -30,6 +30,12 @@ require APP . 'Config' . DS . 'routes_admin.php';
  * to use (in this case, /app/View/Pages/home.ctp)...
  */
 	Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home'));
+
+  //TRANSLATION ROUTES (Uncomment in translation usage)
+  //$languageCodes = array('language' => 'eng|pt'); //ACCEPTED LANGUAGES
+  //Router::connect('/:language', array('controller' => 'pages', 'action' => 'display', 'home')); //HOMEPAGE
+  //Router::connect('/:language/:controller/:action/*', array(), $languageCodes); //FULL PATHS
+  //Router::connect('/:language/:controller', array('action' => 'index'), $languageCodes); //CONTROLLER INDEXES
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */
