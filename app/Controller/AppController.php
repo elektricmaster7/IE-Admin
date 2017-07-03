@@ -2,8 +2,8 @@
 App::uses('Controller', 'Controller');
 class AppController extends Controller {
 	var $uses = array('User','Rule','Group','Notification');
-	var $components = array('Session', 'RequestHandler', 'Authake');
-	var $helpers = array('Form', 'Time', 'Html','Session', 'Js', 'Authake', 'Material');
+	var $components = array('Session', 'RequestHandler', 'Authake', 'Generator');
+	var $helpers = array('Form', 'Time', 'Html', 'Session', 'Js', 'Authake', 'Material');
 	var $counter = 0;
 
 	function beforeFilter(){

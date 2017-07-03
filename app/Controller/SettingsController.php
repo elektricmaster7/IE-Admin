@@ -1,8 +1,9 @@
 <?php
 App::uses('AppController', 'Controller');
-class SettingsController extends AppController {
+App::uses('Folder', 'Utility');
+App::uses('File', 'Utility');
 
-  private $system_tables = array('i18n'=>'i18n','groups_users'=>'groups_users','rules'=>'rules','settings'=>'settings');
+class SettingsController extends AppController {
 
   function admin_tools(){
 
@@ -12,14 +13,28 @@ class SettingsController extends AppController {
     }
 
     //GET TABLE DATA FOR SETTINGS SYSTEMS
-    $table_schema = $this->User->query("SELECT TABLE_NAME AS name FROM INFORMATION_SCHEMA.TABLES AS Setting WHERE TABLE_SCHEMA<>'information_schema' AND TABLE_NAME NOT LIKE '%_translations'");
-    $table_list = array();
-    foreach($table_schema as $tables){
-      $tables_list[$tables['Setting']['name']] = $tables['Setting']['name'];
+    $tables_list = $this->Setting->getTablesList();
+    $this->set('tables', $tables_list);
+  }
+
+  //TODO: MAKE FILE CHECK FOR DUPLICATES SO NO MODELS ARE OVERWRITTEN
+  function admin_generate_model(){
+    if($this->request->is(array('post', 'put'))){
+      $model_name = $this->request->data['Setting']['model_name'];
+      $this->Generator->generateModel($model_name);
+      $this->Session->setFlash(sprintf(__('O model %s foi criado com sucesso!'), $model_name), 'success');
+      $this->redirect(array('action' => 'tools'));
     }
-    
-    $tables_list_clear = array_diff($tables_list, $this->system_tables);
-    $this->set('tables', $tables_list_clear);
+  }
+
+  function admin_generate_translation(){
+    if($this->request->is(array('post', 'put'))){
+      $table_name = $this->request->data['Setting']['table_name'];
+      $this->Generator->generateModel(Inflector::classify($table_name), true);
+      $this->Setting->createTranslationTable($table_name);
+      $this->Session->setFlash(sprintf(__('A tabela de tradução para a tabela %s e o respectivo model foram criados com sucesso!'), $table_name), 'success');
+      $this->redirect(array('action' => 'tools'));
+    }
   }
 }
 ?>
