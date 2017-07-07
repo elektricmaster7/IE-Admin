@@ -1,21 +1,43 @@
 <?php
 App::uses('Controller', 'Controller');
 class AppController extends Controller {
+
 	var $uses = array('User','Rule','Group','Notification');
 	var $components = array('Session', 'RequestHandler', 'Authake', 'Generator');
-	var $helpers = array('Form', 'Time', 'Html', 'Session', 'Js', 'Authake', 'Material');
+	var $helpers = array('Form', 'Time', 'Html' => array('className' => 'HtmlPlus'), 'Session', 'Js', 'Authake', 'Material');
 	var $counter = 0;
 
 	function beforeFilter(){
+		//LANGUAGE
+		//THIS CHECKS THE SESSION FOR A LANGUAGE IF SET USES THAT LANGUAGE FOR TRANSLATION
+		if($this->Session->check('Config.language')){
+			Configure::write('Config.language', $this->Session->read('Config.language'));
+		}
+		//AUTH
+		//SETS THE ADMIN LAYOUT FROM THE PREFIX AND CALLS THE AUTHENTICATION METHODS
 		if (isset($this->params['prefix']) && $this->params['prefix'] == 'admin') $this->layout = 'admin'; //SET ADMIN TEMPLATE FOR ADMIN PAGES
 		$this->auth();
+
+		//NOTIFICATIONS
+		//GETS THE LATEST NOTIFICATIONS FOR DISPLAY IN THE ADMIN PANEL (IF ACTIVE)
 		$this->getNotifications();
 	}
 
+	/*AUTHENTICATION SYSTEM*/
 	private function auth(){
     Configure::write('Authake.useDefaultLayout', true);
     $this->Authake->beforeFilter($this);
   }
+
+	//PASSWORD ENCODING FUNCTION
+	function __makePassword($password1, $password2) {
+		if ($password1 != $password2){
+			$this->Session->setFlash(__('As passwords não são iguais!'), 'error');
+			return false;
+		}
+		//TODO:CHANGE TO MAKE PASSWORD GREAT AGAIN
+		return md5($password1);
+	}
 
 	/*NOTIFICATION SYSTEM*/
 	function getNotifications(){
@@ -38,6 +60,7 @@ class AppController extends Controller {
 		)));
 	}
 
+	//THIS METHOD SETS A NOTIFICATION
 	function setNotification($user_id, $message, $link){
 		$this->Notification->create();
 		$notification = array(
@@ -51,14 +74,11 @@ class AppController extends Controller {
 		$this->Notification->save($notification);
 	}
 
-	function __makePassword($password1, $password2) {
-
-		if ($password1 != $password2)
-		{
-			$this->Session->setFlash(__('As passwords não são iguais!'), 'error');
-			return false;
+	//REDIRTECT FUNCTION OVERWRITTEN TO ACCOUNT FOR TRANSLATION
+	public function redirect($url, $status = NULL, $exit = true){
+		if(!isset($url['language']) && $this->Session->check('Config.language')){
+			$url['language'] = $this->Session->read('Config.language');
 		}
-		//TODO:CHANGE TO MAKE PASSWORD GREAT AGAIN
-		return md5($password1);
+		parent::redirect($url, $status, $exit);
 	}
 }
