@@ -1,6 +1,6 @@
 <div class="login-content">
 	<!--<h1>LOGIN ADMIN</h1>-->
-	<img class="login-logotype" src="/img/logos/ielogocolor.png"/>
+	<img class="login-logotype" src="/img/logos/ielogocolorvector.svg"/>
 	<?php echo $this->Form->create(null, array('url' => array('controller' => 'user', 'action'=>'login')));?>
 
 		<?php echo $this->Form->input('login', array('label' => false, 'div'=> false, 'class' => 'form-control', 'error' => false));?>
