@@ -10,5 +10,9 @@ class HtmlPlusHelper extends HtmlHelper {
     }
     return parent::url($url, $full);
   }
+
+  public function languageSelect(){
+    echo $this->link('English', array('language' => 'eng'));
+  }
 }
 ?>

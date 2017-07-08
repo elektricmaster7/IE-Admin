@@ -13,4 +13,10 @@
 Router::connect('/admin', array('controller' => 'pages', 'action' => 'display', 'admin_home', 'admin' => true));
 Router::connect('/login', array('controller' => 'user', 'action' => 'login'));
 Router::connect('/logout', array('controller' => 'user', 'action' => 'logout'));
+
+//TRANSLATION ROUTES (Uncomment in translation usage)
+$languageCodes = array('language' => 'eng|pt'); //ACCEPTED LANGUAGES
+Router::connect('/admin/:language', array('controller' => 'pages', 'action' => 'display', 'admin_home', 'admin' => true)); //HOMEPAGE
+Router::connect('/admin/:language/:controller/:action/*', array('admin' => true), $languageCodes); //FULL PATHS
+Router::connect('/admin/:language/:controller', array('action' => 'index', 'admin' => true), $languageCodes); //CONTROLLER INDEXES
 ?>

@@ -2,6 +2,7 @@
 <!--<pre>
 <?php //print_r($tables); ?>
 </pre>-->
+<?php $this->Html->languageSelect(); ?>
 <div class="row">
   <div class="col-xs-12 col-md-4">
     <div class="material-card">
