@@ -28,6 +28,6 @@
   $('.material-tooltip').tooltip();
 
   $('.dropdown-admin').on('click', function(){
-    $(this).find('ul').toggle();
+    $(this).find('ul').slideToggle('fast');
   });
 //});

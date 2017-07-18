@@ -12,7 +12,8 @@ class HtmlPlusHelper extends HtmlHelper {
   }
 
   public function languageSelect(){
-    echo $this->link('English', array('language' => 'eng'));
+    echo $this->link('English', array('language' => 'en'));
+    echo $this->link('Português', array('language' => 'pt'));
   }
 }
 ?>

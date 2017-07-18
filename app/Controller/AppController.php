@@ -3,7 +3,7 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
 
 	var $uses = array('User','Rule','Group','Notification');
-	var $components = array('Session', 'RequestHandler', 'Authake', 'Generator');
+	var $components = array('Session', 'Cookie', 'RequestHandler', 'Authake', 'Generator');
 	var $helpers = array('Form', 'Time', 'Html' => array('className' => 'HtmlPlus'), 'Session', 'Js', 'Authake', 'Material');
 	var $counter = 0;
 
