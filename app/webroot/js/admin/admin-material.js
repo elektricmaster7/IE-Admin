@@ -1,4 +1,6 @@
-//$(document).ready(function(){
+$(document).ready(function(){
+
+  //INPUT
   //MATERIAL INPUT LABELS
   var inputs = $('input[type="text"],input[type="email"],input[type="password"],input[type="number"]');
   inputs.next('label').each(function() {
@@ -24,10 +26,27 @@
 
   $('input').attr('autocomplete', 'off');
 
-  //TOOLTIPS
-  $('.material-tooltip').tooltip();
-
+  //MENU
   $('.dropdown-admin').on('click', function(){
     $(this).find('ul').slideToggle('fast');
   });
-//});
+
+  //TOOLTIPS
+  $('.material-tooltip').tooltip();
+
+  //TRANSLATION SELECT
+  $('.language_select').on('change', function(e){
+    //Redirect to somepage
+    var url = document.createElement("a");
+    url.href = window.location.href;
+    var lang = $(this).val();
+    console.log(url.pathname);
+    $.ajax({
+      'url': '/settings/get_translate_url',
+      'data': {"url":url.pathname, "language":lang},
+      'type': 'POST'
+    }).done(function(data){
+      window.location = data;
+    });
+  });
+});

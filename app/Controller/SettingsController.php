@@ -36,5 +36,19 @@ class SettingsController extends AppController {
       $this->redirect(array('action' => 'tools'));
     }
   }
+
+  /**
+   * This function is meant to be used as a getter for a translated url if you have the url to be
+   * reformated in text form ex: /admin/settings/tools returns /admin/{lang}/settings/tools
+   * @method get_translate_url
+   * @author Inspire Electronics
+   * @return string    A finished version url ready to be used in redirection
+   */
+  public function get_translate_url(){
+    $this->autoRender = false;
+    $route = Router::parse($this->request->data['url']);
+    $route['language'] = $this->request->data['language'];
+    return Router::url($route);
+  }
 }
 ?>
