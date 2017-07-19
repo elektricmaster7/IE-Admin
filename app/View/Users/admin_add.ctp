@@ -21,7 +21,7 @@
     <?php if($this->Authake->isMemberOf(1)){ ?>
       <div class="form-group">
         <?php echo $this->Form->label('Group', __('Grupo'));?>
-        <?php echo $this->Form->input('Group', array('label'=>false, 'div'=>false, 'class'=>'form-control'));?>
+        <?php echo $this->Form->input('Group', array('label'=>false, 'div'=>false, 'class'=>'form-control', 'data-placeholder' => __('Selecione uma opção')));?>
       </div>
     <?php } ?>
     <?php if($this->Authake->isMemberOf(1) || $this->Authake->isMemberOf(2)){ ?>

@@ -21,8 +21,8 @@
   </div>
   <?php if($this->Authake->isMemberOf(1)){ ?>
     <div class="form-group">
-      <?php echo $this->Form->label('Group', __("Grupos (Pressione 'Control' para selecionar vários)"));?>
-      <?php echo $this->Form->input('Group', array('label'=>false, 'div'=>false, 'class'=>'form-control'));?>
+      <?php echo $this->Form->label('Group', __("Grupo"));?>
+      <?php echo $this->Form->input('Group', array('label'=>false, 'div'=>false, 'class'=>'form-control', 'data-placeholder' => __('Selecione uma opção')));?>
     </div>
   <?php } ?>
   <!--<div class="form-group">
@@ -40,7 +40,7 @@
       <?php echo $this->Form->label('disable', __('Desactivado'));?>
     </div>
   <?php } ?>
-  <div class="row material-container-footer">
+  <div class="row footer">
     <div class="col-xs-12 col-sm-6 col-md-4"><?php echo $this->Form->submit(__('Editar Utilizador'),array('div'=>false, 'class'=>'material-button')); ?></div>
     <div class="col-xs-12 col-sm-6 col-md-4"><a href="/admin/users" class="material-button inverted-button"><?php echo __('VOLTAR'); ?></a></div>
   </div>

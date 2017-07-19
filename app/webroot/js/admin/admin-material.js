@@ -11,6 +11,10 @@ $(document).ready(function(){
     }
   });
 
+  $('select').select2({
+    width: '100%'
+  });
+
   //SETUP FOCUS TRIGGER
   inputs.on('focus change keyup', function(){
     $(this).next('label').addClass("material-label-focus");

@@ -15,6 +15,7 @@
     <link href="/css/admin/admin.css" rel="stylesheet">
     <link href="/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/css/select2/select2.css" rel="stylesheet">
     <?php $this->start('styles'); ?><?php $this->end(); ?>
     <?php echo $this->fetch('styles'); ?>
 
@@ -89,6 +90,7 @@
     <script src="/js/jquery/jquery-3.1.1.min.js"></script>
     <!--BOOTSTRAP 3.3.7-->
     <script src="/js/bootstrap/bootstrap.min.js"></script>
+    <script src="/js/select2/select2.js"></script>
     <script src="/js/admin/admin-material.js"></script>
     <?php $this->start('scripts'); ?><?php $this->end(); ?>
     <!--MODALS-->
