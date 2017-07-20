@@ -12,7 +12,9 @@ $(document).ready(function(){
   });
 
   $('select').select2({
-    width: '100%'
+    width: '100%',
+    minimumResultsForSearch: 5,
+    language: lang
   });
 
   //SETUP FOCUS TRIGGER
