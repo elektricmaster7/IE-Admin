@@ -36,7 +36,7 @@ class HtmlPlusHelper extends HtmlHelper {
     if($this->Session->check('Config.language')) $default = $this->Session->read('Config.language');
     if(isset($options['class'])) $class += ' '.$options['class'];
     if(isset($options['id'])) $id = $options['id'];
-    echo $this->Form->input(null, array('options' => $languages, 'default' => $default, 'id' => $id,'class' => $class, 'div' => false, 'label' => false));
+    echo $this->Form->input(null, array('options' => $languages, 'default' => $default, 'id' => $id,'class' => $class, 'div' => false, 'label' => false, 'data-flags'));
   }
 
   /**

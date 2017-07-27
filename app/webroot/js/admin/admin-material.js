@@ -11,10 +11,39 @@ $(document).ready(function(){
     }
   });
 
+  //SELECT 2
+  function formatState (state) {
+    if (!state.id) { return state.text; }
+    var $element = $(state.element).parent();
+    if($element.data('flags') !== undefined){
+      var lang = $(state.element).val();
+      if(lang == 'en') lang = 'gb';
+      var $state = $('<span><span class="flag-icon flag-icon-'+lang+'"></span> ' + state.text + '</span>');
+      return $state;
+    } else {
+      return state.text;
+    }
+  };
+
+  function template(data, container){
+    //console.log(data);
+    var $element = $(data.element).parent();
+    if($element.data('flags') !== undefined){
+      var lang = $(data.element).val();
+      if(lang == 'en') lang = 'gb';
+      var $state = $('<span><span class="flag-icon flag-icon-'+lang+'"></span> ' + data.text + '</span>');
+      return $state;
+    } else {
+      return data.text;
+    }
+  }
+
   $('select').select2({
     width: '100%',
     minimumResultsForSearch: 5,
-    language: lang
+    language: lang,
+    templateResult: formatState,
+    templateSelection: template
   });
 
   //SETUP FOCUS TRIGGER
