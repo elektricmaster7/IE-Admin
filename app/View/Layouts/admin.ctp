@@ -47,7 +47,7 @@
       </div>
 
       <!--LOGOS-->
-      
+
     </nav>
 
     <!-- CONTENT -->
@@ -89,7 +89,8 @@
     <script src="/js/jquery/jquery-3.1.1.min.js"></script>
     <!--BOOTSTRAP 3.3.7-->
     <script src="/js/bootstrap/bootstrap.min.js"></script>
-    <script src="/js/admin/admin-material.js"></script>
+    <!--MATERIAL DESIGN--> 
+    <?php echo $this->element('admin-material'); ?>
     <?php $this->start('scripts'); ?><?php $this->end(); ?>
     <!--MODALS-->
     <!--SYSTEM MODALS-->

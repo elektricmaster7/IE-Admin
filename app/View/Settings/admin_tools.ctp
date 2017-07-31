@@ -14,7 +14,7 @@
           <p>Este módulo gera o model indicado incluindo todas as pré-definições necessárias.</p>
         </div>
       </div>
-      <?php echo $this->Form->create('Setting', array('action' => 'generate_translation')); ?>
+      <?php echo $this->Form->create('Setting', array('action' => 'generate_model')); ?>
         <div class="row">
           <div class="col-xs-12">
             <div class="form-group">
