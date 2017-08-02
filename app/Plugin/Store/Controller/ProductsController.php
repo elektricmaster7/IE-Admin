@@ -23,5 +23,7 @@ class ProductsController extends StoreAppController {
   public function admin_delete(){
     //TODO: IMPLEMENT FUNCTION
   }
+
+
 }
 ?>
