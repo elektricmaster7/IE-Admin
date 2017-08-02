@@ -1,6 +1,7 @@
 <h2><?php echo __('DEFINIÇÕES'); ?></h2>
 <div class="material-container">
   <?php echo $this->Form->create('Setting'); ?>
+    <?php echo $this->Form->hidden('id'); ?>
     <div class="form-group">
       <?php echo $this->Form->label('lang', __('Linguagem')); ?>
       <?php echo $this->Form->input('lang', array('options' => array('pt' => 'Português', 'en' => 'English'), 'label' => false, 'div' => false, 'class' => 'form-control', 'data-placeholder' => __('Selecione uma opção'), 'data-flags')); ?>
@@ -20,9 +21,6 @@
 </div>
 
 <h2><?php echo __('FERRAMENTAS DE SISTEMA'); ?></h2>
-<!--<pre>
-<?php //print_r($tables); ?>
-</pre>-->
 <?php //$this->Html->languageSelect(); ?>
 <div class="row">
   <div class="col-xs-12 col-md-4">

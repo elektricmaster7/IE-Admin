@@ -2,12 +2,14 @@
 App::uses('Controller', 'Controller');
 class AppController extends Controller {
 
-	var $uses = array('User','Rule','Group','Notification');
+	var $uses = array('User','Rule','Group','Notification','Setting');
 	var $components = array('Session', 'Cookie', 'RequestHandler', 'Authake', 'Generator');
 	var $helpers = array('Form', 'Time', 'Html' => array('className' => 'HtmlPlus'), 'Session', 'Js', 'Authake', 'Material');
 	var $counter = 0;
 
 	function beforeFilter(){
+		//READ SETTINGS
+		$this->__getSettings();
 		//LANGUAGE
 		//THIS CHECKS THE SESSION FOR A LANGUAGE IF SET USES THAT LANGUAGE FOR TRANSLATION
 		$this->__setLanguage();
@@ -70,6 +72,11 @@ class AppController extends Controller {
 			)
 		);
 		$this->Notification->save($notification);
+	}
+
+	/*SETTINGS SYSTEM*/
+	private function __getSettings(){
+		$this->set('settings', $this->Setting->find('first'));
 	}
 
 	/*TRANSLATION SYSTEM*/

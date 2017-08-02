@@ -42,7 +42,11 @@
         <?php if($this->Authake->isMemberOf(1)){ ?>
           <a href="/admin/settings/tools" class="pull-right"><i class="material-icons md-24 topbar-button">settings</i></a>
         <?php } ?>
-        <?php echo $this->element('admin-notifications', array('notifications' => $notifications)); ?>
+        <?php
+          if(isset($settings) && $settings['Setting']['notifications'] == 1){
+            echo $this->element('admin-notifications', array('notifications' => $notifications));
+          }
+        ?>
         <div class="navbar-username"><?php echo $this->Authake->getLogin(); ?></div>
       </div>
 
@@ -89,7 +93,7 @@
     <script src="/js/jquery/jquery-3.1.1.min.js"></script>
     <!--BOOTSTRAP 3.3.7-->
     <script src="/js/bootstrap/bootstrap.min.js"></script>
-    <!--MATERIAL DESIGN--> 
+    <!--MATERIAL DESIGN-->
     <?php echo $this->element('admin-material'); ?>
     <?php $this->start('scripts'); ?><?php $this->end(); ?>
     <!--MODALS-->

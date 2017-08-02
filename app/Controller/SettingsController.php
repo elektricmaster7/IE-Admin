@@ -7,10 +7,18 @@ class SettingsController extends AppController {
 
   function admin_tools(){
 
-    //TRANSLATION HELPER
     if($this->request->is(array('post', 'put'))){
-      //GENERATE THE ACTUAL THINGS
+      //SAVE SYSTEM SETTINGS
+      if($this->Setting->save($this->request->data)){
+        $this->Session->setFlash(__('Definições editadas com sucesso!'), 'success');
+        $this->redirect($this->here);
+      } else {
+        $this->Session->setFlash(__('Erro ao editar definições!'), 'error');
+      }
     }
+
+    //GET SYSTEM SETTINGS
+    $this->request->data = $this->Setting->find('first');
 
     //GET TABLE DATA FOR SETTINGS SYSTEMS
     $tables_list = $this->Setting->getTablesList();
