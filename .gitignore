@@ -8,7 +8,6 @@
 /dist
 /node_modules*
 /tags
-*.mo
 /_gsdata_*
 #Conflict avoiding paths change .defaults
 #/app/View/Pages/admin_home.ctp

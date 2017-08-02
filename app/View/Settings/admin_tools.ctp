@@ -11,7 +11,7 @@
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <p>Este módulo gera o model indicado incluindo todas as pré-definições necessárias.</p>
+          <p><?php echo __("Este módulo gera o model indicado incluindo todas as pré-definições necessárias."); ?></p>
         </div>
       </div>
       <?php echo $this->Form->create('Setting', array('action' => 'generate_model')); ?>
@@ -32,11 +32,11 @@
   <div class="col-xs-12 col-md-4">
     <div class="material-card">
       <div class="row">
-        <div class="col-xs-12"><i class="material-icons">translate</i>TRADUÇÕES</div>
+        <div class="col-xs-12"><i class="material-icons">translate</i><?php echo __("TRADUÇÕES");?></div>
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <p>Este módulo gera a tabela de tradução da tabela selecionada.</p>
+          <p><?php echo __("Este módulo gera a tabela de tradução da tabela selecionada.");?></p>
         </div>
       </div>
       <?php echo $this->Form->create('Setting', array('action' => 'generate_translation')); ?>
