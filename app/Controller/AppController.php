@@ -9,10 +9,10 @@ class AppController extends Controller {
 
 	function beforeFilter(){
 		//READ SETTINGS
-		$this->__getSettings();
+		$settings = $this->__getSettings();
 		//LANGUAGE
 		//THIS CHECKS THE SESSION FOR A LANGUAGE IF SET USES THAT LANGUAGE FOR TRANSLATION
-		$this->__setLanguage();
+		$this->__setLanguage($settings);
 		//AUTH
 		//SETS THE ADMIN LAYOUT FROM THE PREFIX AND CALLS THE AUTHENTICATION METHODS
 		if (isset($this->params['prefix']) && $this->params['prefix'] == 'admin') $this->layout = 'admin'; //SET ADMIN TEMPLATE FOR ADMIN PAGES
@@ -76,11 +76,14 @@ class AppController extends Controller {
 
 	/*SETTINGS SYSTEM*/
 	private function __getSettings(){
-		$this->set('settings', $this->Setting->find('first'));
+		$settings = $this->Setting->find('first');
+		$this->set('settings', $settings);
+		return $settings;
 	}
 
 	/*TRANSLATION SYSTEM*/
-	private function __setLanguage(){
+	private function __setLanguage($settings){
+		Configure::write('Config.language', $settings['Setting']['lang']);
 		if(!isset($this->params['language']) && $this->Session->check('Config.language')){
 			Configure::write('Config.language', $this->Session->read('Config.language'));
 		}else if(isset($this->params['language']) && ($this->params['language'] != $this->Session->read('Config.language'))){

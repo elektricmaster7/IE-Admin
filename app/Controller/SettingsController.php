@@ -11,7 +11,7 @@ class SettingsController extends AppController {
       //SAVE SYSTEM SETTINGS
       if($this->Setting->save($this->request->data)){
         $this->Session->setFlash(__('Definições editadas com sucesso!'), 'success');
-        $this->redirect($this->here);
+        $this->redirect(array('action'=>'tools'));
       } else {
         $this->Session->setFlash(__('Erro ao editar definições!'), 'error');
       }
