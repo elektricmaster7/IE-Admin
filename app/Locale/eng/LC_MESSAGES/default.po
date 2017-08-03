@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2017-08-02 13:34+0100\n"
+"PO-Revision-Date: 2017-08-03 17:52+0100\n"
 "Last-Translator: \n"
 "Language-Team: EMAIL@ADDRESS\n"
 "Language: en\n"
@@ -13,9 +13,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.0.1\n"
+"X-Generator: Poedit 2.0.3\n"
 
-#: Controller/AppController.php:33
+#: Controller/AppController.php:37
 msgid "As passwords não são iguais!"
 msgstr "The passwords don't match!"
 
@@ -87,15 +87,23 @@ msgstr "This rule cannot be deleted!"
 msgid "Regra eliminada."
 msgstr "Rule deleted."
 
-#: Controller/SettingsController.php:25
+#: Controller/SettingsController.php:13
+msgid "Definições editadas com sucesso!"
+msgstr "Settings updated successfully!"
+
+#: Controller/SettingsController.php:16
+msgid "Erro ao editar definições!"
+msgstr "Error updating settings!"
+
+#: Controller/SettingsController.php:33
 msgid "O model %s foi criado com sucesso!"
 msgstr "The model %s was created successfully!"
 
-#: Controller/SettingsController.php:27
+#: Controller/SettingsController.php:35
 msgid "Erro ao criar o model indicado!"
 msgstr "Error creating the model!"
 
-#: Controller/SettingsController.php:38
+#: Controller/SettingsController.php:46
 msgid ""
 "A tabela de tradução para a tabela %s e o respectivo model foram criados com "
 "sucesso!"
@@ -103,7 +111,7 @@ msgstr ""
 "The translation table for %s and its respective model were created "
 "successfully!"
 
-#: Controller/SettingsController.php:40
+#: Controller/SettingsController.php:48
 msgid "Erro ao criar tabela de tradução para o model indicado!"
 msgstr "Error creating the translation table for the selected model!"
 
@@ -335,7 +343,7 @@ msgstr "View all"
 msgid "Fechar"
 msgstr "Close"
 
-#: View/Elements/gotoadminpage.ctp:3 View/Layouts/admin.ctp:59
+#: View/Elements/gotoadminpage.ctp:3 View/Layouts/admin.ctp:63
 msgid "Administração"
 msgstr "Administration"
 
@@ -415,8 +423,8 @@ msgid "Utilizadores no grupo"
 msgstr "Users in Group"
 
 #: View/Groups/admin_add.ctp:11 View/Groups/admin_edit.ctp:12
-#: View/Rules/admin_add.ctp:11 View/Users/admin_add.ctp:24
-#: View/Users/admin_edit.ctp:25
+#: View/Rules/admin_add.ctp:11 View/Settings/admin_tools.ctp:19
+#: View/Users/admin_add.ctp:24 View/Users/admin_edit.ctp:25
 msgid "Selecione uma opção"
 msgstr "Select an option"
 
@@ -437,7 +445,7 @@ msgstr "Edit Group"
 msgid "VOLTAR"
 msgstr "BACK"
 
-#: View/Groups/admin_index.ctp:1 View/Layouts/admin.ctp:63
+#: View/Groups/admin_index.ctp:1 View/Layouts/admin.ctp:67
 msgid "Grupos"
 msgstr "Groups"
 
@@ -479,27 +487,27 @@ msgstr "Guest"
 msgid "Tem a certeza que pretende continuar a operação indicada?"
 msgstr "Are you sure you want to complete this action?"
 
-#: View/Layouts/admin.ctp:60
+#: View/Layouts/admin.ctp:64
 msgid "Dashboard"
 msgstr "Dashboard"
 
-#: View/Layouts/admin.ctp:61 View/Users/admin_index.ctp:1
+#: View/Layouts/admin.ctp:65 View/Users/admin_index.ctp:1
 msgid "Utilizadores"
 msgstr "Users"
 
-#: View/Layouts/admin.ctp:64 View/Rules/admin_index.ctp:1
+#: View/Layouts/admin.ctp:68 View/Rules/admin_index.ctp:1
 msgid "Regras"
 msgstr "Rules"
 
-#: View/Layouts/admin.ctp:66
+#: View/Layouts/admin.ctp:70
 msgid "Definições"
 msgstr "Settings"
 
-#: View/Layouts/admin.ctp:68
+#: View/Layouts/admin.ctp:72
 msgid "Ferramentas"
 msgstr "Tools"
 
-#: View/Notifications/admin_index.ctp:1
+#: View/Notifications/admin_index.ctp:1 View/Settings/admin_tools.ctp:13
 msgid "Notificações"
 msgstr "Notifications"
 
@@ -580,38 +588,54 @@ msgstr "Delete Rule"
 msgid "Tem a certeza que pretende eliminar a regra?"
 msgstr "Are you sure you want to delete this rule?"
 
-#: View/Settings/admin_tools.ctp:1 View/Users/admin_test.ctp:1
+#: View/Settings/admin_tools.ctp:1
+msgid "DEFINIÇÕES"
+msgstr "SETTINGS"
+
+#: View/Settings/admin_tools.ctp:9
+msgid "Traduções"
+msgstr "Translations"
+
+#: View/Settings/admin_tools.ctp:18
+msgid "Linguagem"
+msgstr "Language"
+
+#: View/Settings/admin_tools.ctp:26
+msgid "Editar Definições"
+msgstr "Update Settings"
+
+#: View/Settings/admin_tools.ctp:31 View/Users/admin_test.ctp:1
 msgid "FERRAMENTAS DE SISTEMA"
 msgstr "SYSTEM TOOLS"
 
-#: View/Settings/admin_tools.ctp:14
+#: View/Settings/admin_tools.ctp:41
 msgid ""
 "Este módulo gera o model indicado incluindo todas as pré-definições "
 "necessárias."
 msgstr ""
 "This module generates the indicated model with all the default settings."
 
-#: View/Settings/admin_tools.ctp:22
+#: View/Settings/admin_tools.ctp:49
 msgid "Nome do Model"
 msgstr "Model Name"
 
-#: View/Settings/admin_tools.ctp:27
+#: View/Settings/admin_tools.ctp:54
 msgid "GERAR MODEL"
 msgstr "GENERATE MODEL"
 
-#: View/Settings/admin_tools.ctp:35
+#: View/Settings/admin_tools.ctp:62
 msgid "TRADUÇÕES"
 msgstr "TRANSLATIONS"
 
-#: View/Settings/admin_tools.ctp:39
+#: View/Settings/admin_tools.ctp:66
 msgid "Este módulo gera a tabela de tradução da tabela selecionada."
 msgstr "This module generates the translation tables for the selected table."
 
-#: View/Settings/admin_tools.ctp:46 View/Users/admin_test.ctp:20
+#: View/Settings/admin_tools.ctp:73 View/Users/admin_test.ctp:20
 msgid "Nome da Tabela"
 msgstr "Table Name"
 
-#: View/Settings/admin_tools.ctp:52 View/Users/admin_test.ctp:27
+#: View/Settings/admin_tools.ctp:79 View/Users/admin_test.ctp:27
 msgid "GERAR TRADUÇÕES"
 msgstr "GENERATE TRANSLATIONS"
 

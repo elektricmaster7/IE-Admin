@@ -13,7 +13,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: Controller/AppController.php:33
+#: Controller/AppController.php:37
 msgid "As passwords não são iguais!"
 msgstr ""
 
@@ -85,19 +85,27 @@ msgstr ""
 msgid "Regra eliminada."
 msgstr ""
 
-#: Controller/SettingsController.php:25
+#: Controller/SettingsController.php:13
+msgid "Definições editadas com sucesso!"
+msgstr ""
+
+#: Controller/SettingsController.php:16
+msgid "Erro ao editar definições!"
+msgstr ""
+
+#: Controller/SettingsController.php:33
 msgid "O model %s foi criado com sucesso!"
 msgstr ""
 
-#: Controller/SettingsController.php:27
+#: Controller/SettingsController.php:35
 msgid "Erro ao criar o model indicado!"
 msgstr ""
 
-#: Controller/SettingsController.php:38
+#: Controller/SettingsController.php:46
 msgid "A tabela de tradução para a tabela %s e o respectivo model foram criados com sucesso!"
 msgstr ""
 
-#: Controller/SettingsController.php:40
+#: Controller/SettingsController.php:48
 msgid "Erro ao criar tabela de tradução para o model indicado!"
 msgstr ""
 
@@ -317,7 +325,7 @@ msgid "Fechar"
 msgstr ""
 
 #: View/Elements/gotoadminpage.ctp:3
-#: View/Layouts/admin.ctp:59
+#: View/Layouts/admin.ctp:63
 msgid "Administração"
 msgstr ""
 
@@ -400,6 +408,7 @@ msgstr ""
 #: View/Groups/admin_add.ctp:11
 #: View/Groups/admin_edit.ctp:12
 #: View/Rules/admin_add.ctp:11
+#: View/Settings/admin_tools.ctp:19
 #: View/Users/admin_add.ctp:24
 #: View/Users/admin_edit.ctp:25
 msgid "Selecione uma opção"
@@ -424,7 +433,7 @@ msgid "VOLTAR"
 msgstr ""
 
 #: View/Groups/admin_index.ctp:1
-#: View/Layouts/admin.ctp:63
+#: View/Layouts/admin.ctp:67
 msgid "Grupos"
 msgstr ""
 
@@ -470,29 +479,30 @@ msgstr ""
 msgid "Tem a certeza que pretende continuar a operação indicada?"
 msgstr ""
 
-#: View/Layouts/admin.ctp:60
+#: View/Layouts/admin.ctp:64
 msgid "Dashboard"
 msgstr ""
 
-#: View/Layouts/admin.ctp:61
+#: View/Layouts/admin.ctp:65
 #: View/Users/admin_index.ctp:1
 msgid "Utilizadores"
 msgstr ""
 
-#: View/Layouts/admin.ctp:64
+#: View/Layouts/admin.ctp:68
 #: View/Rules/admin_index.ctp:1
 msgid "Regras"
 msgstr ""
 
-#: View/Layouts/admin.ctp:66
+#: View/Layouts/admin.ctp:70
 msgid "Definições"
 msgstr ""
 
-#: View/Layouts/admin.ctp:68
+#: View/Layouts/admin.ctp:72
 msgid "Ferramentas"
 msgstr ""
 
 #: View/Notifications/admin_index.ctp:1
+#: View/Settings/admin_tools.ctp:13
 msgid "Notificações"
 msgstr ""
 
@@ -583,36 +593,52 @@ msgid "Tem a certeza que pretende eliminar a regra?"
 msgstr ""
 
 #: View/Settings/admin_tools.ctp:1
+msgid "DEFINIÇÕES"
+msgstr ""
+
+#: View/Settings/admin_tools.ctp:9
+msgid "Traduções"
+msgstr ""
+
+#: View/Settings/admin_tools.ctp:18
+msgid "Linguagem"
+msgstr ""
+
+#: View/Settings/admin_tools.ctp:26
+msgid "Editar Definições"
+msgstr ""
+
+#: View/Settings/admin_tools.ctp:31
 #: View/Users/admin_test.ctp:1
 msgid "FERRAMENTAS DE SISTEMA"
 msgstr ""
 
-#: View/Settings/admin_tools.ctp:14
+#: View/Settings/admin_tools.ctp:41
 msgid "Este módulo gera o model indicado incluindo todas as pré-definições necessárias."
 msgstr ""
 
-#: View/Settings/admin_tools.ctp:22
+#: View/Settings/admin_tools.ctp:49
 msgid "Nome do Model"
 msgstr ""
 
-#: View/Settings/admin_tools.ctp:27
+#: View/Settings/admin_tools.ctp:54
 msgid "GERAR MODEL"
 msgstr ""
 
-#: View/Settings/admin_tools.ctp:35
+#: View/Settings/admin_tools.ctp:62
 msgid "TRADUÇÕES"
 msgstr ""
 
-#: View/Settings/admin_tools.ctp:39
+#: View/Settings/admin_tools.ctp:66
 msgid "Este módulo gera a tabela de tradução da tabela selecionada."
 msgstr ""
 
-#: View/Settings/admin_tools.ctp:46
+#: View/Settings/admin_tools.ctp:73
 #: View/Users/admin_test.ctp:20
 msgid "Nome da Tabela"
 msgstr ""
 
-#: View/Settings/admin_tools.ctp:52
+#: View/Settings/admin_tools.ctp:79
 #: View/Users/admin_test.ctp:27
 msgid "GERAR TRADUÇÕES"
 msgstr ""
