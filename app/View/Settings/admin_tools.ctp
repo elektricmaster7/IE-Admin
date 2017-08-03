@@ -3,17 +3,25 @@
   <?php echo $this->Form->create('Setting'); ?>
     <?php echo $this->Form->hidden('id'); ?>
     <div class="form-group">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <?php echo $this->Form->checkbox('translations', array('label'=>false, 'div'=>false, 'class'=>'material-icons'));?>
+          <?php echo $this->Form->label('translations', __('Traduções'));?>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <?php echo $this->Form->checkbox('notifications', array('label'=>false, 'div'=>false, 'class'=>'material-icons'));?>
+          <?php echo $this->Form->label('notifications', __('Notificações'));?>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
       <?php echo $this->Form->label('lang', __('Linguagem')); ?>
       <?php echo $this->Form->input('lang', array('options' => array('pt' => 'Português', 'en' => 'English'), 'label' => false, 'div' => false, 'class' => 'form-control', 'data-placeholder' => __('Selecione uma opção'), 'data-flags')); ?>
     </div>
-    <div class="form-group">
-      <?php echo $this->Form->input('logo_path', array('label' => false, 'div' => false, 'class' => 'form-control')); ?>
-      <?php echo $this->Form->label('logo_path', __('Localização do logotipo')); ?>
-    </div>
-    <div class="checkbox">
-      <?php echo $this->Form->checkbox('notifications', array('label'=>false, 'div'=>false, 'class'=>'material-icons'));?>
-      <?php echo $this->Form->label('notifications', __('Notificações'));?>
-    </div>
+    <!--<div class="form-group">
+      <?php //echo $this->Form->input('logo_path', array('label' => false, 'div' => false, 'class' => 'form-control')); ?>
+      <?php //echo $this->Form->label('logo_path', __('Localização do logotipo')); ?>
+    </div>-->
     <div class="row footer">
       <div class="col-xs-12 col-sm-6 col-md-4"><?php echo $this->Form->submit(__('Editar Definições'),array('div'=>false, 'class'=>'material-button')); ?></div>
     </div>

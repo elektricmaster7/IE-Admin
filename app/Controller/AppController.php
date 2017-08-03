@@ -7,12 +7,14 @@ class AppController extends Controller {
 	var $helpers = array('Form', 'Time', 'Html' => array('className' => 'HtmlPlus'), 'Session', 'Js', 'Authake', 'Material');
 	var $counter = 0;
 
+	var $settings = null; //SETTINGS VARIABLES
+
 	function beforeFilter(){
 		//READ SETTINGS
-		$settings = $this->__getSettings();
+		$this->settings = $this->__getSettings();
 		//LANGUAGE
 		//THIS CHECKS THE SESSION FOR A LANGUAGE IF SET USES THAT LANGUAGE FOR TRANSLATION
-		$this->__setLanguage($settings);
+		$this->__setLanguage($this->settings);
 		//AUTH
 		//SETS THE ADMIN LAYOUT FROM THE PREFIX AND CALLS THE AUTHENTICATION METHODS
 		if (isset($this->params['prefix']) && $this->params['prefix'] == 'admin') $this->layout = 'admin'; //SET ADMIN TEMPLATE FOR ADMIN PAGES
@@ -94,8 +96,10 @@ class AppController extends Controller {
 
 	//REDIRTECT FUNCTION OVERWRITTEN TO ACCOUNT FOR TRANSLATION
 	public function redirect($url, $status = NULL, $exit = true){
-		if(!isset($url['language']) && $this->Session->check('Config.language')){
-			$url['language'] = $this->Session->read('Config.language');
+		if($this->settings['Setting']['translations']){
+			if(!isset($url['language']) && $this->Session->check('Config.language')){
+				$url['language'] = $this->Session->read('Config.language');
+			}
 		}
 		parent::redirect($url, $status, $exit);
 	}
