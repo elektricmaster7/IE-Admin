@@ -59,7 +59,13 @@
       <!--SIDEBAR-->
       <div class="sidebar-admin sidebar" role="navigation">
         <div class="sidebar-nav collapse navbar-collapse">
-          <div>
+          <div id="menu-tabs">
+            <ul class="tabs">
+              <li class="tab-link current" data-tab="general"><i class="material-icons md-18">home</i></li>
+              <li class="tab-link" data-tab="store"><i class="material-icons md-18">shopping_cart</i></li>
+            </ul>
+          </div>
+          <div id="general" class="tab-content current">
             <ul class="nav" id="side-menu">
               <li class="header"><?php echo __('Administração'); ?></li>
               <li><a href="/admin"><i class="material-icons md-18">home</i> <?php echo __('Dashboard'); ?></a></li>
@@ -77,8 +83,12 @@
               <?php echo $this->element('admin-menu'); ?>
             </ul>
           </div>
+          <div id="store" class="tab-content">
+            <ul class="nav" id="side-menu">
+              <li class="header"><?php echo __('Loja'); ?></li>
+            </ul>
+          </div>
         </div>
-        <div>WRONG MOUTHs</div>
       </div>
 
       <!--PAGE CONTAINER-->
