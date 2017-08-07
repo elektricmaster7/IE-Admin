@@ -1,11 +1,11 @@
 <?php
 App::uses('AppController', 'Controller');
-class ProductsController extends StoreAppController {
-  public $uses = array('Store.Product');
+class CategoriesController extends StoreAppController {
+  public $uses = array('Store.Category');
 
   public function index(){
     //TODO: IMPLEMENT FUNCTION
-    $this->set('products', $this->Product->find('all'));
+    $this->set('categories', $this->Category->find('all'));
   }
 
   public function admin_index(){
