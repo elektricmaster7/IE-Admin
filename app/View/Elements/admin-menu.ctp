@@ -12,14 +12,11 @@
     <div id="general" class="tab-content current">
       <ul class="nav" id="side-menu">
         <li class="header"><?php echo __('Administração'); ?></li>
-        <?php echo $this->Material->adminLink('/admin', __('Dashboard'), array('icon' => 'home', 'permissions' => array(1, 2))); ?>
-        <li><a href="/admin"><i class="material-icons md-18">home</i> <?php echo __('Dashboard'); ?></a></li>
-        <?php if($this->Authake->isMemberOf(1) || $this->Authake->isMemberOf(2)){ ?>
-          <li><a href="/admin/users"><i class="material-icons md-18">person</i> <?php echo __('Utilizadores'); ?></a></li>
-        <?php } ?>
+        <?php echo $this->Material->adminLink('/admin', __('Dashboard'), array('icon' => 'home')); ?>
+        <?php echo $this->Material->adminLink('/admin/users', __('Utilizadores'), array('icon' => 'person', 'permissions' => array(1, 2))); ?>
+        <?php echo $this->Material->adminLink('/admin/groups', __('Grupos'), array('icon' => 'group', 'permissions' => array(1))); ?>
+        <?php echo $this->Material->adminLink('/admin/rules', __('Regras'), array('icon' => 'dehaze', 'permissions' => array(1))); ?>
         <?php if($this->Authake->isMemberOf(1)){ ?>
-          <li><a href="/admin/groups"><i class="material-icons md-18">group</i> <?php echo __('Grupos'); ?></a></li>
-          <li><a href="/admin/rules"><i class="material-icons md-18">dehaze</i> <?php echo __('Regras'); ?></a></li>
           <li class="dropdown-admin">
             <a href="#"><i class="material-icons md-18">settings</i> <?php echo __('Definições'); ?></a>
             <ul>
