@@ -46,6 +46,17 @@ $(document).ready(function(){
     templateSelection: template
   });
 
+  //TABS
+  $('ul.tabs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('ul.tabs li').removeClass('current');
+		$('.tab-content').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	});
+
   //SETUP FOCUS TRIGGER
   inputs.on('focus change keyup', function(){
     $(this).next('label').addClass("material-label-focus");
@@ -75,7 +86,7 @@ $(document).ready(function(){
     var url = document.createElement("a");
     url.href = window.location.href;
     var lang = $(this).val();
-    console.log(url.pathname);
+    //console.log(url.pathname);
     $.ajax({
       'url': '/settings/get_translate_url',
       'data': {"url":url.pathname, "language":lang},

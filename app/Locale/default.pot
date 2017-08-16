@@ -1,737 +1,720 @@
 # LANGUAGE translation of CakePHP Application
 # Copyright YEAR NAME <EMAIL@ADDRESS>
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: 2017-08-03 17:52+0100\n"
-"Last-Translator: \n"
-"Language-Team: EMAIL@ADDRESS\n"
-"Language: en\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.0.3\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
 #: Controller/AppController.php:37
 msgid "As passwords não são iguais!"
-msgstr "The passwords don't match!"
+msgstr ""
 
 #: Controller/GroupsController.php:22;49
 msgid "Grupo inválido."
-msgstr "Invalid group."
+msgstr ""
 
 #: Controller/GroupsController.php:37
 msgid "Grupo criado com sucesso!"
-msgstr "Group created successfully!"
+msgstr ""
 
 #: Controller/GroupsController.php:40;62
 msgid "O grupo não pode ser guardado. Por favor, tente novamente!"
-msgstr "The group cannot be saved. Please try again!"
+msgstr ""
 
 #: Controller/GroupsController.php:54
 msgid "Não pode editar o grupo dos administratores!"
-msgstr "Cannot edit the Administrators group!"
+msgstr ""
 
 #: Controller/GroupsController.php:60
 msgid "Grupo editado com sucesso!"
-msgstr "Group edited successfully!"
+msgstr ""
 
 #: Controller/GroupsController.php:84
 msgid "Este grupo não pode ser eliminado!"
-msgstr "This group cannot be deleted!"
+msgstr ""
 
 #: Controller/GroupsController.php:88
 msgid "Grupo eliminado."
-msgstr "Group deleted."
+msgstr ""
 
 #: Controller/NotificationsController.php:26
 msgid "Notificação inválida!"
-msgstr "Invalid notification!"
+msgstr ""
 
 #: Controller/RulesController.php:16
 msgid "Regra inválida."
-msgstr "Invalid rule."
+msgstr ""
 
 #: Controller/RulesController.php:31
 msgid "Regra criada com sucesso!"
-msgstr "Rule created successfully!"
+msgstr ""
 
 #: Controller/RulesController.php:36;72
 msgid "A regra não pode ser guardada. Por favor, tente novamente!"
-msgstr "The rule cannot be saved. Please try again!"
+msgstr ""
 
 #: Controller/RulesController.php:50
 msgid "Regra Inválida"
-msgstr "Invalid rule"
+msgstr ""
 
 #: Controller/RulesController.php:57
 msgid "Não pode editar esta regra!"
-msgstr "Cannot edit this rule!"
+msgstr ""
 
 #: Controller/RulesController.php:67
 msgid "Regra editada com sucesso!"
-msgstr "Rule edited successfully!"
+msgstr ""
 
 #: Controller/RulesController.php:93
 msgid "O ID da regra é inválido!"
-msgstr "Rule ID is invalid!"
+msgstr ""
 
 #: Controller/RulesController.php:97
 msgid "Esta regra não pode ser eliminada!"
-msgstr "This rule cannot be deleted!"
+msgstr ""
 
 #: Controller/RulesController.php:101
 msgid "Regra eliminada."
-msgstr "Rule deleted."
+msgstr ""
 
 #: Controller/SettingsController.php:13
 msgid "Definições editadas com sucesso!"
-msgstr "Settings updated successfully!"
+msgstr ""
 
 #: Controller/SettingsController.php:16
 msgid "Erro ao editar definições!"
-msgstr "Error updating settings!"
+msgstr ""
 
 #: Controller/SettingsController.php:33
 msgid "O model %s foi criado com sucesso!"
-msgstr "The model %s was created successfully!"
+msgstr ""
 
 #: Controller/SettingsController.php:35
 msgid "Erro ao criar o model indicado!"
-msgstr "Error creating the model!"
+msgstr ""
 
 #: Controller/SettingsController.php:46
-msgid ""
-"A tabela de tradução para a tabela %s e o respectivo model foram criados com "
-"sucesso!"
+msgid "A tabela de tradução para a tabela %s e o respectivo model foram criados com sucesso!"
 msgstr ""
-"The translation table for %s and its respective model were created "
-"successfully!"
 
 #: Controller/SettingsController.php:48
 msgid "Erro ao criar tabela de tradução para o model indicado!"
-msgstr "Error creating the translation table for the selected model!"
+msgstr ""
 
 #: Controller/UserController.php:39
 msgid "Não foi possivel verificar! Dados errados."
-msgstr "Cannot verify! Wrong data."
+msgstr ""
 
 #: Controller/UserController.php:49
 msgid "O código de confirmação foi aceite. Pode agora efectuar login."
-msgstr "The confirmation code has been accepted. You can now login."
+msgstr ""
 
 #: Controller/UserController.php:54
 msgid "O código de confirmação foi aceite. Obrigado!"
-msgstr "The confirmation code has been accepted. Thank you!"
+msgstr ""
 
 #: Controller/UserController.php:79
 msgid "Este nome de utilizador já esta utilizado!"
-msgstr "The selected username is already in use!"
+msgstr ""
 
 #: Controller/UserController.php:89
 msgid "Este email já está utilizado!"
-msgstr "The selected email is already in use!"
+msgstr ""
 
 #: Controller/UserController.php:121
 msgid "Confirmação de registo em %s "
-msgstr "Registration confirmation on %s "
+msgstr ""
 
 #: Controller/UserController.php:132
 msgid "Irá receber um email com um código para finalizar o seu registo..."
-msgstr "A code was sent to your email account to confirm your registration..."
+msgstr ""
 
 #: Controller/UserController.php:136
-msgid ""
-"Erro ao enviar e-mail de confirmação. Por favor contacte o administrador em "
-"%s"
+msgid "Erro ao enviar e-mail de confirmação. Por favor contacte o administrador em %s"
 msgstr ""
-"Error sending confirmation email! Please contact the administrator at %s"
 
 #: Controller/UserController.php:149
 msgid "Erro ao efectuar registo!"
-msgstr "Could not finish registration!"
+msgstr ""
 
 #: Controller/UserController.php:160
 msgid "Tem login efectuado. Altere a password no seu perfil."
-msgstr "You are logged in. Please change your password in your profile."
+msgstr ""
 
 #: Controller/UserController.php:186
 msgid "A sua password foi alterada! Pode agora iniciar sessão!"
-msgstr "Your password has been changed! You can now login!"
+msgstr ""
 
 #: Controller/UserController.php:191
 msgid "Erro ao guardar a sua password!"
-msgstr "Error saving your password!"
+msgstr ""
 
 #: Controller/UserController.php:216;221
 msgid "Já tem sessão iniciada!"
-msgstr "You are already logged in!"
+msgstr ""
 
 #: Controller/UserController.php:244;249;305;310
 msgid "Nome de utilizador ou password inválidos!"
-msgstr "Invalid username or password!"
+msgstr ""
 
 #: Controller/UserController.php:259;264
 msgid "A sua conta encontra-se desactivada!"
-msgstr "Your account is deactivated!"
+msgstr ""
 
 #: Controller/UserController.php:275;280
 msgid "A sua conta expirou!"
-msgstr "Your account has expired!"
+msgstr ""
 
 #: Controller/UserController.php:290;295
 msgid "O seu registo ainda não foi confirmado!"
-msgstr "Your registration is not yet confirmed!"
+msgstr ""
 
 #: Controller/UserController.php:325
 msgid "Tem sessão inciada como "
-msgstr "You are logged in as "
+msgstr ""
 
 #: Controller/UserController.php:373
-msgid ""
-"Efectuou um pedido de mudança de password. Por favor verifique o seu e-mail "
-"e use o código que enviamos"
+msgid "Efectuou um pedido de mudança de password. Por favor verifique o seu e-mail e use o código que enviamos"
 msgstr ""
-"You requested a password change. Please verify your email and use the given "
-"code"
 
 #: Controller/UserController.php:388
 msgid "Pedido de alteração de password em %s "
-msgstr "Password change request on %s "
+msgstr ""
 
 #: Controller/UserController.php:398
-msgid ""
-"Se a informção estiver correcta deverá receber um e-mail com as instruções "
-"para alterar a password..."
+msgid "Se a informção estiver correcta deverá receber um e-mail com as instruções para alterar a password..."
 msgstr ""
-"If the provided information is correct you should soon receive an email with "
-"instructions to change your password..."
 
 #: Controller/UserController.php:402
-msgid ""
-"Erro ao enviar e-mail de alteração de password. Por favor contacte o "
-"administrador em %s"
+msgid "Erro ao enviar e-mail de alteração de password. Por favor contacte o administrador em %s"
 msgstr ""
-"Error sending password change email. Please contact the administrator at %s"
 
 #: Controller/UserController.php:407
 msgid "Error ao alterar a password. Por favor contacte o administrador em %s"
-msgstr "Error changing the password. Please contact the administrator at %s"
+msgstr ""
 
 #: Controller/UserController.php:412
-msgid ""
-"Se a informação fornecida estiver correcta, deverá receber um email com as "
-"instruções para alterar a sua password..."
+msgid "Se a informação fornecida estiver correcta, deverá receber um email com as instruções para alterar a sua password..."
 msgstr ""
-"If the information is correct, you should soon receive an email with "
-"instructions to change your password..."
 
 #: Controller/UserController.php:424
 msgid "A sua sessão foi terminada!"
-msgstr "You are logged out!"
+msgstr ""
 
 #: Controller/UsersController.php:22;69
 msgid "Utilizador inválido!"
-msgstr "Invalid user!"
+msgstr ""
 
 #: Controller/UsersController.php:40
 msgid "Não pode adicionar um utilizador ao grupo de administradores"
-msgstr "You cannot add a user on to the administrators group"
+msgstr ""
 
 #: Controller/UsersController.php:53
 msgid "O utilizador foi adicionado."
-msgstr "User created."
+msgstr ""
 
 #: Controller/UsersController.php:57
 msgid "Erro ao adicionar utilizador! Tente novamente."
-msgstr "Error adding user! Please try again."
+msgstr ""
 
 #: Controller/UsersController.php:78
 msgid "Não pode editar um utilizador do grupo de administradores"
-msgstr "You cannot edit an admin user"
+msgstr ""
 
 #: Controller/UsersController.php:88
 msgid "Apenas o admin pode editar o seu perfil!"
-msgstr "Only an admin can change his profile!"
+msgstr ""
 
 #: Controller/UsersController.php:102
 msgid "Não pode editar um utilizador no grupo de administradores"
-msgstr "You cannot edit an admin user"
+msgstr ""
 
 #: Controller/UsersController.php:134
 msgid "O utilizador foi editado."
-msgstr "The user was edited."
+msgstr ""
 
 #: Controller/UsersController.php:139
 msgid "Erro ao editar utilizador! Tente novamente."
-msgstr "The user cannot be edited! Please try again."
+msgstr ""
 
 #: Controller/UsersController.php:156
 msgid "ID de utilizador inválido!"
-msgstr "Invalid user ID!"
+msgstr ""
 
 #: Controller/UsersController.php:165
 msgid "Não pode eliminar um utilizador no grupo de administradores"
-msgstr "You cannot edit an admin user"
+msgstr ""
 
 #: Controller/UsersController.php:172
 msgid "Utilizador eliminado"
-msgstr "User deleted"
+msgstr ""
 
 #: Controller/Component/AuthakeComponent.php:140
 msgid "A sua sessão expirou!"
-msgstr "Your session has expired!"
+msgstr ""
 
 #: Controller/Component/AuthakeComponent.php:157
 msgid "Tem de efectuar login para aceder a %s"
-msgstr "You have to login to access %s"
+msgstr ""
 
-#: Controller/Component/AuthakeComponent.php:198 View/Helper/authake.php:46
+#: Controller/Component/AuthakeComponent.php:198
+#: View/Helper/authake.php:46
 msgid "Guest"
-msgstr "Guest"
+msgstr ""
 
 #: Model/User.php:37
 msgid "Apenas são permitidos caracteres alfanumericos"
-msgstr "Only alphanumeric characters are allowed"
+msgstr ""
 
 #: Model/User.php:42
 msgid "Comprimento minimo de 3 caracteres"
-msgstr "Minimum 3 characters"
+msgstr ""
 
 #: Model/User.php:46
 msgid "Comprimento máximo de 32 caracteres"
-msgstr "Maximum 32 characters"
+msgstr ""
 
 #: Model/User.php:55
 msgid "Preencha o campo de email"
-msgstr "Email cannot be blank"
+msgstr ""
 
 #: Model/User.php:59
 msgid "O email indicado já está em uso"
-msgstr "The selected email is already in use"
+msgstr ""
 
 #: Model/User.php:67
 msgid "A password deve ser preenchida"
-msgstr "The password must be filled in"
+msgstr ""
 
 #: Model/User.php:74;81
 msgid "As passwords devem ser iguais e preenchidas"
-msgstr "The passwords must not be blank and should match"
+msgstr ""
 
-#: View/Elements/admin-modals.ctp:6;13 View/Helper/MaterialHelper.php:20
-#: View/User/pass.ctp:7 View/User/verify.ctp:5
+#: View/Elements/admin-modals.ctp:6;13
+#: View/Helper/MaterialHelper.php:20
+#: View/User/pass.ctp:7
+#: View/User/verify.ctp:5
 msgid "Confirmar"
-msgstr "Confirm"
+msgstr ""
 
 #: View/Elements/admin-modals.ctp:9
 msgid "Tem a certeza que pretende continuar esta acção?"
-msgstr "Are you sure you want to complete this action?"
+msgstr ""
 
 #: View/Elements/admin-modals.ctp:12
 msgid "Cancelar"
-msgstr "Cancel"
+msgstr ""
 
 #: View/Elements/admin-notifications.ctp:8
 msgid "Ver todas"
-msgstr "View all"
+msgstr ""
 
-#: View/Elements/error.ctp:2 View/Elements/info.ctp:2
-#: View/Elements/success.ctp:2 View/Elements/warning.ctp:2
+#: View/Elements/error.ctp:2
+#: View/Elements/info.ctp:2
+#: View/Elements/success.ctp:2
+#: View/Elements/warning.ctp:2
 msgid "Fechar"
-msgstr "Close"
+msgstr ""
 
-#: View/Elements/gotoadminpage.ctp:3 View/Layouts/admin.ctp:63
+#: View/Elements/gotoadminpage.ctp:3
+#: View/Layouts/admin.ctp:63
 msgid "Administração"
-msgstr "Administration"
+msgstr ""
 
 #: View/Elements/gotohomepage.ctp:3
 msgid "Inicio"
-msgstr "Home"
+msgstr ""
 
 #: View/Emails/html/lost_password.ctp:1
 msgid "Efectuou um pedido de reposição de password em %s"
-msgstr "You requested to reset your password at %s"
+msgstr ""
 
 #: View/Emails/html/lost_password.ctp:2
 msgid "Clique no link abaixo para repor a sua password:"
-msgstr "Click the link bellow to reset your password:"
+msgstr ""
 
 #: View/Emails/html/lost_password.ctp:5
 msgid "Clique aqui para repor a sua password"
-msgstr "Click here to reset your password"
+msgstr ""
 
-#: View/Emails/html/lost_password.ctp:7 View/Emails/html/register.ctp:7
+#: View/Emails/html/lost_password.ctp:7
+#: View/Emails/html/register.ctp:7
 #: View/Emails/html/verify.ctp:7
 msgid "Código de verificação: %s"
-msgstr "Verification code: %s"
+msgstr ""
 
 #: View/Emails/html/lost_password.ctp:8
-msgid ""
-"Se não efectuou este pedido, não é necessária nenhuma acção. A password será "
-"a mesma até usar este código."
+msgid "Se não efectuou este pedido, não é necessária nenhuma acção. A password será a mesma até usar este código."
 msgstr ""
-"If you didn't made this request, no action is needed. Your password will "
-"remain the same until this code is used."
 
-#: View/Emails/html/lost_password.ctp:9 View/Emails/html/register.ctp:8
+#: View/Emails/html/lost_password.ctp:9
+#: View/Emails/html/register.ctp:8
 #: View/Emails/html/verify.ctp:8
 msgid "Cumprimentos"
-msgstr "Best Regards"
+msgstr ""
 
 #: View/Emails/html/register.ctp:1
 msgid "E-mail de verificação em %s"
-msgstr "Email verification at %s"
+msgstr ""
 
 #: View/Emails/html/register.ctp:2
 msgid "Efectuou um registo no site."
-msgstr "You have signed up for the website."
+msgstr ""
 
 #: View/Emails/html/register.ctp:2
 msgid "Para garantir que o seu e-mail é válido, clique neste link:"
-msgstr "In order to confirm you email, you should click the link bellow:"
+msgstr ""
 
-#: View/Emails/html/register.ctp:5 View/Emails/html/verify.ctp:5
+#: View/Emails/html/register.ctp:5
+#: View/Emails/html/verify.ctp:5
 msgid "Clique aqui para verificar"
-msgstr "Click to verify"
+msgstr ""
 
 #: View/Emails/html/verify.ctp:1
 msgid "Verificação de e-mail em %s"
-msgstr "Email verification at %s"
+msgstr ""
 
 #: View/Emails/html/verify.ctp:2
 msgid "Modificou o seu e-mail no perfil."
-msgstr "You have changed your profile's email."
+msgstr ""
 
 #: View/Emails/html/verify.ctp:2
 msgid "Para garantir que o e-mail é válido, clique no link abaixo:"
-msgstr "In order to confirm you email, you should click the link bellow:"
+msgstr ""
 
 #: View/Groups/admin_add.ctp:1
 msgid "ADICIONAR GRUPO"
-msgstr "ADD GROUP"
+msgstr ""
 
-#: View/Groups/admin_add.ctp:6 View/Groups/admin_edit.ctp:7
+#: View/Groups/admin_add.ctp:6
+#: View/Groups/admin_edit.ctp:7
 #: View/Groups/admin_index.ctp:7
 msgid "Nome"
-msgstr "Name"
+msgstr ""
 
-#: View/Groups/admin_add.ctp:10 View/Groups/admin_edit.ctp:11
+#: View/Groups/admin_add.ctp:10
+#: View/Groups/admin_edit.ctp:11
 msgid "Utilizadores no grupo"
-msgstr "Users in Group"
+msgstr ""
 
-#: View/Groups/admin_add.ctp:11 View/Groups/admin_edit.ctp:12
-#: View/Rules/admin_add.ctp:11 View/Settings/admin_tools.ctp:19
-#: View/Users/admin_add.ctp:24 View/Users/admin_edit.ctp:25
+#: View/Groups/admin_add.ctp:11
+#: View/Groups/admin_edit.ctp:12
+#: View/Rules/admin_add.ctp:11
+#: View/Settings/admin_tools.ctp:19
+#: View/Users/admin_add.ctp:24
+#: View/Users/admin_edit.ctp:25
 msgid "Selecione uma opção"
-msgstr "Select an option"
+msgstr ""
 
 #: View/Groups/admin_add.ctp:15
 msgid "Adicionar Grupo"
-msgstr "Add Group"
+msgstr ""
 
 #: View/Groups/admin_edit.ctp:1
 msgid "EDITAR GRUPO"
-msgstr "EDIT GROUP"
+msgstr ""
 
 #: View/Groups/admin_edit.ctp:16
 msgid "Editar Grupo"
-msgstr "Edit Group"
+msgstr ""
 
-#: View/Groups/admin_edit.ctp:17 View/Rules/admin_edit.ctp:42
+#: View/Groups/admin_edit.ctp:17
+#: View/Rules/admin_edit.ctp:42
 #: View/Users/admin_edit.ctp:45
 msgid "VOLTAR"
-msgstr "BACK"
+msgstr ""
 
-#: View/Groups/admin_index.ctp:1 View/Layouts/admin.ctp:67
+#: View/Groups/admin_index.ctp:1
+#: View/Layouts/admin.ctp:67
 msgid "Grupos"
-msgstr "Groups"
+msgstr ""
 
-#: View/Groups/admin_index.ctp:8 View/Notifications/admin_index.ctp:9
-#: View/Rules/admin_index.ctp:12 View/Users/admin_index.ctp:19
+#: View/Groups/admin_index.ctp:8
+#: View/Notifications/admin_index.ctp:9
+#: View/Rules/admin_index.ctp:12
+#: View/Users/admin_index.ctp:19
 msgid "Acções"
-msgstr "Actions"
+msgstr ""
 
 #: View/Groups/admin_index.ctp:19
 msgid "Eliminar grupo"
-msgstr "Delete Group"
+msgstr ""
 
 #: View/Groups/admin_index.ctp:20
 msgid "Tem a certeza que pretende eliminar o grupo?"
-msgstr "Are you sure you want to delete this group?"
+msgstr ""
 
-#: View/Groups/admin_index.ctp:31 View/Rules/admin_index.ctp:39
+#: View/Groups/admin_index.ctp:31
+#: View/Rules/admin_index.ctp:39
 #: View/Users/admin_index.ctp:67
 msgid "Adicionar"
-msgstr "Add"
+msgstr ""
 
 #: View/Helper/AuthakeHelper.php:51
 msgid "Logout"
-msgstr "Logout"
+msgstr ""
 
 #: View/Helper/AuthakeHelper.php:57
 msgid "Registar"
-msgstr "Register"
+msgstr ""
 
-#: View/Helper/AuthakeHelper.php:58 View/Users/admin_index.ctp:14
+#: View/Helper/AuthakeHelper.php:58
+#: View/Users/admin_index.ctp:14
 msgid "Login"
-msgstr "Login"
+msgstr ""
 
 #: View/Helper/AuthakeHelper.php:78
 msgid "Convidado"
-msgstr "Guest"
+msgstr ""
 
 #: View/Helper/MaterialHelper.php:21
 msgid "Tem a certeza que pretende continuar a operação indicada?"
-msgstr "Are you sure you want to complete this action?"
+msgstr ""
 
 #: View/Layouts/admin.ctp:64
 msgid "Dashboard"
-msgstr "Dashboard"
+msgstr ""
 
-#: View/Layouts/admin.ctp:65 View/Users/admin_index.ctp:1
+#: View/Layouts/admin.ctp:65
+#: View/Users/admin_index.ctp:1
 msgid "Utilizadores"
-msgstr "Users"
+msgstr ""
 
-#: View/Layouts/admin.ctp:68 View/Rules/admin_index.ctp:1
+#: View/Layouts/admin.ctp:68
+#: View/Rules/admin_index.ctp:1
 msgid "Regras"
-msgstr "Rules"
+msgstr ""
 
 #: View/Layouts/admin.ctp:70
 msgid "Definições"
-msgstr "Settings"
+msgstr ""
 
 #: View/Layouts/admin.ctp:72
 msgid "Ferramentas"
-msgstr "Tools"
+msgstr ""
 
-#: View/Notifications/admin_index.ctp:1 View/Settings/admin_tools.ctp:13
+#: View/Notifications/admin_index.ctp:1
+#: View/Settings/admin_tools.ctp:13
 msgid "Notificações"
-msgstr "Notifications"
+msgstr ""
 
 #: View/Notifications/admin_index.ctp:7
 msgid "Notificação"
-msgstr "Notification"
+msgstr ""
 
 #: View/Notifications/admin_index.ctp:8
 msgid "Data"
-msgstr "Date"
+msgstr ""
 
 #: View/Rules/admin_add.ctp:1
 msgid "ADICIONAR REGRA"
-msgstr "ADD RULE"
+msgstr ""
 
-#: View/Rules/admin_add.ctp:5 View/Rules/admin_edit.ctp:6
+#: View/Rules/admin_add.ctp:5
+#: View/Rules/admin_edit.ctp:6
 #: View/Rules/admin_index.ctp:7
 msgid "Descrição"
-msgstr "Description"
+msgstr ""
 
-#: View/Rules/admin_add.ctp:10 View/Rules/admin_edit.ctp:11
-#: View/Rules/admin_index.ctp:8 View/Users/admin_add.ctp:23
-#: View/Users/admin_edit.ctp:24 View/Users/admin_index.ctp:16
+#: View/Rules/admin_add.ctp:10
+#: View/Rules/admin_edit.ctp:11
+#: View/Rules/admin_index.ctp:8
+#: View/Users/admin_add.ctp:23
+#: View/Users/admin_edit.ctp:24
+#: View/Users/admin_index.ctp:16
 msgid "Grupo"
-msgstr "Group"
+msgstr ""
 
-#: View/Rules/admin_add.ctp:16 View/Rules/admin_edit.ctp:17
+#: View/Rules/admin_add.ctp:16
+#: View/Rules/admin_edit.ctp:17
 #: View/Rules/admin_index.ctp:11
 msgid "Ordem"
-msgstr "Order"
+msgstr ""
 
-#: View/Rules/admin_add.ctp:20 View/Rules/admin_edit.ctp:21
+#: View/Rules/admin_add.ctp:20
+#: View/Rules/admin_edit.ctp:21
 msgid "Path (perl regex)"
-msgstr "Path (perl regex)"
+msgstr ""
 
-#: View/Rules/admin_add.ctp:25 View/Rules/admin_edit.ctp:26
+#: View/Rules/admin_add.ctp:25
+#: View/Rules/admin_edit.ctp:26
 #: View/Rules/admin_index.ctp:9
 msgid "Permissões"
-msgstr "Permissions"
+msgstr ""
 
-#: View/Rules/admin_add.ctp:30 View/Rules/admin_edit.ctp:31
+#: View/Rules/admin_add.ctp:30
+#: View/Rules/admin_edit.ctp:31
 msgid "Redireccionar"
-msgstr "Redirect"
+msgstr ""
 
-#: View/Rules/admin_add.ctp:35 View/Rules/admin_edit.ctp:36
+#: View/Rules/admin_add.ctp:35
+#: View/Rules/admin_edit.ctp:36
 msgid "Mensagem"
-msgstr "Message"
+msgstr ""
 
 #: View/Rules/admin_add.ctp:40
 msgid "Adicionar Regra"
-msgstr "Add Rule"
+msgstr ""
 
 #: View/Rules/admin_edit.ctp:1
 msgid "EDITAR REGRA"
-msgstr "EDIT RULE"
+msgstr ""
 
 #: View/Rules/admin_edit.ctp:27
 msgid "Permitir"
-msgstr "Allow"
+msgstr ""
 
 #: View/Rules/admin_edit.ctp:27
 msgid "Negar"
-msgstr "Deny"
+msgstr ""
 
 #: View/Rules/admin_edit.ctp:41
 msgid "Editar Regra"
-msgstr "Edit Rule"
+msgstr ""
 
 #: View/Rules/admin_index.ctp:10
 msgid "Path"
-msgstr "Path"
+msgstr ""
 
 #: View/Rules/admin_index.ctp:27
 msgid "Eliminar regra"
-msgstr "Delete Rule"
+msgstr ""
 
 #: View/Rules/admin_index.ctp:28
 msgid "Tem a certeza que pretende eliminar a regra?"
-msgstr "Are you sure you want to delete this rule?"
+msgstr ""
 
 #: View/Settings/admin_tools.ctp:1
 msgid "DEFINIÇÕES"
-msgstr "SETTINGS"
+msgstr ""
 
 #: View/Settings/admin_tools.ctp:9
 msgid "Traduções"
-msgstr "Translations"
+msgstr ""
 
 #: View/Settings/admin_tools.ctp:18
 msgid "Linguagem"
-msgstr "Language"
+msgstr ""
 
 #: View/Settings/admin_tools.ctp:26
 msgid "Editar Definições"
-msgstr "Update Settings"
+msgstr ""
 
-#: View/Settings/admin_tools.ctp:31 View/Users/admin_test.ctp:1
+#: View/Settings/admin_tools.ctp:31
+#: View/Users/admin_test.ctp:1
 msgid "FERRAMENTAS DE SISTEMA"
-msgstr "SYSTEM TOOLS"
+msgstr ""
 
 #: View/Settings/admin_tools.ctp:41
-msgid ""
-"Este módulo gera o model indicado incluindo todas as pré-definições "
-"necessárias."
+msgid "Este módulo gera o model indicado incluindo todas as pré-definições necessárias."
 msgstr ""
-"This module generates the indicated model with all the default settings."
 
 #: View/Settings/admin_tools.ctp:49
 msgid "Nome do Model"
-msgstr "Model Name"
+msgstr ""
 
 #: View/Settings/admin_tools.ctp:54
 msgid "GERAR MODEL"
-msgstr "GENERATE MODEL"
+msgstr ""
 
 #: View/Settings/admin_tools.ctp:62
 msgid "TRADUÇÕES"
-msgstr "TRANSLATIONS"
+msgstr ""
 
 #: View/Settings/admin_tools.ctp:66
 msgid "Este módulo gera a tabela de tradução da tabela selecionada."
-msgstr "This module generates the translation tables for the selected table."
+msgstr ""
 
-#: View/Settings/admin_tools.ctp:73 View/Users/admin_test.ctp:20
+#: View/Settings/admin_tools.ctp:73
+#: View/Users/admin_test.ctp:20
 msgid "Nome da Tabela"
-msgstr "Table Name"
+msgstr ""
 
-#: View/Settings/admin_tools.ctp:79 View/Users/admin_test.ctp:27
+#: View/Settings/admin_tools.ctp:79
+#: View/Users/admin_test.ctp:27
 msgid "GERAR TRADUÇÕES"
-msgstr "GENERATE TRANSLATIONS"
+msgstr ""
 
 #: View/User/denied.ctp:1
 msgid "Não tem acesso a esta página."
-msgstr "Access denied."
+msgstr ""
 
-#: View/User/login.ctp:7 View/Users/admin_add.ctp:6 View/Users/admin_edit.ctp:8
+#: View/User/login.ctp:7
+#: View/Users/admin_add.ctp:6
+#: View/Users/admin_edit.ctp:8
 msgid "Utilizador"
-msgstr "User"
+msgstr ""
 
-#: View/User/login.ctp:11 View/Users/admin_add.ctp:12
+#: View/User/login.ctp:11
+#: View/Users/admin_add.ctp:12
 #: View/Users/admin_edit.ctp:14
 msgid "Password"
-msgstr "Password"
+msgstr ""
 
 #: View/User/lost_password.ctp:3
 msgid "Pedido de reposição"
-msgstr "Reset request"
+msgstr ""
 
 #: View/User/message.ctp:5
 msgid "Ir para página principal"
-msgstr "Go to homepage"
+msgstr ""
 
 #: View/User/profile.ctp:6
 msgid "Alterar a password"
-msgstr "Change password"
+msgstr ""
 
 #: View/User/register.ctp:8
 msgid "Register"
-msgstr "Register"
+msgstr ""
 
 #: View/Users/admin_add.ctp:1
 msgid "ADICIONAR UTILIZADOR"
-msgstr "ADD USER"
+msgstr ""
 
-#: View/Users/admin_add.ctp:18 View/Users/admin_edit.ctp:19
+#: View/Users/admin_add.ctp:18
+#: View/Users/admin_edit.ctp:19
 #: View/Users/admin_index.ctp:15
 msgid "Email"
-msgstr "Email"
+msgstr ""
 
-#: View/Users/admin_add.ctp:30 View/Users/admin_edit.ctp:40
+#: View/Users/admin_add.ctp:30
+#: View/Users/admin_edit.ctp:40
 msgid "Desactivado"
-msgstr "Deactivated"
+msgstr ""
 
 #: View/Users/admin_add.ctp:34
 msgid "Adicionar Utilizador"
-msgstr "Add User"
+msgstr ""
 
 #: View/Users/admin_edit.ctp:1
 msgid "EDITAR UTILIZADOR"
-msgstr "EDIT USER"
+msgstr ""
 
 #: View/Users/admin_edit.ctp:44
 msgid "Editar Utilizador"
-msgstr "Edit User"
+msgstr ""
 
 #: View/Users/admin_index.ctp:6
 msgid "Pesquisa"
-msgstr "Search"
+msgstr ""
 
 #: View/Users/admin_index.ctp:13
 msgid "ID"
-msgstr "ID"
+msgstr ""
 
 #: View/Users/admin_index.ctp:54
 msgid "Eliminar utilizador"
-msgstr "Delete User"
+msgstr ""
 
 #: View/Users/admin_index.ctp:55
 msgid "Tem a certeza que pretende eliminar o utilizador?"
-msgstr "Are you sure you want to delete this user?"
+msgstr ""
 
-#~ msgid "Utilizadores no grupo (Pressione 'Control' para selecionar vários)"
-#~ msgstr "Users (Press 'Control' for multiple selection)"
-
-#~ msgid "Grupos (Pressione 'Control' para selecionar vários)"
-#~ msgstr "Groups (Press 'Control' for multiple selection)"
-
-#~ msgid "Error"
-#~ msgstr "Error"
-
-#~ msgid "The requested address %s was not found on this server."
-#~ msgstr "The requested address %s was not found on this server."
-
-#~ msgid "An Internal Error Has Occurred."
-#~ msgstr "An Internal Error Has Occurred."
-
-#~ msgid "CakePHP: the rapid development php framework"
-#~ msgstr "CakePHP: the rapid development php framework"
-
-#~ msgid "Debug setting does not allow access to this URL."
-#~ msgstr "Debug setting does not allow access to this URL."
-
-#~ msgid "Criado em"
-#~ msgstr "Created"
-
-#~ msgid "Estado"
-#~ msgstr "State"

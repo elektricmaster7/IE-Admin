@@ -1,7 +1,21 @@
 <?php
 class MaterialHelper extends AppHelper {
 
-  var $helpers = array('Session', 'Html', 'Form');
+  var $helpers = array('Session', 'Html', 'Form', 'Authake');
+
+  function adminLink($link, $name, $options = array()){
+    if(!isset($options['icon'])) $options['icon'] = 'dehaze';
+    if(isset($options['permissions'])){
+      foreach($options['permissions'] as $group_id){
+        if($this->Authake->isMemberOf($group_id)){
+          return '<li><a href="'.$link.'"><i class="material-icons md-18">'.$options['icon'].'</i>'.$name.'</a></li>'; 
+        }
+      }
+      return '';
+    } else {
+      return '<li><a href="'.$link.'"><i class="material-icons md-18">'.$options['icon'].'</i>'.$name.'</a></li>';
+    }
+  }
 
   function viewButton($controller, $id, $options = array()){
     if(!isset($options['icon'])) $options['icon'] = 'search';

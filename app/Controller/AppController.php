@@ -2,15 +2,19 @@
 App::uses('Controller', 'Controller');
 class AppController extends Controller {
 
-	var $uses = array('User','Rule','Group','Notification');
+	var $uses = array('User','Rule','Group','Notification','Setting');
 	var $components = array('Session', 'Cookie', 'RequestHandler', 'Authake', 'Generator');
 	var $helpers = array('Form', 'Time', 'Html' => array('className' => 'HtmlPlus'), 'Session', 'Js', 'Authake', 'Material');
 	var $counter = 0;
 
+	var $settings = null; //SETTINGS VARIABLES
+
 	function beforeFilter(){
+		//READ SETTINGS
+		$this->settings = $this->__getSettings();
 		//LANGUAGE
 		//THIS CHECKS THE SESSION FOR A LANGUAGE IF SET USES THAT LANGUAGE FOR TRANSLATION
-		$this->__setLanguage();
+		$this->__setLanguage($this->settings);
 		//AUTH
 		//SETS THE ADMIN LAYOUT FROM THE PREFIX AND CALLS THE AUTHENTICATION METHODS
 		if (isset($this->params['prefix']) && $this->params['prefix'] == 'admin') $this->layout = 'admin'; //SET ADMIN TEMPLATE FOR ADMIN PAGES
@@ -72,8 +76,16 @@ class AppController extends Controller {
 		$this->Notification->save($notification);
 	}
 
+	/*SETTINGS SYSTEM*/
+	private function __getSettings(){
+		$settings = $this->Setting->find('first');
+		$this->set('settings', $settings);
+		return $settings;
+	}
+
 	/*TRANSLATION SYSTEM*/
-	private function __setLanguage(){
+	private function __setLanguage($settings){
+		Configure::write('Config.language', $settings['Setting']['lang']);
 		if(!isset($this->params['language']) && $this->Session->check('Config.language')){
 			Configure::write('Config.language', $this->Session->read('Config.language'));
 		}else if(isset($this->params['language']) && ($this->params['language'] != $this->Session->read('Config.language'))){
@@ -84,8 +96,10 @@ class AppController extends Controller {
 
 	//REDIRTECT FUNCTION OVERWRITTEN TO ACCOUNT FOR TRANSLATION
 	public function redirect($url, $status = NULL, $exit = true){
-		if(!isset($url['language']) && $this->Session->check('Config.language')){
-			$url['language'] = $this->Session->read('Config.language');
+		if($this->settings['Setting']['translations']){
+			if(!isset($url['language']) && $this->Session->check('Config.language')){
+				$url['language'] = $this->Session->read('Config.language');
+			}
 		}
 		parent::redirect($url, $status, $exit);
 	}

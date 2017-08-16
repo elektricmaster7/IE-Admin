@@ -32,32 +32,27 @@ class AuthakeHelper extends AppHelper {
     }
 
     function getUserMenu() {
-	if ( ! Configure::read('Authake.useEmailAsUsername') )
-	{
-	    $loginName = $this->getLogin();
-	}
-	else
-	{
-	    $loginName = $this->getUserEmail();
-	}
- 	if($loginName){
-		$output = '<li class="dropdown pull-right">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown">'.
-			$this->Gravatar->get_gravatar($this->getUserEmail(),18,'','',true).'&nbsp;'.
-			$loginName.'<b class="caret"></b></a>
-			<ul class="dropdown-menu">
-				<li><a href="'.$this->Html->url( array('plugin'=>'authake','controller'=>'user','action'=>'index')).'">Profile Settings</a></li>
-				<li class="divider"></li>
-				<li>'.$this->Html->link(__('Logout'), array('plugin'=>'authake','controller'=> 'user', 'action'=>'logout')).'</li>
-			</ul>
-		</li>';
-		}
-		else
-		{
-		$output = '<li class="pull-right">'.$this->Html->link(__('Registar'), array('plugin'=>'authake','controller'=> 'user', 'action'=>'register')).'</li>';
-		$output .= '<li class="pull-right">'.$this->Html->link(__('Login'), array('plugin'=>'authake','controller'=> 'user', 'action'=>'login')).'</li>';
-		}
-        return $output;
+    	if(!Configure::read('Authake.useEmailAsUsername')){
+    	    $loginName = $this->getLogin();
+    	} else {
+    	    $loginName = $this->getUserEmail();
+    	}
+     	if($loginName){
+    		$output = '<li class="dropdown pull-right">
+    			<a href="#" class="dropdown-toggle" data-toggle="dropdown">'.
+    			$this->Gravatar->get_gravatar($this->getUserEmail(),18,'','',true).'&nbsp;'.
+    			$loginName.'<b class="caret"></b></a>
+    			<ul class="dropdown-menu">
+    				<li><a href="'.$this->Html->url( array('plugin'=>'authake','controller'=>'user','action'=>'index')).'">Profile Settings</a></li>
+    				<li class="divider"></li>
+    				<li>'.$this->Html->link(__('Logout'), array('plugin'=>'authake','controller'=> 'user', 'action'=>'logout')).'</li>
+    			</ul>
+    		</li>';
+  		} else {
+  		    $output = '<li class="pull-right">'.$this->Html->link(__('Registar'), array('plugin'=>'authake','controller'=> 'user', 'action'=>'register')).'</li>';
+          $output .= '<li class="pull-right">'.$this->Html->link(__('Login'), array('plugin'=>'authake','controller'=> 'user', 'action'=>'login')).'</li>';
+  		}
+      return $output;
     }
 
     function isLogged() {
@@ -81,7 +76,6 @@ class AuthakeHelper extends AppHelper {
     function isMemberOf($gid) {
         return in_array($gid, $this->getGroupIds());
     }
-
 }
 
 ?>
