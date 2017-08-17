@@ -2,12 +2,13 @@
 App::uses('Controller', 'Controller');
 class AppController extends Controller {
 
-	var $uses = array('User','Rule','Group','Notification','Setting');
+	var $uses = array('User','Rule','Group','Notification','Setting','Plugin');
 	var $components = array('Session', 'Cookie', 'RequestHandler', 'Authake', 'Generator');
 	var $helpers = array('Form', 'Time', 'Html' => array('className' => 'HtmlPlus'), 'Session', 'Js', 'Authake', 'Material');
 	var $counter = 0;
 
 	var $settings = null; //SETTINGS VARIABLES
+	var $plugins = null; //PLUGIN VARIABLES
 
 	function beforeFilter(){
 		//READ SETTINGS
@@ -81,6 +82,11 @@ class AppController extends Controller {
 		$settings = $this->Setting->find('first');
 		$this->set('settings', $settings);
 		return $settings;
+	}
+
+	/*PLUGIN INFORMATION*/
+	private function __getPlugins(){
+		return null;
 	}
 
 	/*TRANSLATION SYSTEM*/
