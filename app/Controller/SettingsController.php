@@ -25,6 +25,12 @@ class SettingsController extends AppController {
     $this->set('tables', $tables_list);
   }
 
+  function admin_plugins(){
+    App::uses('StoreAppController', 'Store.Controller');
+    $PluginController = new StoreAppController();
+    if(method_exists($PluginController, 'install')) $PluginController->install();
+  }
+
   //TODO: MAKE FILE CHECK FOR DUPLICATES SO NO MODELS ARE OVERWRITTEN
   function admin_generate_model(){
     if($this->request->is(array('post', 'put'))){

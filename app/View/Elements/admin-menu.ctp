@@ -21,6 +21,7 @@
             <a href="#"><i class="material-icons md-18">settings</i> <?php echo __('Definições'); ?></a>
             <ul>
               <li><a href="/admin/settings/tools"><i class="material-icons md-18">build</i> <?php echo __('Ferramentas'); ?></a></li>
+              <li><a href="/admin/settings/plugins"><i class="material-icons md-18">extension</i> <?php echo __('Plugins'); ?></a></li>
             </ul>
           </li>
         <?php } ?>
