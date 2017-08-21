@@ -26,9 +26,30 @@ class SettingsController extends AppController {
   }
 
   function admin_plugins(){
-    App::uses('StoreAppController', 'Store.Controller');
-    $PluginController = new StoreAppController();
-    if(method_exists($PluginController, 'install')) $PluginController->install();
+    //App::uses('StoreAppController', 'Store.Controller');
+    //$PluginController = new StoreAppController();
+    //if(method_exists($PluginController, 'install')) $PluginController->install();
+    $plugins = array();
+    $plugin_paths = glob(APP.'Plugin/*', GLOB_ONLYDIR|GLOB_MARK);
+    foreach($plugin_paths as $plugin_path){
+      $plugin_file = file_get_contents($plugin_path.'plugin.json');
+      if($plugin_path !== false){
+        $plugin_file_array = json_decode($plugin_file, true);
+        if(!empty($plugin_file_array) && isset($plugin_file_array['name'])){
+          $plugins[] = array(
+            'Plugin' => array(
+              'id' => $plugin_file_array['name'],
+              'plugin_id' => $plugin_file_array['id'],
+              'name' => $plugin_file_array['name'],
+              'version' => $plugin_file_array['version'],
+              'author' => $plugin_file_array['author'],
+              'active' => 0
+            )
+          );
+        }
+      }
+    }
+    print_r($plugins);
   }
 
   //TODO: MAKE FILE CHECK FOR DUPLICATES SO NO MODELS ARE OVERWRITTEN
