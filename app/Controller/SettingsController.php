@@ -54,7 +54,7 @@ class SettingsController extends AppController {
       }
     }
     $this->set('plugins', $plugins);
-    print_r($plugins);
+    //print_r($plugins);
   }
 
   //TODO: MAKE FILE CHECK FOR DUPLICATES SO NO MODELS ARE OVERWRITTEN

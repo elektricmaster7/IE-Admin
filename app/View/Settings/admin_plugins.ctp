@@ -33,3 +33,4 @@
     </table>
   </div>
 </div>
+<?php $this->element('admin-datatables'); ?>

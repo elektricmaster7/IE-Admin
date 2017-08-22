@@ -1,6 +1,6 @@
 <!--ADMIN MENU (USER)-->
-<pre><?php print_r($path); ?></pre>
-<?php echo $this->Html->url($path); ?>
+<!--<pre><?php //print_r($path); ?></pre>-->
+<?php //echo $this->Html->url($path); ?>
 <div class="sidebar-admin sidebar" role="navigation">
   <div class="sidebar-nav collapse navbar-collapse">
     <div id="menu-tabs">

@@ -19,17 +19,18 @@ class MaterialHelper extends AppHelper {
 
   function actionButton($controller, $action, $id, $options = array()){
     if(!isset($options['icon'])) $options['icon'] = "menu";
-    return '<a href="/admin/'.$controller.'/'.$action.'/'.$id.'"><i class="material-icons md-24">'.$options['icon'].'</i></a>';
+    if(!isset($options['text'])) $options['text'] = "";
+    return '<a href="/admin/'.$controller.'/'.$action.'/'.$id.'" class="material-tooltip" data-toggle="tooltip" data-placement="auto top" title="'.$options['text'].'"><i class="material-icons md-24">'.$options['icon'].'</i></a>';
   }
 
   function viewButton($controller, $id, $options = array()){
     if(!isset($options['icon'])) $options['icon'] = 'search';
-    return '<a href="/admin/'.$controller.'/view/'.$id.'"><i class="material-icons md-24">'.$options['icon'].'</i></a>';
+    return '<a href="/admin/'.$controller.'/view/'.$id.'" class="material-tooltip" data-toggle="tooltip" data-placement="auto top" title="'.__('Ver').'"><i class="material-icons md-24">'.$options['icon'].'</i></a>';
   }
 
   function editButton($controller, $id, $options = array()){
     if(!isset($options['icon'])) $options['icon'] = 'edit';
-    return '<a href="/admin/'.$controller.'/edit/'.$id.'"><i class="material-icons md-24">'.$options['icon'].'</i></a>';
+    return '<a href="/admin/'.$controller.'/edit/'.$id.'" class="material-tooltip" data-toggle="tooltip" data-placement="auto top" title="'.__('Editar').'"><i class="material-icons md-24">'.$options['icon'].'</i></a>';
   }
 
   function deleteButton($controller, $id, $options = array()){
