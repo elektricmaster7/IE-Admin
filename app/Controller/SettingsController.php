@@ -38,15 +38,18 @@ class SettingsController extends AppController {
       if($plugin_path !== false){
         $plugin_file_array = json_decode($plugin_file, true);
         if(!empty($plugin_file_array) && isset($plugin_file_array['name'])){
-          $plugins[] = array(
-            'Plugin' => array(
-              'id' => $plugin_file_array['name'],
-              'plugin_id' => $plugin_file_array['id'],
-              'name' => $plugin_file_array['name'],
-              'version' => $plugin_file_array['version'],
-              'author' => $plugin_file_array['author']
-            )
-          );
+          foreach($plugins as $plugin){ if($plugin['Plugin']['name'] == $plugin_file_array['name']){ $installed = true; } }
+          if(!isset($installed)){
+            $plugins[] = array(
+              'Plugin' => array(
+                'id' => $plugin_file_array['name'],
+                'plugin_id' => $plugin_file_array['id'],
+                'name' => $plugin_file_array['name'],
+                'version' => $plugin_file_array['version'],
+                'author' => $plugin_file_array['author']
+              )
+            );
+          }
         }
       }
     }
