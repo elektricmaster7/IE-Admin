@@ -8,13 +8,18 @@ class MaterialHelper extends AppHelper {
     if(isset($options['permissions'])){
       foreach($options['permissions'] as $group_id){
         if($this->Authake->isMemberOf($group_id)){
-          return '<li><a href="'.$link.'"><i class="material-icons md-18">'.$options['icon'].'</i>'.$name.'</a></li>'; 
+          return '<li><a href="'.$link.'"><i class="material-icons md-18">'.$options['icon'].'</i>'.$name.'</a></li>';
         }
       }
       return '';
     } else {
       return '<li><a href="'.$link.'"><i class="material-icons md-18">'.$options['icon'].'</i>'.$name.'</a></li>';
     }
+  }
+
+  function actionButton($controller, $action, $id, $options = array()){
+    if(!isset($options['icon'])) $options['icon'] = "menu";
+    return '<a href="/admin/'.$controller.'/'.$action.'/'.$id.'"><i class="material-icons md-24">'.$options['icon'].'</i></a>';
   }
 
   function viewButton($controller, $id, $options = array()){

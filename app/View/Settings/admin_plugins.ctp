@@ -11,14 +11,24 @@
         </tr>
       </thead>
       <tbody>
-        <?php //foreach(){ ?>
+        <?php foreach($plugins as $plugin){ ?>
           <tr>
-            <td>Teste</td>
-            <td>1.0.0</td>
-            <td>Inspire Electronics</td>
-            <td>Install</td>
+            <td><?php echo $plugin['Plugin']['name']; ?></td>
+            <td><?php echo $plugin['Plugin']['version']; ?></td>
+            <td><?php echo $plugin['Plugin']['author']; ?></td>
+            <td>
+              <?php
+                if(isset($plugin['Plugin']['active']) && $plugin['Plugin']['active'] == 1){
+                  echo $this->Material->actionButton('settings', 'disable', $plugin['Plugin']['id'], array('icon' => 'remove'));
+                } else if(isset($plugin['Plugin']['active']) && $plugin['Plugin']['active'] == 0) {
+                  echo $this->Material->actionButton('settings', 'activate', $plugin['Plugin']['id'], array('icon' => 'check'));
+                } else {
+                  echo $this->Material->actionButton('settings', 'install', $plugin['Plugin']['id'], array('icon' => 'add'));
+                }
+              ?>
+            </td>
           </tr>
-        <?php //} ?>
+        <?php } ?>
       </tbody>
     </table>
   </div>

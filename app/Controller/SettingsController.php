@@ -5,6 +5,8 @@ App::uses('File', 'Utility');
 
 class SettingsController extends AppController {
 
+  var $uses = array('Plugin');
+
   function admin_tools(){
 
     if($this->request->is(array('post', 'put'))){
@@ -29,7 +31,7 @@ class SettingsController extends AppController {
     //App::uses('StoreAppController', 'Store.Controller');
     //$PluginController = new StoreAppController();
     //if(method_exists($PluginController, 'install')) $PluginController->install();
-    $plugins = array();
+    $plugins = $this->Plugin->find('all');
     $plugin_paths = glob(APP.'Plugin/*', GLOB_ONLYDIR|GLOB_MARK);
     foreach($plugin_paths as $plugin_path){
       $plugin_file = file_get_contents($plugin_path.'plugin.json');
@@ -42,13 +44,13 @@ class SettingsController extends AppController {
               'plugin_id' => $plugin_file_array['id'],
               'name' => $plugin_file_array['name'],
               'version' => $plugin_file_array['version'],
-              'author' => $plugin_file_array['author'],
-              'active' => 0
+              'author' => $plugin_file_array['author']
             )
           );
         }
       }
     }
+    $this->set('plugins', $plugins);
     print_r($plugins);
   }
 
