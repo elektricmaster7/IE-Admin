@@ -197,6 +197,10 @@ a:hover > i {
   color: @primaryColor;
 }
 
+a:hover > span > i {
+  color: @primaryColor;
+}
+
 h1 {
   font-size:18px;
   font-weight: 400;
@@ -967,16 +971,27 @@ table.material-table {
     padding-right: 0;
   }
 
-  .dropdown-admin {
-    a:focus { background-color: transparent; }
+  a:focus i {
+    color: @primaryColor;
+  }
 
-    ul {
-      padding-left: 15px;
-      display: none;
-      border-top: 1px solid #E7E7E7;
+  .dropdown-admin {
+    a:focus i {
+      color: @primaryColor
     }
 
-    ul:hover { background-color: #eeeeee; }
+    ul {
+      padding-left: 0px;
+      display: none;
+    }
+
+    ul li a:hover {
+      background-color: #eeeeee;
+    }
+
+    ul li a:focus {
+      background-color: #eeeeee;
+    }
 
     ul li {
       list-style-type: none;
@@ -986,13 +1001,24 @@ table.material-table {
     ul li a {
       position: relative;
       display: block;
-      padding: 10px 15px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 25px;
+      padding-right: 15px;
+      border-top: 1px solid #E7E7E7;
     }
-    ul li a.active { background-color: #eeeeee; }
+
+    ul li a.active {
+      i { color: @primaryColor; }
+      background-color: #eeeeee;
+    }
   }
 
   ul li { border-bottom: 1px solid @lightDividerColor; }
-  ul li a.active { background-color: #eeeeee; }
+  ul li a.active {
+    i { color: @primaryColor; }
+    background-color: #eeeeee;
+  }
 }
 
 @media (min-width: 768px) {

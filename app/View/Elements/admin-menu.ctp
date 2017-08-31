@@ -13,7 +13,7 @@
       <ul class="nav" id="side-menu">
         <li class="header"><?php echo __('Administração'); ?></li>
         <?php echo $this->Material->adminLink('/admin', __('Dashboard'), array('icon' => 'home')); ?>
-        <?php echo $this->Material->adminLink('/admin/users', __('Utilizadores'), array('icon' => 'person', 'permissions' => array(1, 2))); ?>
+        <?php echo $this->Material->adminLink(array('controller' => 'users'), __('Utilizadores'), array('icon' => 'person', 'permissions' => array(1, 2))); ?>
         <?php echo $this->Material->adminLink('/admin/groups', __('Grupos'), array('icon' => 'group', 'permissions' => array(1))); ?>
         <?php echo $this->Material->adminLink('/admin/rules', __('Regras'), array('icon' => 'dehaze', 'permissions' => array(1))); ?>
         <?php if($this->Authake->isMemberOf(1)){ ?>

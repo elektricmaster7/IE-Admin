@@ -4,11 +4,13 @@ class MaterialHelper extends AppHelper {
   var $helpers = array('Session', 'Html', 'Form', 'Authake');
 
   function adminLink($link, $name, $options = array()){
+    print_r($this->here." ".$link);
+    if($link == $this->here) { $active = "active"; } else { $active = ""; }
     if(!isset($options['icon'])) $options['icon'] = 'dehaze';
     if(isset($options['permissions'])){
       foreach($options['permissions'] as $group_id){
         if($this->Authake->isMemberOf($group_id)){
-          return '<li><a href="'.$link.'"><i class="material-icons md-18">'.$options['icon'].'</i>'.$name.'</a></li>';
+          return '<li><a href="'.$link.'" class="'.$active.' "><i class="material-icons md-18">'.$options['icon'].'</i>'.$name.'</a></li>';
         }
       }
       return '';
@@ -44,7 +46,7 @@ class MaterialHelper extends AppHelper {
       $properties = 'href="/admin/'.$controller.'/delete/'.$id.'"';
     }
 
-    return '<a '.$properties.'><i class="material-icons md-24">'.$options['icon'].'</i></a>';
+    return '<a '.$properties.'><span class="material-tooltip" data-toggle="tooltip" data-placement="auto top" title="'.__('Eliminar').'"><i class="material-icons md-24">'.$options['icon'].'</i></span></a>';
   }
 
 }

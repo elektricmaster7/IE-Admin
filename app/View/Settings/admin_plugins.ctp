@@ -19,11 +19,12 @@
             <td>
               <?php
                 if(isset($plugin['Plugin']['active']) && $plugin['Plugin']['active'] == 1){
-                  echo $this->Material->actionButton('settings', 'disable', $plugin['Plugin']['id'], array('icon' => 'remove'));
+                  echo $this->Material->actionButton('settings', 'disable', $plugin['Plugin']['id'], array('icon' => 'remove', 'text' => __('Desactivar')));
                 } else if(isset($plugin['Plugin']['active']) && $plugin['Plugin']['active'] == 0) {
-                  echo $this->Material->actionButton('settings', 'activate', $plugin['Plugin']['id'], array('icon' => 'check'));
+                  echo $this->Material->actionButton('settings', 'activate', $plugin['Plugin']['id'], array('icon' => 'check', 'text' => __('Activar')));
+                  echo $this->Material->actionButton('settings', 'uninstall', $plugin['Plugin']['id'], array('icon' => 'delete', 'text' => __('Desinstalar')));
                 } else {
-                  echo $this->Material->actionButton('settings', 'install', $plugin['Plugin']['id'], array('icon' => 'add'));
+                  echo $this->Material->actionButton('settings', 'install', $plugin['Plugin']['id'], array('icon' => 'add', 'text' => __('Instalar')));
                 }
               ?>
             </td>
