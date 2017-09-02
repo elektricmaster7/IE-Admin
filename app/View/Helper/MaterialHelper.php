@@ -4,20 +4,33 @@ class MaterialHelper extends AppHelper {
   var $helpers = array('Session', 'Html', 'Form', 'Authake');
 
   function adminLink($link, $name, $options = array()){
+    //ROUTE CHECK
     $c_link = Router::parse($link);
     $c_here = Router::parse($this->here);
     if(isset($c_here['language'])) unset($c_here['language']);
     if($c_link == $c_here) { $active = "active"; } else { $active = ""; }
+    //ICON SETTING
     if(!isset($options['icon'])) $options['icon'] = 'dehaze';
+    //PERMISSIONS CHECK
     if(isset($options['permissions'])){
+      $allowed = false;
       foreach($options['permissions'] as $group_id){
-        if($this->Authake->isMemberOf($group_id)){
-          return '<li><a href="'.$link.'" class="'.$active.' "><i class="material-icons md-18">'.$options['icon'].'</i>'.$name.'</a></li>';
-        }
+        if($this->Authake->isMemberOf($group_id)) $allowed = true;
       }
-      return '';
+      if(!$allowed) return;
+    }
+    //SUBMENU CHECK
+    if(isset($options['children'])){
+      echo '<li class="dropdown-admin">';
+        echo '<a href="'.$link.'" class="'.$active.'"><i class="material-icons md-18">'.$options['icon'].'</i>'.$name.'</a>';
+        echo '<ul>';
+          foreach($options['children'] as $submenu){
+            echo $this->adminLink($submenu['link'], $submenu['name'], $submenu['options']);
+          }
+        echo '</ul>';
+      echo '</li>';
     } else {
-      return '<li><a href="'.$link.'" class="'.$active.'"><i class="material-icons md-18">'.$options['icon'].'</i>'.$name.'</a></li>';
+      echo '<li><a href="'.$link.'" class="'.$active.'"><i class="material-icons md-18">'.$options['icon'].'</i>'.$name.'</a></li>';
     }
   }
 
