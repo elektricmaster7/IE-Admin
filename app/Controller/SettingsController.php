@@ -57,6 +57,10 @@ class SettingsController extends AppController {
     //print_r($plugins);
   }
 
+  function admin_install(){
+
+  }
+
   //TODO: MAKE FILE CHECK FOR DUPLICATES SO NO MODELS ARE OVERWRITTEN
   function admin_generate_model(){
     if($this->request->is(array('post', 'put'))){

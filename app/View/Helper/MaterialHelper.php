@@ -33,11 +33,20 @@ class MaterialHelper extends AppHelper {
       echo '<li><a href="'.$link.'" class="'.$active.'"><i class="material-icons md-18">'.$options['icon'].'</i>'.$name.'</a></li>';
     }
   }
-
+  //TODO: CHANGE THIS NEEDS THE PREFIX TO BE CORRECT
   function actionButton($controller, $action, $id, $options = array()){
     if(!isset($options['icon'])) $options['icon'] = "menu";
     if(!isset($options['text'])) $options['text'] = "";
-    return '<a href="/admin/'.$controller.'/'.$action.'/'.$id.'" class="material-tooltip" data-toggle="tooltip" data-placement="auto top" title="'.$options['text'].'"><i class="material-icons md-24">'.$options['icon'].'</i></a>';
+
+    if(isset($options['confirm']) && $options['confirm'] == true){
+      if(!isset($options['title'])) $options['title'] = __('Confirmar');
+      if(!isset($options['message'])) $options['message'] = __('Tem a certeza que pretende continuar a operação indicada?');
+      $properties = 'href="#" data-href="/admin/'.$controller.'/'.$action.'/'.$id.'" data-toggle="modal" data-target="#confirmModal" data-title="'.$options['title'].'" data-message="'.$options['message'].'"';
+    } else {
+      $properties = 'href="/admin/'.$controller.'/'.$action.'/'.$id.'"';
+    }
+
+    return '<a '.$properties.' ><span class="material-tooltip" data-toggle="tooltip" data-placement="auto top" title="'.$options['text'].'"><i class="material-icons md-24">'.$options['icon'].'</i></span></a>';
   }
 
   function viewButton($controller, $id, $options = array()){
