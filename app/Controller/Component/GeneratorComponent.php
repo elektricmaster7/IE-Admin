@@ -32,5 +32,14 @@ class GeneratorComponent extends Component {
     return true;
   }
 
+  //TODO: NEEDS FINALIZING
+  function generateController($controllerName){
+    $dir = new Folder(APP.'Controller'.DS);
+    if(file_exists($dir->pwd().$controllerName.'.php')) return false;
+    $file = new File($dir->pwd().$controllerName.'.php', true, 0755);
+    $file->write("<?php\nApp::uses('AppController', 'Model');\nclass ".$controllerName."Controller extends AppController {} ?>");
+    return true;
+  }
+
 }
 ?>

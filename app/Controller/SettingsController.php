@@ -74,6 +74,18 @@ class SettingsController extends AppController {
     }
   }
 
+  //TODO: MAKE FILE CHECK FOR DUPLICATES SO NO CONTROLLERS ARE OVERWRITTEN
+  function admin_generate_controller(){
+    if($this->request->is(array('post', 'put'))){
+      $controller_name = $this->request->data['Setting']['controller_name'];
+      if($this->Generator->generateController($controller_name)){
+        $this->Session->setFlash(sprintf(__('O controller %s foi criado com sucesso!'), $controller_name), 'success');
+      }else{
+        $this->Session->setFlash(__('Erro ao criar o controller indicado!', 'error'));
+      }
+      $this->redirect(array('action' => 'tools'));
+  }
+
   function admin_generate_translation(){
     if($this->request->is(array('post', 'put'))){
       $table_name = $this->request->data['Setting']['table_name'];
