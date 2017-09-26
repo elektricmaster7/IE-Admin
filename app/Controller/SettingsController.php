@@ -28,6 +28,7 @@ class SettingsController extends AppController {
   }
 
   function admin_plugins(){
+    //print_r($this->Plugin->schema());
     //App::uses('StoreAppController', 'Store.Controller');
     //$PluginController = new StoreAppController();
     //if(method_exists($PluginController, 'install')) $PluginController->install();
@@ -84,6 +85,7 @@ class SettingsController extends AppController {
         $this->Session->setFlash(__('Erro ao criar o controller indicado!', 'error'));
       }
       $this->redirect(array('action' => 'tools'));
+    }
   }
 
   function admin_generate_translation(){
@@ -106,7 +108,7 @@ class SettingsController extends AppController {
    * @author João Redondo (IE)
    * @return string    A finished version url ready to be used in redirection
    */
-  public function get_translate_url(){
+  function get_translate_url(){
     $this->autoRender = false;
     $route = Router::parse($this->request->data['url']);
     $route['language'] = $this->request->data['language'];
